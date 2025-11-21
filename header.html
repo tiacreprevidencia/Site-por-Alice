@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/fonts/fontawesome/css/all.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/header.css">
+</head>
+<body>
+
+    <!-- 🔹 DESKTOP HEADER -->
+  <header class="header-desktop">
+    <!-- Logo -->
+    <a href="/index.html" class="logo">
+      <img src="/images/acreprev-logo.png" alt="Acreprevidência">
+    </a>
+    
+    <!-- Menu -->
+    <nav class="menu" id="main-nav">
+        <ul>
+
+            <!-- 🔹 Mega Menu -->
+            <li class="has-dropdown">
+                <a href="#">Institucional</a>
+                <div class="dropdown dropdown-2col">
+                    <div class="dropdown-col">
+                        <h3>Sobre o Instituto</h3>
+                        <a href="/institucional/sobre-o-instituto/quem-somos.html">Quem Somos</a>
+                        <a href="/institucional/sobre-o-instituto/estrutura-organizacional.html">Estrutura Organizacional</a>
+                    </div>
+                    <div class="dropdown-col">
+                        <h3>Conselhos e Comitê</h3>
+                        <a href="/institucional/conselhos/ceps.html">CEPS</a>
+                        <a href="/institucional/conselhos/conselho-fiscal.html">Conselho Fiscal</a>
+                        <a href="/institucional/comite/comite-investimento.html">Comitê de Investimentos</a>
+                    </div>              
+                </div>
+            </li>
+
+            <li class="has-dropdown">
+                <a href="#">Serviços</a>
+                <div class="dropdown dropdown-1col">
+                    <div class="dropdown-col">
+                        <h3>Funcionalidades</h3>
+                        <a href="https://www.acreprevidencia.ac.gov.br/financeiro/" target="_blank">Cédula C</a>
+                        <a href="https://www.acreprevidencia.ac.gov.br/financeiro/" target="_blank">Contracheque</a>
+                        <a href="/servicos/dap/index.html" target="_blank">DAP</a>
+                        <a href="/servicos/formularios-e-requerimentos.html" target="_blank">Formulários e Requerimentos</a>
+                        <a href="/servicos/prova-de-vida.html" target="_blank">Prova de Vida</a>
+                        <a href="https://www.acreprevidencia.ac.gov.br/simulador/" target="_blank">Simulador de Aposentadoria</a>
+                        <a href="https://www.acreprevidencia.ac.gov.br/ctc/validacao/verifica" target="_blank">Validar CTC</a>
+                    </div>              
+                </div>
+            </li>
+
+            <li>
+                <a href="/transparencia.html">Transparência</a>
+            </li>
+
+            <li class="has-dropdown">
+                <a href="/beneficios/index.html">Benefícios</a>
+                <div class="dropdown dropdown-3col">
+                    <div class="dropdown-col">
+                        <h3>Beneficiários</h3>
+                        <a href="/beneficios/dependentes/aposentadoria.html">Aposentadoria</a>
+                        <a href="/beneficios/dependentes/auxilio-doenca.html">Auxílio Doença</a>
+                        <a href="/beneficios/dependentes/salario-familia.html">Salário Família</a>
+                        <a href="/beneficios/dependentes/salario-maternidade.html">Salário Maternidade</a>
+                    </div>
+                    <div class="dropdown-col">
+                        <h3>Dependentes</h3>
+                        <a href="/beneficios/dependentes/auxilio-reclusao.html">Auxílio Reclusão</a>
+                        <a href="/beneficios/dependentes/pensao.html">Pensão</a>
+                    </div>
+                    <div class="dropdown-col">
+                        <h3>Histórico</h3>
+                        <a href="/beneficios/historico-de-concendidos.html">Histórico de Concedidos</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="has-dropdown">
+                <a href="#">Legislação</a>
+                <div class="dropdown dropdown-2col">
+                    <div class="dropdown-col">
+                        <h3>Legislação Estadual</h3>
+                        <a href="/legislacao/estadual.html">Estadual</a>
+                    </div>
+                    <div class="dropdown-col">
+                        <h3>Legislação Federal</h3>
+                        <a href="/legislacao/federal.html">Federal</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="/ouvidoria.html">Ouvidoria</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Campo de busca -->
+    <div class="campo-search" style="margin-left: 40px;">
+            <div class="input-container">
+                <input type="text" id="servico" class="campo-pesquisa blinking-cursor" autocomplete="off"
+                    placeholder="O que você está procurando?">
+                <span id="icon-search" class="icon-search">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 512 512">
+                        <path fill="#cccccc"
+                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                    </svg>
+                </span>
+                <!--<span id="limpar-campo" class="limpar-campo" title="Limpar campo">×</span>--->
+            </div>
+            <div id="resultados" class="resultados">
+                <!-- Os resultados serão exibidos aqui -->
+            </div>
+        </div>
+    </div>
+    </header>
+
+    <!-- 🔹 MOBILE HEADER -->
+    <header class="header-mobile">
+    <div class="logo-mobile">
+        <div class="menu-toggle"><i class="fa fa-bars"></i></div>
+        <a href="/index.html">
+        <img src="/images/icones/logo2.png" alt="Logo Acreprevidência">
+        </a>
+    </div>
+    </header>
+
+    <!-- 🔹 OVERLAY e BAR-COLOR -->
+    <div id="overlay" class="overlaymenu"></div>
+    <div class="div-color"></div>
+    <div class="barra-menu"></div>
+
+    <!-- 🔹 MENU MOBILE (painel lateral) -->
+    <nav class="mobile-menu">
+        <div class="logo-mobile">
+            <img src="/images/icones/logo2.png" alt="Logo Acreprevidência">
+                <!-- Botão de fechar -->
+            <div class="close-menu">
+                <i class="fa fa-times"></i>
+            </div>
+        </div>
+
+    
+
+        <!-- Campo de Busca -->
+        <div class="campo-search">
+            <div class="input-container">
+                <input type="text" id="servico-mobile" class="campo-pesquisa blinking-cursor" autocomplete="off"
+                    placeholder="O que você está procurando?">
+                <span id="icon-search" class="icon-search">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 512 512">
+                        <path fill="#cccccc"
+                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                    </svg>
+                </span>
+                <!--<span id="limpar-campo" class="limpar-campo" title="Limpar campo">×</span>-->
+            </div>
+            <div id="resultados-mobile" class="resultados-mobile">
+                <!-- Os resultados serão exibidos aqui -->
+            </div>
+        </div>
+
+        <!-- Itens -->
+        <ul>
+            <li class="menu-item has-submenu">
+                <a href="#">Institucional</a>
+                <ul class="submenu">
+                <li><div class="submenu-title">Sobre o Instituto</div></li>
+                <li><a href="/institucional/sobre-o-instituto/quem-somos.html">Quem Somos</a></li>
+                <li><a href="/institucional/sobre-o-instituto/estrutura-organizacional.html">Estrutura Organizacional</a></li>
+                <li class="submenu-group"></li>
+                <li><div class="submenu-title">Conselhos e Comitê</div></li>
+                <li><a href="/institucional/conselhos/ceps.html">CEPS</a></li>
+                <li><a href="/institucional/conselhos/conselho-fiscal.html">Conselho Fiscal</a></li>
+                <li><a href="/institucional/comite/comite-investimento.html">Comitê de Investimentos</a></li>
+                <li class="submenu-group"></li>
+                </ul>
+            </li>
+            <li class="menu-item has-submenu">
+                <hr><a href="#">Serviços</a>
+                <ul class="submenu">
+                <li><div class="submenu-title">Funcionalidades</div></li>
+                <li><a href="https://www.acreprevidencia.ac.gov.br/financeiro/" target="_blank">Cédula C</a></li>
+                <li><a href="https://www.acreprevidencia.ac.gov.br/financeiro/" target="_blank">Contracheque</a></li>
+                <li><a href="/servicos/dap/index.html" target="_blank">DAP</a></li>
+                <li><a href="/servicos/formularios-e-requerimentos.html" target="_blank">Formulários e Requerimentos</a></li>
+                <li><a href="/servicos/prova-de-vida.html" target="_blank">Prova de Vida</a></li>
+                <li><a href="https://www.acreprevidencia.ac.gov.br/simulador/" target="_blank">Simulador de Aposentadoria</a></li>
+                <li><a href="https://www.acreprevidencia.ac.gov.br/ctc/validacao/verifica" target="_blank">Validar CTC</a></li>
+                <li class="submenu-group"></li>
+                </ul>
+            </li>
+
+            <li class="menu-item">
+                <hr><a href="/transparencia.html">Transparência</a>
+            </li>
+
+            <li class="menu-item has-submenu">
+                <hr><a href="/beneficios/index.html">Benefícios</a>
+                <ul class="submenu">
+                <li><div class="submenu-title">Beneficiários</div></li>
+                <li><a href="/beneficios/dependentes/aposentadoria.html">Aposentadoria</a></li>
+                <li><a href="/beneficios/dependentes/auxilio-doenca.html">Auxílio Doença</a></li>
+                <li><a href="/beneficios/dependentes/salario-familia.html">Salário Família</a></li>
+                <li><a href="/beneficios/dependentes/salario-maternidade.html">Salário Maternidade</a></li>
+                <li class="submenu-group"></li>
+                <li><div class="submenu-title">Dependentes</div></li>
+                <li><a href="/beneficios/dependentes/auxilio-reclusao.html">Auxílio Reclusão</a></li>
+                <li><a href="/beneficios/dependentes/pensao.html">Pensão</a></li>
+                <li class="submenu-group"></li>
+                <li><div class="submenu-title">Histórico</div></li>
+                <li><a href="/beneficios/historico-de-concendidos.html">Histórico de Concedidos</a></li>
+                <li class="submenu-group"></li>
+                </ul>
+            </li>
+
+            <li class="menu-item has-submenu">
+                <hr><a href="#">Legislação</a>
+                <ul class="submenu">
+                <li><div class="submenu-title">Legislação Estadual</div></li>
+                <li><a href="/legislacao/estadual.html">Estadual</a></li>
+                <li class="submenu-group"></li>
+                <li><div class="submenu-title">Legislação Federal</div></li>
+                <li><a href="/legislacao/federal.html">Federal</a></li>
+
+                <li class="submenu-group"></li>
+                </ul>
+            </li>
+
+            <li class="menu-item">
+                <hr><a href="/ouvidoria.html">Ouvidoria</a><hr>
+            </li>
+
+            <!--- <li class="menu-item single-submenu">
+                <a href="#">Compre agora</a>
+                <ul class="submenu">
+                <li><a href="#">Página de compra</a></li>
+                </ul>
+            </li> ---> 
+        </ul>
+
+    <!-- Rodapé -->
+    <div class="footer-menu">
+        <hr>
+        <div>ACREPREVIDÊNCIA</div>
+    </div>
+    </nav>
+
+    <script src="/js/cookies.js" defer></script>
+    <script src="/js/servicos.js" defer></script>
+    <script src="/js/servicosmobile.js" defer></script>
+    <script src="/js/header-mobile.js" defer></script>
+
+</body>
+
+</html>

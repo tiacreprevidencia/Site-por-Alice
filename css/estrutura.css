@@ -1,0 +1,48 @@
+/* 🔹 Estrutura básica (mantém seus estilos) */
+.round-box {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.round-box-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.round-box-title {
+  flex: 1;
+  font-size: 1.2rem;
+  color: var(--preto);
+}
+
+.toggle-icon {
+  font-size: 1.3rem;
+  color: var(--gray-icons);
+  transition: transform 0.3s ease;
+}
+
+/* 🔹 Conteúdo escondido inicialmente */
+.round-box-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.35s ease;
+  font-size: 1rem;
+  color: var(--preto);
+  padding-left: 3.5rem; /* alinhado com o ícone */
+}
+
+/* 🔹 Quando ativo, mostra conteúdo */
+.round-box.active .round-box-content {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 0.8rem;
+}
+
+/* 🔹 Ícone gira ao abrir */
+.round-box.active .toggle-icon {
+  transform: rotate(45deg);
+  color: var(--verde-azul);
+}

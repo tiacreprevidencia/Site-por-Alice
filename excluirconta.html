@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/icones/logo.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Preload para garantir carregamento rápido -->
+    <link rel="preload" href="/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="/css/style.css" as="style">
+
+    <!-- Folhas de estilo carregadas no início -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Exclusão de conta</title>
+
+    <style>
+        .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+}
+
+    </style>
+    
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header id="cabecario"></header>
+    <!-- Fim cabeçalho -->
+
+
+    <!-- PRINCIAPL -->
+    <div class="news">
+        <div class="content-news">
+            <h3>Exclusão de conta</h3>
+            <div class="bar-color-green"></div>
+
+            <div>
+                <button id="myBtnexcluir" class="btn btn-danger text_align_left deletar borda" style="margin-bottom: 15px;">Deletar conta</button>
+                <br />
+                <p class="text-cont">Após a exclusão de conta, não será possível acessar o contra-cheque e realizar a prova de vida.</p>                
+                <h4 align="justify" style="font-weight: bolder;margin-bottom: 10px;">Quais dados serão excluídos?</h4>
+                <p class="text-cont">- CPF;</p>
+                <p class="text-cont">- E-mail;</p>
+                <p class="text-cont">- Matrícula;</p>
+                <p class="text-cont">- Nome;</p>
+                <p class="text-cont" style="margin-bottom: 30px;">- Telefone;</p>
+
+
+                <h3>Dúvidas</h3>
+                 <div class="bar-color-green"></div>
+                <h4 align="justify" style="font-weight: bolder;margin-bottom: 10px;">Para quaisquer dúvidas, entre em contato conosco:</h4>
+                <p class="text-cont">- E-mail: atendimento.acreprev@gmail.com</p>
+                <p class="text-cont" style="margin-bottom: 20px;">- Telefone: +55 (68) 3215-4309 </p>
+            </div>
+        </div>
+    </div>
+    <!-- Fim PRINCIAPL -->
+
+    <!-- O Modal -->
+    <div id="myModalexcluir" class="modal">
+        <!-- Conteúdo do Modal -->
+        <div class="modal-content">
+            <span class="close" style="cursor: pointer;color: fff;"></span>
+            <p class="modal-title" style="font-size: 20px">Exclusão de conta</p>
+            <div class="bar-color-green"></div>
+            <form id="deleteForm" method="POST">
+                <div class="form-group">
+                    <label for="cpf" style="font-size: 16px">CPF</label>
+                    <input type="text" class="form-control" id="cpf" name="cpf" maxlength="11" required style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="senha" style="font-size: 16px">Senha de acesso:</label>
+                    <input type="password" class="form-control" id="senha" name="senha" required autocomplete="off">
+                </div>
+                <br />
+                <div style="display: flex; justify-content: space-around;">
+                    <button type="button" class="btn btn-primary borda" onclick="fechaModal();">Cancelar</button>
+                    <button type="submit" class="btn btn-danger borda">Deletar</button>
+                </div>
+            </form>
+            <div id="resultado" class="mt-3"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        var modal = document.getElementById("myModalexcluir");
+        var btn = document.getElementById("myBtnexcluir");
+        var span = document.getElementsByClassName("close")[0];
+
+        // Abre o modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        };
+
+        // Fecha o modal ao clicar no "X"
+        span.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        // Fecha o modal clicando fora dele
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+
+        // Fecha o modal via botão "Cancelar"
+        window.fechaModal = function() {
+            modal.style.display = "none";
+        };
+
+        // Submissão do formulário via AJAX
+        $('#deleteForm').on('submit', function(e) {
+            e.preventDefault(); // Impede o envio padrão e evita adicionar parâmetros à URL
+            var cpf = $('#cpf').val().trim();
+            var senha = $('#senha').val().trim();
+
+            // AJAX para enviar os dados
+            $.ajax({
+                url: 'https://www.acreprevidencia.ac.gov.br/microServices/api/delete-cadastro',
+                type: 'POST',
+                data: { cpf: cpf, senha: senha },
+                success: function(response) {
+                    $('#resultado').html('<div class="alert alert-success" role="alert">Conta excluída com sucesso!</div>');
+                    $('#deleteForm')[0].reset();
+                    setTimeout(function() {
+                        modal.style.display = "none";
+                    }, 3000); // Fecha o modal após 3 segundos
+                },
+                error: function(xhr) {
+                    var erroMsg = xhr.status === 400 ? "Dados inválidos. Por favor, verifique e tente novamente." : "Erro desconhecido! Status: " + xhr.status;
+                    $('#resultado').html('<div class="alert alert-danger" role="alert">' + erroMsg + '</div>');
+                }
+            });
+        });
+    });
+
+
+    </script>
+
+    <!-- Importando rodapé -->
+    <div id="rodape"></div>
+    <!-- Fim importação rodapé -->
+
+  
+    <script src="/js/jquery-3.6.4.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

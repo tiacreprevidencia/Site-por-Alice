@@ -1,0 +1,92 @@
+/* --- Variáveis de cores --- */
+  :root {
+    --verde-luxo: #0B3D2E;
+    --dourado: #D4AF37;
+    --branco: #FFFFFF;
+    --cinza-texto: #555555;
+    --cinza-claro: #F8F8F8;
+  }
+
+  /* --- Reset e base --- */
+  * { margin:0; padding:0; box-sizing:border-box; font-family:'Open Sans', sans-serif; }
+  body { background-color: var(--branco); color: var(--cinza-texto); line-height:1.6; }
+  a { color: var(--verde-luxo); text-decoration: none; }
+  a:hover { color: var(--dourado); }
+
+  /* --- Cabeçalho --- */
+  header {
+    background-color: var(--verde-luxo);
+    color: var(--branco);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  header h1 { font-family:'Playfair Display', serif; font-size:2rem; }
+  nav ul { list-style:none; display:flex; gap:1.5rem; }
+  nav li a { font-weight:600; position:relative; padding:0.5rem; }
+  nav li a::after {
+    content:''; position:absolute; width:0%; height:2px;
+    background-color: var(--dourado); bottom:0; left:0; transition:0.3s;
+  }
+  nav li a:hover::after { width:100%; }
+
+  /* --- Botão Hamburger --- */
+  .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; }
+  .hamburger div { width:25px; height:3px; background-color: var(--branco); transition: all 0.3s; }
+
+  /* --- Hero Section --- */
+  .hero { background-color: var(--branco); text-align:center; padding:5rem 2rem; border-bottom:2px solid var(--dourado); }
+  .hero h2 { font-family:'Playfair Display', serif; font-size:3rem; color: var(--verde-luxo); margin-bottom:1rem; }
+  .hero p { font-size:1.2rem; color: var(--cinza-texto); }
+  .btn-primary {
+    background-color: var(--verde-luxo); color: var(--branco); padding:0.8rem 1.5rem; border-radius:6px;
+    font-weight:600; transition: all 0.3s; display:inline-block; margin-top:1rem;
+  }
+  .btn-primary:hover {
+    background-color: var(--branco); color: var(--verde-luxo); border:2px solid var(--dourado);
+    box-shadow:0 4px 12px rgba(212,175,55,0.5);
+  }
+
+
+
+  /* --- Seções de Conteúdo --- */
+  .section { padding:4rem 2rem; max-width:1200px; margin:0 auto; }
+  .cards { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap:2rem; }
+  .card {
+    background-color: var(--cinza-claro);
+    border-left:4px solid var(--dourado);
+    padding:2rem;
+    border-radius:8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .card:hover { transform: translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,0.1); }
+  .card h3 { color: var(--verde-luxo); margin-bottom:0.8rem; font-family:'Playfair Display', serif; }
+  .card p { color: var(--cinza-texto); }
+  .card-icon { font-size:2rem; color: var(--dourado); margin-bottom:1rem; display:inline-block; }
+
+
+  
+  /* --- Formulário de Contato --- */
+  form { background-color: var(--cinza-claro); padding:2rem; border-radius:8px; display:flex; flex-direction:column; gap:1rem; max-width:600px; margin:auto; }
+  form label { font-weight:600; margin-bottom:0.3rem; }
+  form input, form textarea { padding:0.8rem; border:1px solid #ccc; border-radius:4px; width:100%; }
+  form input:focus, form textarea:focus { border-color: var(--verde-luxo); outline:none; box-shadow:0 0 5px rgba(11,61,46,0.5); }
+  form button { width:max-content; align-self:flex-start; }
+
+  /* --- Footer --- */
+  footer { background-color: var(--verde-luxo); color: var(--branco); text-align:center; padding:3rem 2rem; margin-top:2rem; }
+  footer a { color: var(--dourado); margin:0 0.5rem; }
+
+  /* --- Responsividade --- */
+  @media(max-width:768px){
+    nav ul { position:absolute; top:100%; left:0; right:0; background-color: var(--verde-luxo); flex-direction:column; gap:0; display:none; }
+    nav ul.active { display:flex; }
+    nav li a { padding:1rem 2rem; border-bottom:1px solid var(--dourado); }
+    .hamburger { display:flex; }
+  }
+
+  /* --- Acessibilidade --- */
+  .skip-link { position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden; z-index:100; }
+  .skip-link:focus { left:0; top:0; background: var(--dourado); color: var(--verde-luxo); padding:1rem; text-decoration:none; font-weight:bold; z-index:1000; }

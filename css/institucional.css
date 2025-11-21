@@ -1,0 +1,171 @@
+/* ===== ESTILO INSTITUCIONAL E PORTARIAS OFICIAIS (ATUALIZADO) ===== */
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --branco: #ffffff;
+  --preto: #000000;
+  --branco-sujo: #fafafa;
+  --institucional-bg-color: #f8f9fa;
+  --institucional-text-color: #212529;
+  --institucional-accent-color: #4caf50;
+  --verde-escuro: #1b7053;
+  --verde-azul: #30c896;
+  --verde-limao: #3aaa35;
+}
+
+main {
+  padding: 0 20px 21px;
+  margin: 0 auto;
+}
+
+.section-artigo-oficial {
+  max-width: 75rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.artigo-oficial {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #212529;
+  max-width: 75rem;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  font-variant-numeric: normal !important;
+  font-feature-settings: "lnum" 1, "pnum" 1 !important; /* Usa números alinhados e proporcionais */
+}
+/* Título */
+.artigo-oficial h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  padding-top: 2rem;
+}
+
+/* Subtítulo */
+.artigo-oficial-subtitle {
+  font-weight: 600;
+  font-size: 18px;
+  margin: 1rem 0 0.3rem;
+}
+
+/* Listas */
+.lista-oficial {
+  background: #f9fafb;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 6px;
+  padding: 1.5rem 2rem;
+  margin-top: 1rem;
+}
+
+.section-artigo-oficial .artigo-oficial ul {
+  margin: 0.5rem 0 1.2rem 1.4rem;
+  padding-left: 2rem;
+  list-style-type: disc;
+}
+/* Parágrafos */
+.section-artigo-oficial .artigo-oficial p,
+.section-artigo-oficial .artigo-oficial li,
+.section-artigo-oficial .artigo-oficial ul {
+  font-size: 1.1rem;
+  line-height: 2.2;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+/* Links */
+.section-artigo-oficial .artigo-oficial a {
+  color: var(--verde-escuro);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+.section-artigo-oficial .artigo-oficial a:hover {
+  color: var(--verde-limao);
+}
+
+.artigo-oficial-bar-color {
+  width: 100%;
+  max-width: 500px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #4caf50;
+  margin: 1.5rem 0;
+}
+
+/* RESPONSIVIDADE - segue o padrão institucional */
+@media (max-width: 767px) {
+  .artigo-oficial {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 1rem;
+    font-size: 1rem;
+  }
+
+  .artigo-oficial h2 {
+    font-size: 22px;
+    text-align: left;
+  }
+
+  .section-artigo-oficial .artigo-oficial ul {
+    padding-left: 1.2rem;
+  }
+
+  .section-artigo-oficial .artigo-oficial li,
+  .section-artigo-oficial .artigo-oficial p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .section-artigo-oficial .artigo-oficial a {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .artigo-oficial-bar-color {
+    max-width: 100%;
+    height: 3px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    main {
+    padding: 0 1.5rem 2rem 1.5rem;
+    }
+
+  .artigo-oficial {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+
+  .artigo-oficial h2 {
+    font-size: 22px;
+    text-align: left;
+  }
+
+  .section-artigo-oficial .artigo-oficial ul {
+    padding-left: 1.5rem;
+  }
+
+  .section-artigo-oficial .artigo-oficial li,
+  .section-artigo-oficial .artigo-oficial p {
+    line-height: 1.9;
+  }
+
+  .artigo-oficial-bar-color {
+    max-width: 100%;
+    height: 3px;
+  }
+}
+
+.artigo-oficial .card-sub-pages {
+  padding: 0;
+  margin: 0;
+}

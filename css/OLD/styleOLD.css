@@ -1,0 +1,1958 @@
+/* Padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: 14px;
+  font-feature-settings: "liga" off, "tnum" 1;
+  font-variant-numeric: tabular-nums;
+}
+
+div,
+[id] {
+  font-feature-settings: "liga" off, "tnum" 1, "lnum" 1;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Fim Padrão */
+
+/* Importando fontes */
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat Italic";
+  src: url("../fonts/Montserrat-Italic.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat.ttf");
+}
+
+/* Fim importação */
+
+/* Aviso de Cookies */
+
+.cookie-banner p {
+  font-weight: 500;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.cookie-banner {
+  position: fixed;
+  bottom: 1.2em;
+  right: 1.2em;
+  background: #fff;
+  width: 350px;
+  padding: 1.5em;
+  border-radius: 0.5em;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  text-align: center;
+  z-index: 9999;
+  display: none;
+}
+
+.cookie-banner a {
+  padding-top: 01em;
+  color: #0a85d1;
+  text-decoration: underline;
+  transition: 0.1s color;
+}
+
+.cookie-banner a:hover {
+  text-decoration: none;
+  color: #44a9e9;
+}
+
+#accept-cookies {
+  background-color: #009963;
+  border-radius: 0.3em;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: background 0.4s, box-shadow 0.4s;
+}
+
+#accept-cookies:hover {
+  background-color: #5aad85;
+}
+
+/* Fim de Aviso de Cookies */
+
+/* Navbar */
+
+.div-color {
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    rgba(237, 224, 57, 1) 0%,
+    rgba(43, 158, 116, 1) 50%,
+    rgba(237, 224, 57, 1) 100%
+  );
+}
+
+.twolines::after {
+  top: 25px !important;
+}
+
+/* Fim Navbar */
+
+/* =========== BENEFÍCIOS =========== */
+
+.container-beneficios {
+  width: 75rem;
+  margin: 0 auto;
+}
+
+.card-sub-pages details summary::after {
+  content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="17" viewBox="0 0 448 512"%3E%3Cpath fill="%23aaa" d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"%3E%3C/path%3E%3C/svg%3E');
+}
+
+.card-sub-pages details[open] summary::after {
+  content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="17" viewBox="0 0 320 512"%3E%3Cpath fill="%23212529" d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"%3E%3C/path%3E%3C/svg%3E');
+}
+
+.container-beneficios p,
+.container-beneficios li {
+  font-size: 1.2rem;
+}
+
+.container-beneficios li {
+  margin-left: 4rem;
+}
+
+.content-beneficios {
+  margin: 3em 0 3.5em;
+}
+
+.content-beneficios h5 {
+  margin: 0 0 0.5em 1.25em;
+  font-size: 1.2rem;
+}
+
+.content-beneficios h4 {
+  font-weight: 600;
+  font-size: 1.5em;
+  margin: 1em 0 0.5em;
+}
+
+/* =========== FIM BENEFÍCIOS =========== */
+
+/* =========== FINANCEIRO =========== */
+.conteudo-financeiro {
+  width: 75rem;
+  margin: 0 auto;
+}
+
+.containerFinanceiro {
+  margin: 1.5em 0 4em;
+  /* display: flex; */
+}
+
+.card {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-top: #26a175 solid 3px !important;
+  border-radius: 8px !important;
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 0px 0.8em !important;
+  margin: 20px 0 !important;
+  border-left: none !important;
+  border-bottom: none !important;
+  border-right: none !important;
+}
+
+.buttonCard {
+  display: flex;
+  justify-content: center;
+}
+
+.card-body h1 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+}
+
+.card-body h4 {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.dateCard h6 {
+  margin: 1em 0;
+  padding-top: 1em;
+  font-size: 0.9rem;
+  color: #979797;
+  border-top: #ccc 1px solid;
+}
+
+.buttonCard a {
+  margin: 2em 1em 0.5em 0;
+  text-decoration: none;
+  padding: 0.5em 0;
+  width: 8em;
+  text-align: center;
+  border: #26a175 1px solid;
+  color: #005018;
+  font-weight: 600;
+  border-radius: 9px;
+  transition: transform 0.3s, background-color 0.2s;
+}
+
+.buttonCard a:hover {
+  background-color: #26a175;
+  color: #fff;
+  transform: scale(1);
+}
+
+.card:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.card-columns {
+  margin-bottom: 3em;
+}
+
+/* Movimento Financeiro */
+
+.nav.nav-pills {
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: #0a656a !important;
+  color: #fff !important;
+}
+
+.nav-link {
+  font-family: "Montserrat" !important;
+  color: #000 !important;
+  margin-right: 0.2em;
+}
+
+.nav-link:hover {
+  background-color: #ddd !important;
+}
+
+.margin-card {
+  background-color: #fff;
+  border: 1px #eee solid;
+  padding: 1.5em;
+  border-radius: 0.8em;
+  transition: 0.3s box-shadow;
+  width: 75rem;
+}
+
+.margin-card:hover {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.margin-card h6 {
+  font-family: "Montserrat";
+  color: #000000;
+  font-weight: 600;
+  margin: 0 0 1em 0.5em;
+}
+
+.legenda-graficos {
+  display: flex;
+}
+
+.legenda-graficos h3 {
+  display: flex;
+  align-items: center;
+  background-color: #eee;
+  padding: 0.5em;
+  font-size: 1rem;
+  border-radius: 0.3em;
+  margin: 0 1em 2em 0.5em;
+}
+
+.icon {
+  width: 15px;
+  height: 90%;
+  border-radius: 0.2em;
+  margin-right: 0.5em;
+}
+
+.despesas {
+  background-color: rgba(255, 99, 132, 1);
+}
+
+.receitas {
+  background-color: rgba(75, 192, 192, 1);
+}
+
+.saldo {
+  background-color: rgb(77, 75, 192);
+}
+
+.table {
+  width: 100%;
+  border: 1px solid;
+  margin-top: 1rem;
+  /* border-radius: 1em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    border-collapse: collapse;
+    overflow: hidden; */
+}
+
+.table thead tr {
+  border: none !important;
+}
+
+.table th,
+.table td {
+  padding: 1em 1em !important;
+}
+
+.table thead tr th {
+  background-color: #f0f0f0;
+  border: 1px #eee solid;
+}
+
+.table thead th {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.table a {
+  text-decoration: none;
+  color: #000;
+  margin-right: 1em;
+  background-color: rgba(75, 192, 192, 0.3);
+  transition: 0.2s background;
+  padding: 0.5em 1.2em;
+  border-radius: 0.3em;
+  border: none;
+}
+
+.table a:hover {
+  background-color: rgba(75, 192, 192, 0.2);
+  color: #000;
+}
+
+.table-acao {
+  text-align: right;
+}
+
+.columnYearConsolidados {
+  width: 68%;
+}
+
+/* Fim Movimento Financeiro */
+
+/* =========== FIM FINANCEIRO =========== */
+
+/* ===== ESTILO INSTITUCIONAL E PORTARIAS OFICIAIS (ATUALIZADO) ===== */
+.artigo-oficial {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #212529;
+  max-width: 75rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 0 0 0;
+  background-color: #fff;
+  font-variant-numeric: normal !important;
+  font-feature-settings: "lnum" 1, "pnum" 1 !important; /* Usa números alinhados e proporcionais */
+}
+
+.artigo-oficial h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.artigo-oficial ul {
+  padding-left: 2rem;
+}
+
+.artigo-oficial p,
+.artigo-oficial li,
+.artigo-oficial ul {
+  font-size: 1.1rem;
+  line-height: 2.2;
+  font-weight: 500;
+  margin-bottom: 0.5rem !important;
+}
+
+.artigo-oficial-bar-color {
+  width: 100%;
+  max-width: 500px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #4caf50;
+  margin: 1.5rem 0;
+}
+
+/* RESPONSIVIDADE - segue o padrão institucional */
+@media (max-width: 768px) {
+  .artigo-oficial {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 1.5rem 1rem !important;
+    font-size: 1rem;
+  }
+
+  .artigo-oficial h2 {
+    font-size: 22px;
+    text-align: left;
+  }
+
+  .artigo-oficial ul {
+    padding-left: 1.2rem;
+  }
+
+  .artigo-oficial li,
+  .artigo-oficial p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .artigo-oficial-bar-color {
+    max-width: 100%;
+    height: 3px;
+  }
+}
+
+.artigo-oficial .card-sub-pages {
+  padding: 0;
+  margin: 0;
+}
+
+/*============FIM==============*/
+
+/* =========== INSTITUCIONAL =========== */
+
+/* Conselho Fiscal */
+
+/* Cabeçalho */
+.conteudo-institucional {
+  width: 75rem;
+  margin: 0 auto;
+}
+
+.conselhos-secao {
+  margin: 1.5rem 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 650;
+  color: #aaa;
+}
+
+.conselhos-secao::before,
+.conselhos-secao::after {
+  content: "•";
+  font-size: 30px;
+  padding: 0 15px;
+  position: relative;
+  top: 0.4rem;
+}
+
+.titulo-secao {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.conteudo-conselho-fiscal {
+  flex: 1;
+}
+
+/* Fim cabeçalho */
+
+/* Menu */
+.menu-conselho-fiscal {
+  display: flex;
+  justify-content: center;
+  gap: 5em;
+}
+
+.icon-and-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-and-title svg {
+  margin: 0 auto;
+}
+
+.icon-and-title h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 0.5em;
+}
+
+.tab-button {
+  cursor: pointer;
+  text-align: center;
+  padding: 1.5em;
+}
+
+.tab-button:hover {
+  color: #0a656a;
+}
+
+.tab-button:hover .icon-and-title svg {
+  fill: #0a656a;
+}
+
+.tab-button.active-tab {
+  background-color: #f9f8f8;
+  border-radius: 4px;
+}
+
+.tab-button.active-tab svg {
+  fill: #0a656a;
+}
+
+.tab-button.active-tab h2 {
+  color: #0a656a;
+}
+
+svg {
+  fill: #bbb;
+}
+
+.tab {
+  display: none;
+}
+
+.active-tab {
+  display: block;
+}
+
+/* Fim menu */
+
+/* Atribuições */
+.tab {
+  margin: 3em 0;
+}
+
+.tab p {
+  line-height: 2.2;
+  font-weight: 500;
+}
+
+/* Fim atribuições */
+
+/* Composição */
+.table-composicao {
+  border-collapse: collapse;
+  border-radius: 0.7em;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  transition: box-shadow 0.4s;
+  margin: 4em 0 5em;
+}
+
+.table-composicao:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.table-composicao th {
+  padding: 1em;
+  background: #0a656a;
+  color: #fff;
+  text-align: center;
+}
+
+.table-composicao td {
+  padding: 1.2em;
+  background: #fff;
+  border: none;
+  font-weight: 500;
+}
+
+#indicados {
+  border-bottom: 1px #eee solid;
+}
+
+.col1{
+  width: 41%;
+}
+
+.col2 {
+  width: 18%;
+}
+
+.col3 {
+  width: 31%;
+}
+/* Fim composição */
+
+/* Publicações */
+#contentThree,
+#contentFive,
+#contentSexto {
+  margin: 3em 0;
+}
+
+#contentThree a,
+#contentFive a,
+#contentSexto a {
+  text-decoration: none;
+  color: #000;
+  fill: #0a656a;
+  cursor: pointer;
+}
+
+#contentThree h1,
+#contentFive h1,
+#contentSexto h1 {
+  font-size: 1.2rem;
+  padding-bottom: 0.6rem;
+}
+
+#contentThree h3,
+#contentFive h3,
+#contentSexto h3 {
+  font-size: 1rem;
+  color: #000;
+  cursor: pointer;
+}
+
+.tab-pub-content {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 1em;
+  padding: 1em 2em;
+  border-radius: 0.4em;
+  transition: 0.2s;
+  border: 1px #ddd solid;
+}
+
+.tab-pub-content:hover {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: #fff;
+  border: 1px #fff solid;
+}
+
+.svg {
+  margin-right: 1.5em;
+}
+
+.svg svg {
+  fill: #0a656a;
+}
+
+/* Fim publicações */
+
+/* Fim Conselho Fiscal */
+
+/* Estrutura Organizacional */
+
+.card-sub-pages {
+  background: white;
+  padding: 38px 0;
+  margin: 40px 0;
+  border-radius: 4px;
+  width: 100%;
+  border: none;
+}
+
+.card-sub-pages details {
+  display: block !important; /* Evitar que <details> force comportamento de flex */
+  border-radius: 5px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.05);
+  border-left: 15px solid gray;
+  padding: 5px 15px 5px 5px;
+  transition: background 0.3s ease, border-left-color 0.3s ease,
+    height 0.3s ease;
+  height: 0;
+  margin-top: 15px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.card-sub-pages details.infos[open] {
+  /* background: #ebf3e7; */
+  border-left-color: #216a57;
+  height: auto;
+}
+
+.card-sub-pages details:not([open]) {
+  height: auto;
+  background: #fff;
+  border-left-color: #ddd;
+}
+
+.card-sub-pages details a {
+  text-decoration: none;
+  color: #555;
+}
+
+.card-sub-pages details a:hover {
+  text-decoration: underline;
+  color: #0599f5;
+}
+
+.card-sub-pages details p {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-start;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2rem;
+  padding: 0 22px 0.5rem 22px;
+  color: #2c2c2c;
+}
+
+.card-sub-pages details p::before {
+  /* content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='0.8em' viewBox='0 0 448 512'%3E%3Cpath d='M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z' fill='%23202020'/%3E%3C/svg%3E%0A"); */
+  content: "▸ ";
+  color: #2e7d32;
+  margin-right: 5px;
+  font-size: 1.3rem;
+}
+
+.card-sub-pages details a {
+  color: #0a85d1;
+  font-size: 1.2rem;
+}
+
+.card-sub-pages details summary {
+  font-size: 1.3rem;
+  padding: 1.5rem 0 1.5rem 1.1em;
+}
+
+.card-sub-pages details summary {
+  justify-content: space-between;
+}
+
+.card-sub-pages .details p {
+  justify-content: flex-start;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.card-sub-pages details summary,
+.card-sub-pages details p {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.card-sub-pages details summary::-webkit-details-marker,
+.card-sub-pages details p::-webkit-details-marker {
+  display: none;
+}
+
+.card-sub-pages details[open] summary {
+  font-weight: 600;
+}
+
+.divisao-interna {
+  margin-left: 3rem;
+}
+
+.sigla {
+  font-weight: 600;
+  margin-right: 0.2rem;
+  display: inline-block;
+}
+/* =============================
+   OVERRIDE LIMPO PARA .infos.static
+   ============================= */
+
+.card-sub-pages .infos.static {
+  display: block; /* sempre visível */
+  background: #fff; /* fundo de details fechado */
+  border-left: 15px solid #ddd; /* borda lateral padrão */
+  border-radius: 5px; /* cantos arredondados */
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0; /* mesma sombra */
+  margin-top: 15px; /* espaçamento entre cards */
+  padding: 5px 15px 5px 5px;
+}
+
+.card-sub-pages .infos.static > a.infos-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.3rem; /* mesma tipografia de summary */
+  padding: 1.5rem 1.1em; /* mesmo padding vertical e lateral */
+  color: #2c2c2c;
+  cursor: pointer;
+}
+
+.card-sub-pages .infos.static > a.infos-title:hover {
+  text-decoration: underline;
+}
+
+.infos.static:hover {
+  border-left-color: #216a57;
+}
+
+.static-tab {
+  display: block;
+  margin: 3em 0;
+}
+
+/* Fim Estrutura Organizacional */
+
+/* Quem Somos */
+
+/* Timeline */
+.timeline,
+.timeline-horizontal {
+  list-style: none;
+  padding: 20px;
+  position: relative;
+}
+
+.timeline:before {
+  height: 3px;
+  top: 40px;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #efeff1;
+  left: 50%;
+  margin-left: -1.5px;
+}
+
+.timeline .timeline-item {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline .timeline-item:before,
+.timeline .timeline-item:after {
+  content: "";
+  display: table;
+}
+
+.timeline .timeline-item:after {
+  clear: both;
+}
+
+.timeline .timeline-item .timeline-badge {
+  color: #fff;
+  width: 54px;
+  height: 54px;
+  line-height: 52px;
+  font-size: 22px;
+  text-align: center;
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  margin-left: -25px;
+  background-color: #333;
+  z-index: 100;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.timeline .timeline-item .timeline-badge i,
+.timeline .timeline-item .timeline-badge .fa,
+.timeline .timeline-item .timeline-badge .glyphicon {
+  top: 2px;
+  left: 0px;
+}
+
+.timeline .timeline-item .timeline-badge {
+  background-color: #216a57;
+}
+
+.timeline-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline .timeline-item .timeline-panel {
+  position: relative;
+  width: 46%;
+  float: left;
+  right: 16px;
+  background: #f8f8f8;
+  border-radius: 2px;
+  padding: 20px;
+}
+
+.timeline .timeline-item .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: -16px;
+  display: inline-block;
+  border-top: 16px solid transparent;
+  border-left: 16px solid #777;
+  border-right: 0 solid #777;
+  border-bottom: 16px solid transparent;
+  content: " ";
+}
+
+.timeline .timeline-item .timeline-panel .timeline-title {
+  margin-top: 0;
+  color: inherit;
+}
+
+.timeline .timeline-item .timeline-panel .timeline-body > p,
+.timeline .timeline-item .timeline-panel .timeline-body > ul {
+  margin-bottom: 0;
+}
+
+.timeline .timeline-item .timeline-panel .timeline-body > p + p {
+  margin-top: 5px;
+}
+
+.timeline .timeline-item:last-child:nth-child(even) {
+  float: right;
+}
+
+.timeline .timeline-item:nth-child(even) .timeline-panel {
+  float: right;
+  left: 16px;
+}
+
+.timeline .timeline-item:nth-child(even) .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+
+.timeline-horizontal {
+  list-style: none;
+  position: relative;
+  margin: 12px 0;
+  padding: 20px 0px;
+  display: inline-block;
+}
+
+.timeline-horizontal:before {
+  top: auto;
+  bottom: 26px;
+  left: 56px;
+  right: 0;
+  width: 74%;
+  margin-bottom: 20px;
+}
+
+.timeline-horizontal-instituicao::before {
+  width: 68% !important;
+}
+
+.timeline-horizontal .timeline-item {
+  display: table-cell;
+  height: 280px;
+  width: 20%;
+  min-width: 320px;
+  float: none !important;
+  padding-left: 0px;
+  padding-right: 20px;
+  margin: 0 auto;
+  vertical-align: bottom;
+}
+
+.timeline-horizontal .timeline-item .timeline-panel {
+  top: auto;
+  bottom: 64px;
+  display: inline-block;
+  float: none !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100%;
+}
+
+.timeline-horizontal .timeline-item .timeline-panel:before {
+  top: auto;
+  bottom: -16px;
+  left: 28px !important;
+  right: auto;
+  border-right: 16px solid transparent !important;
+  border-top: 16px solid #f8f8f8 !important;
+  border-bottom: 0 solid #777 !important;
+  border-left: 16px solid transparent !important;
+}
+
+.timeline-horizontal .timeline-item:before,
+.timeline-horizontal .timeline-item:after {
+  display: none;
+}
+
+.timeline-horizontal .timeline-item .timeline-badge {
+  top: auto;
+  bottom: 0px;
+  left: 43px;
+}
+
+.fundamentos {
+  display: flex;
+  background-color: #fff;
+  border-radius: 0.9em;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 8px 8px 30px 0px rgba(42, 67, 113, 0.15);
+  transition: transform 450ms;
+  padding: 2em;
+  margin-bottom: 3em;
+}
+
+.fundamentos:hover {
+  transform: translateY(-5px);
+}
+
+.icon-fundamentos {
+  padding-top: 0.4em;
+}
+
+.icon-fundamentos img {
+  width: 60px;
+  margin-right: 2em;
+}
+
+.content-fundamentos h1 {
+  font-weight: 700;
+  font-size: 1.3rem !important;
+  color: #1a1b1e;
+}
+
+.content-fundamentos p {
+  font-weight: 500;
+  font-size: 1.1rem !important;
+  color: #606060;
+}
+
+#contentFour {
+  font-size: 1.1rem !important;
+}
+
+/* Fim Quem Somos */
+
+/* =========== FIM INSTITUCIONAL =========== */
+
+/* =========== SERVIÇOS =========== */
+
+.content.details p {
+  display: flex;
+  font-weight: 450;
+}
+
+.content.details i {
+  margin-left: 4px;
+}
+
+.content.details p i {
+  transition: transform 0.3s ease;
+}
+
+.content.details a:hover i {
+  transform: translateX(4px);
+}
+
+.content.details a:hover {
+  text-decoration: none !important;
+}
+
+
+
+/* =========== FIM SERVIÇOS =========== */
+
+/* =========== NOTICÍAS =========== */
+
+.news {
+  margin: 3rem 0;
+  flex: 1;
+}
+
+.content-news {
+  width: 75rem;
+  margin: 0 auto;
+}
+
+.content-news h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.content-news p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.bar-color-green {
+  width: 120px;
+  height: 4px;
+  border-radius: 20px;
+  background-color: #4caf50;
+  margin: 1.5rem 0;
+}
+
+.info-post-news {
+  padding-top: 1rem;
+  display: flex;
+  align-items: start;
+}
+
+.info-post-news p {
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0;
+}
+
+.info-post-news img {
+  height: 21px;
+  margin-right: 0.5rem;
+}
+
+.media-news {
+  margin: 1.3rem 0;
+}
+
+.media-news-content {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-news-content img {
+  border-radius: 5px;
+  width: 50rem;
+  margin: 0.6rem 0;
+}
+
+.info-news {
+  width: 75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-news-content {
+  width: 50rem;
+  margin: 0.5rem 0;
+  padding-left: 0.6rem;
+  border-left: 3px #4caf50 solid;
+}
+
+.info-news-content h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.info-news-content h5 {
+  font-size: 1rem;
+  color: #888888;
+  padding-top: 0.4rem;
+}
+
+.content-news h3 {
+  padding-top: 1.3rem;
+  padding-bottom: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #4b4a4a;
+}
+
+/* =========== FIM NOTÍCIAS =========== */
+
+/* =========== LEGISLAÇÃO =========== */
+
+.container-site {
+  width: 75rem;
+  margin: 0 auto;
+}
+
+.cards-legis-estadual {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 0rem 1.8rem;
+  max-width: 75rem;
+  margin: 3vh 0;
+  width: 100%;
+}
+
+.cards-externo {
+  background-color: #fff;
+  border-radius: 1em;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 31.7%;
+  margin-bottom: 2em;
+  height: 290px;
+  display: none;
+}
+
+.cards-externo:hover {
+  background-color: #fafafa;
+}
+
+.dados-card {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.5em;
+}
+
+.dados-card {
+  padding: 1em 0 0 1.5em;
+}
+
+.conteudo-card-externo {
+  padding: 0.6em 1.5em 0 1.5em;
+}
+
+.tipo-card h5 {
+  background-color: #daedd0;
+  padding: 2px 4px;
+  font-size: 0.8rem;
+  border-radius: 0.5em;
+  margin-bottom: 0;
+  color: #06432d;
+}
+
+.tipo-card {
+  padding-right: 1em;
+  border-right: 1px #bbb solid;
+}
+
+.data-card {
+  padding: 1em;
+}
+
+.data-card h5 {
+  font-size: 0.8rem;
+  margin-bottom: 0;
+  font-family: "Montserrat";
+}
+
+.conteudo-card-externo {
+  height: 63%;
+}
+
+.conteudo-card-externo h5 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding-bottom: 0.2em;
+}
+
+.conteudo-card-externo p {
+  font-size: 0.99rem;
+}
+
+.saiba-mais-card {
+  bottom: 0;
+  border-top: 1px #ccc solid;
+}
+
+.saiba-mais-card p {
+  padding: 1em 0 0 1.5em;
+}
+
+.saiba-mais-card a {
+  color: #000;
+  text-decoration: none;
+}
+
+.saiba-mais-card a:hover {
+  text-decoration: underline;
+}
+
+.show {
+  display: block;
+}
+
+#myBtnContainer {
+  text-align: center;
+  margin: 3vh 0;
+}
+
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
+  background-color: #daedd0 !important;
+  border: none;
+  /* color: #fff !important; */
+}
+
+/* .btn:hover {
+    background-color: #eee !important;
+} */
+
+.btn.active,
+.btn.active:focus,
+.btn.active:active {
+  outline: none !important;
+  border: 1px solid transparent !important;
+  box-shadow: 0 0 0 0;
+}
+
+/* =========== FIM LEGISLAÇÃO =========== */
+
+/* =========== OUVIDORIA =========== */
+
+.container-contact-us {
+  background-color: #e5f8e6;
+  padding: 70px 0;
+}
+
+.informations-contact-us {
+  display: flex;
+  margin: 0 auto;
+  width: 75rem;
+}
+
+.find-us {
+  width: 55%;
+}
+
+.main-form {
+  width: 47%;
+}
+
+.find-us h2 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.find-us a {
+  margin-top: 1em;
+  color: #5f5f5f;
+  font-weight: 500;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.find-us svg {
+  margin-right: 0.4em;
+}
+
+.explicativo-find-us {
+  display: flex;
+  margin-top: 4em;
+}
+
+.explicativo-find-us h6 {
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 0.5em !important;
+}
+
+.explicativo-find-us p {
+  margin-top: 0.3em !important;
+}
+
+.suporte-via-chat,
+.feedback-sugestoes {
+  margin-right: 2em;
+}
+
+.suporte-via-chat,
+.feedback-sugestoes,
+.duvidas-imagens {
+  width: 30%;
+}
+
+.main-form {
+  display: flex;
+  justify-content: end;
+}
+
+.content-form {
+  background-color: #fff;
+  padding: 1.5em;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 1.7em;
+  width: 72%;
+}
+
+#ouvidoriaForm h3 {
+  font-weight: 700;
+  margin-bottom: 0.3em;
+}
+
+#ouvidoriaForm p {
+  margin-bottom: 2em;
+}
+
+.input {
+  position: relative;
+}
+
+.input__label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: calc(0.5rem * 0.75) 0.5rem;
+  margin: calc(0.5rem * 0.75 + 3px) calc(0.5rem * 0.5);
+  transform: translate(0, 0);
+  transform-origin: 0 0;
+  background: #fff;
+  transition: transform 120ms ease-in;
+  line-height: 1.2;
+}
+
+.form-group label {
+  display: inline;
+  color: #747474;
+  font-weight: 500;
+  cursor: text;
+}
+
+.form-group {
+  margin-top: 1em;
+}
+
+.input__field {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: calc(0.5rem * 1.5) 0.5rem;
+  border-radius: 4px;
+  resize: none;
+}
+
+.input__field:focus + .input__label,
+.input__field:not(:placeholder-shown) + .input__label {
+  transform: translate(0.25rem, -65%) scale(0.8);
+}
+
+.button-contact-us {
+  border: none;
+  width: 100%;
+  padding: 0.6em 0;
+  margin-top: 1em;
+  border-radius: 0.3em;
+  background-color: #009963;
+  color: #fff;
+  transition: 0.3s background;
+}
+
+.button-contact-us:hover {
+  background-color: #5aad85;
+}
+
+.agree-terms {
+  margin: 0.6em 0 0 0 !important;
+  text-align: center;
+  color: #707070;
+}
+
+.agree-terms a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.agree-terms a:hover {
+  text-decoration: underline;
+}
+
+.onde-encontrar {
+  display: flex;
+  margin: 0 auto;
+  padding: 3em 0;
+  width: 75rem;
+  height: 500px;
+}
+
+.informacoes-localizacao {
+  display: flex;
+  align-items: center;
+}
+
+.content-infos-localizacao {
+  margin-left: 1.2em;
+}
+
+.informacoes-localizacao h5 {
+  margin-bottom: 0.2em;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.informacoes-localizacao h3 {
+  margin-bottom: 1em;
+  font-weight: 600;
+  font-size: 1.7em;
+}
+
+.content-infos-localizacao p {
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* OUVIDORIA RESPONSIVIDADE */
+
+@media only screen and (min-width: 250px) and (max-width: 349px) {
+  .find-us h2 {
+    margin-top: 1.3em;
+    font-size: 1.4rem;
+  }
+  .onde-encontrar {
+    height: auto;
+  }
+}
+@media only screen and (min-width: 350px) and (max-width: 479px) {
+  .find-us h2 {
+    margin-top: 1.3em;
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 575px) {
+  .find-us h2 {
+    margin-top: 1.3em;
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .content-form {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .informations-contact-us,
+  .onde-encontrar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2em;
+  }
+
+  .find-us,
+  .main-form {
+    width: 48%;
+  }
+
+  .content-form {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .informations-contact-us,
+  .onde-encontrar {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+  }
+
+  .find-us {
+    width: 55%;
+  }
+
+  .main-form {
+    width: 45%;
+    justify-content: flex-end;
+  }
+
+  .content-form {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+}
+
+@media only screen and (max-width: 767px) {
+  .find-us a,
+  .suporte-whatsapp {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-top: 1em;
+  }
+
+  .informations-contact-us,
+  .onde-encontrar {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 1em;
+  }
+
+  .find-us,
+  .main-form,
+  .content-form {
+    width: 100% !important;
+  }
+
+  .explicativo-find-us {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .suporte-via-chat,
+  .feedback-sugestoes,
+  .duvidas-imagens {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .onde-encontrar {
+    height: auto;
+  }
+
+  .container-contact-us {
+    padding: 20px 0;
+  }
+}
+
+/* =========== FIM OUVIDORIA =========== */
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  cursor: not-allowed;
+  background-color: #f5f5f5;
+  opacity: 1;
+}
+
+/* Responsividade */
+
+@media (max-width: 767px) {
+  .item {
+    flex: 1 1 100%; /* Cada item ocupará 100% da largura */
+  }
+
+  .meios-contato {
+    flex-direction: column; /* Empilha os meios de contato verticalmente em telas menores */
+  }
+
+  .meios {
+    flex: 1 1 100%; /* Ocupa 100% da largura em telas pequenas */
+  }
+
+  /* Informações dos meios de contato - INICIO */
+  .infos h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  .infos p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: #666;
+  }
+
+  .faleconosco {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .duvidas-titulo h1 {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .meios-contato {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .meios {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1 1 250px; /* Flexível com largura mínima de 250px */
+    text-align: left;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Informações dos meios de contato - FIM */
+
+  /* Acesso rápido - INICIO */
+
+  /* Flexbox para os links de acesso */
+  .acesso {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 90%;
+  }
+
+  /* Estilo dos itens de acesso */
+
+  .acesso-rapido h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  /* Texto de cada item */
+  .texto-acesso h2 {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  /* Acesso rápido - FIM */
+
+  /* Slider - INICIO */
+  .titulo-noticia h1 {
+    font-size: 16px;
+  }
+
+  .sub-noticia h2 {
+    font-size: 14px;
+    white-space: nowrap; /* Impede a quebra de linha */
+    overflow: hidden; /* Esconde o texto que ultrapassa o contêiner */
+    text-overflow: ellipsis; /* Adiciona "..." quando o texto for muito longo */
+    width: 100%; /* Define a largura total para o h2 */
+  }
+
+  /* Icon do Wpp - INICIO */
+
+  /* Slider - FIM */
+
+  /* Icon do Wpp - FIM */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  a {
+    display: block;
+    padding: 10px 20px;
+    color: #000; /* Cor do texto preta */
+    text-decoration: none;
+  }
+
+  a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .servicos-container {
+    width: 100%;
+    padding: 0px 10px;
+    text-align: justify;
+  }
+
+  /* conselhos - ceps - Inicio */
+
+  .conteudo-institucional {
+    /* Estilo geral */
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .menu-conselho-fiscal {
+    /* Menu de navegação flexível */
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    gap: 2em;
+  }
+
+  .menu-conselho-fiscal > * {
+    flex: 1 1 calc(50% - 1em); /* Duas colunas */
+    box-sizing: border-box;
+  }
+
+  .container-beneficios {
+    width: 100%;
+  }
+
+  .content-beneficios {
+    margin: 3em 10px 3.5em;
+  }
+
+  /* conselhos - ceps - Fim */
+
+ 
+
+  /* Estudo Atuarial - Inicio */
+  .conteudo-financeiro {
+    width: 100%;
+  }
+  /* Estudo Atuarial- Fim */
+
+  /* Lei Estadual - Inicio */
+
+  .container-site {
+    width: 100%;
+  }
+  .saiba-mais-card a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  .cards-externo {
+    flex: 1 1 100%;
+  }
+  /* Lei Estadual - Fim */
+
+  /* OUVIDORIA - INICIO */
+  .informations-contact-us,
+  .main-form,
+  .localizacao-acreprevidencia,
+  .informacoes-localizacao {
+    padding: 10px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 300px;
+  }
+
+  .button-contact-us {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .input__field {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: calc(0.5rem * 1.5) 0.5rem;
+    border-radius: 4px;
+  }
+
+  .input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .button-contact-us {
+    border: none;
+    width: 100%;
+    margin-top: 1em;
+    border-radius: 0.3em;
+    background-color: #009963;
+    color: #fff;
+  }
+  /* OUVIDORIA - FIM */
+
+  /*  NOTICIAS */
+  .content-news {
+    width: 100% !important;
+    padding: 10px;
+  }
+
+  .media-news-content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Garante que as imagens fiquem proporcionais */
+  }
+
+  /* Container flex para as imagens */
+  .media-news-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as imagens quebrem linha em telas menores */
+    gap: 10px; /* Espaçamento entre as imagens */
+  }
+
+  /* Estilo das imagens no modo não-mobile */
+  .media-news-gallery img {
+    flex: 1;
+    max-width: calc(
+      25% - 10px
+    ); /* Aproximadamente 4 imagens por linha com espaçamento */
+    height: 200px; /* Altura fixa para manter o mesmo tamanho */
+  }
+
+  .media-news-gallery {
+    flex-direction: column; /* Empilha as imagens verticalmente */
+  }
+
+  .media-news-gallery img {
+    max-width: 100%; /* Imagens ocupam toda a largura */
+    height: auto; /* Ajusta a altura conforme a largura */
+    object-fit: contain; /* Garante que as imagens fiquem proporcionais */
+  }
+  .info-news {
+    max-width: 100%;
+  }
+
+  /*  NOTICIAS - FIM */
+
+  /* Composição de tabela */
+  @media (max-width: 768px) {
+    .table-composicao {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      margin: 1em 0;
+      font-size: 0.85em;
+    }
+
+    .table-composicao th,
+    .table-composicao td {
+      padding: 0.6em 0.5em;
+      white-space: nowrap; /* Evita quebra de texto */
+    }
+
+    .table-composicao::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .table-composicao::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 3px;
+    }
+  }
+}
+
+/* ===== Ajustes extras para Safari iOS ===== */
+
+/* Garante que fontes carreguem corretamente no Safari */
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat Italic";
+  src: url("../fonts/Montserrat-Italic.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat.ttf") format("truetype");
+  font-display: swap;
+}
+
+/* Fallback para problemas de altura no Safari iOS */
+html, body {
+  min-height: -webkit-fill-available;
+}
+
+/* Reset para imagens e elementos flexíveis */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+/***********************************************************************/

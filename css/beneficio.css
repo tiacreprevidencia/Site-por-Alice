@@ -1,0 +1,160 @@
+/* Reset simples */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.6;
+}
+
+:root {
+  --lightsteelblue: #B0C4DE;
+  --steelblue: #4682B4;
+  --amarelo-ouro: #FFC107;
+  --amarelo-ouro-escuro: #E6A700;
+  --amarelo-ouro-claro: #FFD54F;
+  --amarelo-ouro-suave: #FFF8E1;
+  --amarelo-creme: #FAFAD2;
+  --verde-luxo: #0B3D2E;
+  --dourado-metalico: #D4AF37;
+  --dourado-brilhante: #FFDF00;
+  --dourado: #FDD017;
+  --verde-azulado-claro: #00796B;
+  --verde-escuro-azulado: #014D4D;
+  --dark-green: #216a57;
+  --green-pantone: #316A57;
+  --verde-escuro: #1b7053;
+  --verde-agua-escuro: #0B5A5D;
+  --titulos: #094142;
+  --cinza-azulado: #0c5a5c;
+  --verde-limao: #3aaa35;
+  --verde-limao-claro: #81c97d;
+  --verde-agua: #26a175;
+  --verde-azul: #30c896;
+  --verde-menta-apagado: #C9E3CC; /*Realces sutis em elementos interativos*/
+  --verde-oliva-claro: #9FB79E; /*Textos de destaque ou ícones de seção*/
+  --verde-oliva: #8BA17A;
+  --verde-musgo: #BFD8B8; /*Fundos suaves ou hover em botões discretos*/
+  --verde-cinza: #abcbba;
+  --verde-acizentado-suave: #A8C3A0; /*Tons de destaque suaves, como bordas ou ícones secundários*/
+  --green-background: #ebf3e7;
+  --preto: #000;
+  --branco: #fff;
+  --branco-sujo: #fafafa;
+  --branco-claro: #fefefe;
+  --branco-quase-branco: #fcfcfc;
+  --branco-suave: #f2f2f2;
+  --branco-cinza: #f5f5f5;
+  --branco-cinza-claro: #F8F8F8;
+  --branco-neve: #f9f9f9;
+  --branco-quase-cinza: #f7f7f7;
+  --bege: #F5F5DC;
+  --linen: #FAF0E6;
+  --cinza: #ddd;
+  --cinza-esverdeado: #E6ECE8; /*Fundo alternativo, áreas neutras*/
+  --cinza-escuro: #333;
+  --gray: #808080;
+  --gray-icons: #D9D9D9; /*Linhas divisórias, bordas sutis*/
+}
+
+/* ----- Estilos dos Cards de Benefícios ----- */
+.section-box { padding: 1rem 1rem 4rem; max-width:1000px; margin:0 auto; }
+.section-box h2 { font-size: 22px; font-weight: 600; color: var(--titulos); margin-bottom:2rem; }
+.cards-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem; /* espaçamento entre os cards */
+  max-width: 1000px; /* controla largura máxima do grid */
+  margin: 0 auto; /* centraliza */
+  justify-content: center
+}
+
+.card-box {
+  display: block; /* transforma o link em "caixa" */
+  text-decoration: none; /* remove sublinhado */
+  color: inherit; /* mantém cores do texto */
+  background: var(--branco);
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px; /* bordas arredondadas */
+  padding: 2rem 1.5rem;
+ min-height: 150px;  /* dá corpo, mas deixa flexível */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.card-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--verde-escuro), var(--verde-azul));
+  border-radius: 10px 0 0 10px; 
+  pointer-events: none; 
+}
+
+.card-box:hover {
+  /*transform: scale(1.03); efeito “pegável” */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+  background: #fafafa; /* leve mudança no fundo */
+  transform: translateY(-5px);
+}
+
+.card-box-icon {
+  font-size: 2.3rem;
+  display: block;
+  margin-bottom: 0.3rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.05); /* ícone fofinho com profundidade */
+}
+
+.card-box-icon i {
+  font-size: inherit;  
+  color: inherit;        
+  line-height: 1;       
+  color: var(--gray-icons);
+}
+
+.card-box h3 {
+  margin-bottom: 0.5rem; color: var(--verde-luxo);
+  font-size: 18px; font-weight: 600;
+}
+
+.card-box p { font-size: 1rem; color: #555; font-weight: 500; line-height: 1.5; }
+
+/* ----- Responsividade ----- */
+/* Mobile - até 767px */
+@media (max-width: 767px) {
+  .section-box { 
+    padding: 0 2rem 1.5rem;
+  }
+  .cards-box { 
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  p, li {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablet - de 768px até 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  .section-box { 
+    padding: 3rem 2rem; margin: 0 3rem;
+  }
+  .cards-box { 
+    grid-template-columns: repeat(2, 1fr);
+  } 
+  h1 {
+    font-size: 1.6rem;
+  }
+}

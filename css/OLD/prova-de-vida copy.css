@@ -1,0 +1,251 @@
+
+.servicos-container {
+  width: 75rem;
+  margin: 0 auto;
+}
+
+.download-our-app {
+  display: flex;
+}
+
+.info-download-aplicativo {
+  display: flex;
+  background-color: #ebf3e7;
+  padding: 4em 0;
+  border-radius: 1.2em;
+  margin: 3em 0;
+}
+
+.image-app-smartphone,
+.where-download-our-app {
+  width: 50%;
+}
+
+.where-download-our-app {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.info-where-download-our-app h1 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 0.5em;
+}
+
+.info-where-download-our-app p {
+  font-weight: 500;
+  color: #474747 !important;
+  margin: 0 8em 1em 0;
+}
+
+.links-app-loja-de-apps {
+  display: flex;
+}
+
+.links-app-loja-de-apps img {
+  width: 150px;
+  margin-right: 1em;
+}
+
+.image-app-smartphone img {
+  height: 450px;
+}
+
+.image-app-smartphone {
+  display: flex;
+  justify-content: center;
+  padding-left: 5%;
+}
+
+.servicos-container p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #000;
+  line-height: 1.6;
+}
+
+.servicos-container h6 {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.2em;
+  color: #000;
+}
+
+.perguntas-frequentes {
+  padding: 1.2em;
+  border: 1px #ddd solid;
+  border-radius: 0.5em;
+  transition: 0.3s box-shadow;
+  margin-bottom: 0.6em;
+}
+
+.perguntas-frequentes:hover {
+  border: 1px #eee solid;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.resposta-perguntas-frequentes {
+  margin-top: 10px;
+  padding-left: 0.8em;
+  border-left: 3px #0a656a solid;
+}
+
+.resposta-perguntas-frequentes p {
+  color: #474747;
+  font-weight: 500;
+}
+
+.servicos-container h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #000;
+}
+
+.main-perguntas-frequentes {
+  margin-bottom: 4rem;
+}
+
+.passo-a-passo-prova-de-vida {
+  display: flex;
+  margin: 2em 0 3em;
+}
+
+.acamados-prova-de-vida {
+  margin: 4em 0;
+  background-color: #ebf3e7;
+  padding: 2em;
+  border-radius: 1.2em;
+  display: flex;
+}
+
+.acamados-prova-de-vida i {
+  margin: 0.6em 1em 0 0;
+  text-align: center;
+}
+
+.title-step-prova-de-vida {
+  font-weight: 700;
+}
+
+.title2-step-prova-de-vida {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
+}
+
+.video-passo-a-passo-prova-de-vida video {
+  height: 470px;
+  margin-right: 3em;
+  border-radius: 0.8em;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.steps {
+  margin: 1em auto 0 auto;
+}
+
+.step {
+  display: flex;
+  position: relative;
+}
+
+.step:after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 32px;
+  height: 0;
+  width: 2px;
+  background-color: #009963;
+}
+
+.step .info {
+  margin: 3px 0 20px;
+}
+
+.step .title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: #000;
+}
+
+.step .text {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #000;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+.step:not(:last-child):after {
+  height: 70%;
+}
+
+.number {
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #009963;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 15px;
+  font-weight: 600;
+  margin-right: 14px;
+  font-weight: 600;
+}
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 360px; /* Tamanho base da imagem */
+    margin: auto;
+}
+
+.celular {
+    width: 100%;
+    display: block;
+}
+
+.video-na-tela {
+    position: absolute;
+    top: 8.5%;
+    left: 26.5%;
+    width: 44%;
+    height: 84%;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.video-na-tela video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.5rem;
+}
+
+/* Removido .video-passo-a-passo-prova-de-vida video fixo que dava conflito */
+
+/* Resposividade */
+@media (max-width: 767px) {
+    .info-download-aplicativo { flex-direction: column; align-items: center; }
+    .servicos-container p { width: 100%; }
+
+  /* Empilha o conteúdo em telas menores */
+    .passo-a-passo-prova-de-vida { flex-direction: column; align-items: center; }
+    .margem-loja { margin-right: 30px !important; margin-left: 30px !important; } 
+    .baixe { width: 86% !important; }
+    .video-passo-a-passo-prova-de-vida video { height: 360px !important; }
+    .video-na-tela { left: 26.9%; }
+}

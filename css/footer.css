@@ -1,0 +1,238 @@
+/* =========== RODAPÉ / FOOTER =========== */
+.rodape {
+  background-color: #f9f8f8;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+.menu-rodape {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.linha-vertical {
+  height: 340px;
+  border-right: 1px solid #ccc;
+}
+
+.secao h3 {
+  font-weight: 600;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+.secao p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.secao a {
+  text-decoration: none;
+  color: #333;
+}
+
+.secao a:hover {
+  text-decoration: underline;
+}
+
+.info-end {
+  background-color: #333;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.info-end a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.info-end a:hover {
+  text-decoration: underline;
+}
+
+.content-end {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.conteudo-termos,
+.conteudo-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.conteudo-termos img {
+  height: 50px;
+}
+
+.sep {
+  height: 35px;
+  border-right: 1px solid #eee;
+  margin: 0 10px;
+}
+
+.conteudo-termos a,
+.conteudo-info a {
+  font-size: 0.95rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.conteudo-termos a:hover,
+.conteudo-info a:hover {
+  text-decoration: underline;
+}
+
+/* Esconde abreviação CRP por padrão */
+.conteudo-info a .short-text {
+  display: none;
+}
+.conteudo-info a .full-text {
+  display: inline;
+}
+
+/* ================== RESPONSIVO FOOTER ================== */
+/* Mobile: até 767px */
+@media (max-width: 767px) {
+  /* regras específicas para mobile */
+  .menu-rodape {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 0;
+    gap: 15px;
+  }
+
+  .secao {
+    flex: 1 1 100%; /* Ocupa toda a largura */
+    margin-bottom: 20px;
+  }
+
+  .linha-vertical {
+    display: none; /* Escondido por padrão, pode ser utilizado se necessário */
+  }
+
+  .info-end {
+    padding: 10px 10px;
+  }
+
+  .content-end {
+    width: 20rem;
+    gap: 8px;
+  }
+
+  .conteudo-termos img {
+    margin-left: auto; /* empurra o link até encostar na logo */
+    transform: translateX(
+      30px
+    ); /* ajuste fino para alinhar ao início da logo */
+  }
+
+  .conteudo-termos a,
+  .conteudo-info a {
+    font-size: 0.95rem;
+    margin: 0 4px;
+    display: inline-flex; /* garante alinhamento */
+    align-items: center; /* centraliza vertical */
+    justify-content: center; /* centraliza horizontal */
+    text-align: center;
+    position: relative; /* necessário para spans absolutos, se usados */
+  }
+
+  .sep {
+    height: 28px;
+    margin: 0 6px;
+    transform: translateX(30px);
+  }
+
+  /* Esconde Política de Privacidade */
+  .conteudo-termos a[href*="politica"] {
+    display: none !important;
+  }
+
+  /* Esconde Diário Oficial */
+  .conteudo-info a[href*="diario"] {
+    display: none !important;
+  }
+
+  /* CRP: mostra apenas abreviação */
+  .conteudo-info a .short-text {
+    display: inline;
+  }
+  .conteudo-info a .full-text {
+    display: none;
+  }
+
+  /* pega apenas o link "DIÁRIO OFICIAL" 
+  .conteudo-info a[href*="diario"] {
+    margin-left: auto; empurra o link até encostar na logo 
+    transform: translateX(
+      -50px
+    ); ajuste fino para alinhar ao início da logo 
+  }*/
+}
+
+/* Tablet (Primeira Faixa): 768px a 819px */
+@media (min-width: 768px) and (max-width: 991px) {
+  .linha-vertical {
+    display: none;
+  }
+  .secao {
+    flex: 0 0 60%;
+    margin-bottom: 20px;
+  }
+  .secao a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+  }
+  .conteudo-info a .short-text {
+    display: inline;
+  }
+  .conteudo-info a .full-text {
+    display: none;
+  }
+}
+
+/* Notebook: 992px a 1119px */
+@media (min-width: 992px) and (max-width: 1119px) {
+  /* regras específicas para Notebook */
+  .menu-rodape {
+    width: 68rem;
+  }
+
+  .content-end {
+    width: 68rem;
+  }
+
+  .conteudo-info a {
+    font-size: 13px;
+    margin-right: 20px;
+  }
+}
+
+/* Desktop grande: 1200px+ */
+@media (min-width: 1200px) {
+  /* regras para desktop grande */
+  .menu-rodape {
+    width: 75rem;
+  }
+  .content-end {
+    width: 75rem;
+  }
+  .conteudo-info a {
+    margin-right: 20px;
+  }
+}

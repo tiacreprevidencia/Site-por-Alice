@@ -1,0 +1,200 @@
+/* ===== RESET GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: var(--branco);
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+/* ===== PALETA DE CORES ===== */
+:root {
+  --preto: #000;
+  --branco: #fff;
+  --branco-sujo: #fafafa;
+  --verde-escuro: #1b7053;
+  --verde-azul: #30c896;
+  --verde-limao: #3aaa35;
+  --sombra-suave: rgba(0, 0, 0, 0.07);
+  --realce: rgba(255, 255, 255, 0.6);
+  --texto: #2f2f2f;
+  --link: #0a85d1;
+  --underline: #0599f5;
+  --gray-icons: #D9D9D9;
+}
+
+/* ===== MAIN E CONTAINER ===== */
+main {
+  display: block;
+  padding: 2rem 2rem 4rem;
+  margin: 0 auto;
+}
+
+.accordion-box {
+  display: grid;
+  gap: 1.2rem;
+  padding: 0 4rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== ITEM ===== */
+.accordion-item {
+  position: relative;
+  background: var(--branco);
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: box-shadow 0.25s ease, background 0.25s ease, transform 0.2s ease;
+}
+
+/* 🔹 Borda fina lateral com gradiente */
+.accordion-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--verde-escuro), var(--verde-azul));
+  border-radius: 10px 0 0 10px;
+  pointer-events: none;
+}
+
+.accordion-item.active {
+  background: var(--branco-sujo);
+}
+
+
+
+/* ===== CABEÇALHO ===== */
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.4rem 1.8rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+.accordion-header:hover {
+  background: var(--branco-sujo);
+}
+
+.accordion-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.accordion-icon {
+  font-size: 2rem;
+  margin-right: 25px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  color: var(--gray-icons);
+}
+
+.accordion-icon i {
+  font-size: inherit;
+  color: inherit;
+  line-height: 1;
+  color: var(--gray-icons);
+}
+
+.accordion-title {
+  font-size: 1.3rem;
+  color: var(--preto);
+}
+
+.accordion-title:hover {
+  color: var(--verde-limao);
+}
+
+.accordion-arrow {
+  font-size: 1.1rem;
+  color: #777;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.accordion-item.active .accordion-arrow {
+  transform: rotate(180deg);
+}
+
+/* ===== CONTEÚDO ===== */
+.accordion-content {
+  display: none;
+  padding: 0 1.5rem 2rem;
+  color: #444;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+/* Subtítulos */
+.subitem-header {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0.3rem 0;
+}
+
+/* Parágrafos */
+.accordion-content p {
+  margin: 0.3rem 0 1rem 0;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Listas */
+.accordion-content ul {
+  margin: 0.5rem 0 1.2rem 2.4rem;
+  padding: 0;
+  list-style-type: disc;
+}
+
+.accordion-content li {
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+  font-size: 1.2rem;
+}
+
+.accordion-content a {
+  color: var(--verde-escuro);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.accordion-content a:hover {
+  color: var(--verde-limao);
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+@media (max-width: 991px) {
+  main {
+    padding: 0 2rem;
+    margin: 0 2rem 2rem;
+  }
+
+  .accordion-box {
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  main {
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
+}

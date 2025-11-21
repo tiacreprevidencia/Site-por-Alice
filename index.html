@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="shortcut icon" href="/images/icones/logo.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/access.css">
+    <link rel="stylesheet" href="/css/noticias-module.css">
+    <title>Acreprevidência</title>
+
+    <style>
+        .modal-content {
+            margin: 0 !important;
+        }
+        
+        .barra-menu{
+            display: none; 
+        }
+
+        .noticias {
+            background-color: #F9F8F8 !important;
+        }
+
+        .pesquisa {
+            margin-bottom: 9px;
+            box-shadow: rgba(0, 0, 0, 0.15) 2.4px 4.4px 3.2px !important;
+        }   
+    </style>
+
+    <style>
+        /* Estilo para o fundo do modal */
+        .modal {
+            display: block; /* Sempre visível para testes */
+            position: fixed; /* Fixo na tela */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente */
+            z-index: 999; /* Fica acima de outros elementos */
+        }
+        
+        /* Estilo para centralizar o conteúdo do modal */
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centraliza exatamente no meio */
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%; /* Ajusta a largura do modal */
+            max-width: 600px; /* Define uma largura máxima */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombras suaves */
+            border-radius: 8px; /* Bordas arredondadas */
+        }
+        
+        /* Barra verde no topo */
+        .bar-color-green {
+            background-color: green;
+            height: 5px;
+            border-radius: 8px 8px 0 0; /* Arredonda os cantos superiores */
+        }
+        
+        /* Botão de fechar */
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+        }
+        
+        .close:hover {
+            color: red; /* Altera a cor ao passar o mouse */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Importando cabeçalho -->
+    <header id="cabecario"></header>
+
+    <!-- Fim importação cabeçalho -->
+
+    <br />
+    <!-- Carrossel de notícias -->
+    <div>
+        <center>
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-inner">   
+
+                <div class="carousel-item active" data-bs-interval="7000">
+                    <a href="https://www.acreprevidencia.ac.gov.br/financeiro/login" target="_blank">
+                        <img src="/images/banner/contracheque.webp" class="imagem" alt="" loading="lazy">
+                    </a>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="7000">
+                    <a href="#">
+                        <img src="/images/banner/alertagolpe.webp" class="imagem" alt="" loading="lazy">
+                    </a>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="7000">
+                    <a href="https://www.acreprevidencia.ac.gov.br/financeiro/login"
+                        target="_blank">
+                        <img src="/images/banner/cedulac-2024.webp"
+                            class="imagem" alt="Cerimônia de homenagem aos militares" loading="lazy">
+                    </a>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="7000">
+                    <a href="/servicos/prova-de-vida.html" target="_blank">
+                        <img src="/images/banner/prova-vida-2024.webp" class="imagem" alt="" loading="lazy">
+                    </a>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="7000">
+                    <a href="https://www.acreprevidencia.ac.gov.br/simulador/" target="_blank">
+                        <img src="/images/banner/simulador.webp" class="imagem" alt="" loading="lazy">
+                    </a>
+                </div>
+
+            </div>            
+            
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2"></button> 
+                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="4"></button>      
+            </div>
+        </div>
+    </center>
+    </div>
+    <!-- Fim carrossel de notícias  -->
+
+    <!-- Acesso rápido -->
+    <section class="section-box" id="services">
+    <h2>Acesso Rápido</h2>
+    <div class="cards-box">
+        <a class="card-box" href="https://www.acreprevidencia.ac.gov.br/financeiro/">
+            <div class="icone-acesso">
+                <img src="images/icones/contracheque.webp" id="ico1" alt="" loading="lazy">
+            </div>
+            <h3>Contracheque</h3>
+            <p>Emita seu contracheque com rapidez e praticidade</p>
+        </a>
+
+        <a class="card-box" href="https://www.acreprevidencia.ac.gov.br/financeiro/">
+            <div class="icone-acesso">
+                <img src="images/icones/cedula.webp" id="ico2" alt="" loading="lazy">
+            </div>
+            <h3>Cédula C</h3>
+            <p>Obtenha sua Cédula C de forma rápida e simples</p>
+        </a>
+
+        <a class="card-box" href="/servicos/formularios-e-requerimentos.html">
+            <div class="icone-acesso">
+                <img src="images/icones/formularios.webp" id="ico3" alt="" loading="lazy">
+            </div>
+            <h3>Formulários e Requerimentos</h3>
+            <p>Solicite auxílios e benefícios com facilidade</p>
+        </a>
+
+        <a class="card-box" href="/servicos/prova-de-vida.html">
+            <div class="icone-acesso">
+                <img src="images/icones/provavida.webp" alt="" id="ico4" loading="lazy">
+            </div>
+            <h3>Prova de Vida</h3>
+            <p>Realize a sua prova de vida de maneira simplificada</p>
+        </a>
+
+        <a class="card-box" href="https://www.acreprevidencia.ac.gov.br/simulador/">
+            <div class="icone-acesso">
+                <img src="images/icones/aposentadoria.webp" alt="" id="ico5" loading="lazy">
+            </div>
+            <h3>Simulador de Aposentadoria</h3>
+            <p>Simule sua aposentadoria no conforto da sua casa</p>
+        </a>
+
+        <a class="card-box" href="beneficios/calendario-pagamento.html">
+            <div class="icone-acesso">
+                <img src="images/calendario.webp" alt="" id="ico5" loading="lazy">
+            </div>
+            <h3>Calendário de Pagamento</h3>
+            <p>Calendário anual de pagamento</p>
+        </a>
+    </div>
+    </section>
+    <!-- Fim acesso rápido -->
+     
+    <!-- Benefícios concedidos -->
+    <div class="benef-concedidos">
+        <div class="beneficios">
+            <h1 class="benef-title">Agosto de 2025</h1>
+            <div class="dados-benef">
+                <div class="concessoes item">
+                    <h1>45</h1>
+                    <h3>Aposentadorias</h3>
+                </div>
+                <div class="concessoes item">
+                    <h1>9</h1>
+                    <h3>Pensões</h3>
+                </div>
+                <div class="pgtos-benef item">
+                    <div class="num-pgto">
+                        <h2>+ R$ </h2>
+                        <h1> 114 </h1>
+                        <h2> Milhões</h2>
+                    </div>
+                    <h3>pagos para Aposentados</h3>
+                </div>
+                <div class="pgtos-benef item">
+                    <div class="num-pgto">
+                        <h2>+ R$ </h2>
+                        <h1> 16 </h1>
+                        <h2> Milhões</h2>
+                    </div>
+                    <h3>pagos para Pensionistas</h3>
+                </div>
+            </div>
+        </div>
+        <div class="saber-mais">
+            <a href="/beneficios/historico-de-concendidos.html" id="see-more-benef">SAIBA MAIS</a>
+        </div>
+    </div>
+    <!-- Fim benefícios concedidos -->
+     
+    <!-- noticias -->
+    <div class="acesso-rapido noticias">
+        <div class="titulos">
+            <h1>Últimas Notícias</h1>
+        </div>
+
+        <div class="acesso" style="background-color:#F9F8F8;">
+            <div class="news-container">
+                <!-- PRIMEIRO SLIDE CAPA   -->
+                <div class="main-news">
+                    <a href="noticias/2025/aposentados.html">
+                        <img src="noticias/2025/images/aposentados/capa.jpg" alt="Notícia principal" loading="eager">
+                        <div class="main-news-title"><h2>Aposentados e pensionistas do Acreprevidência devem realizar prova de vida para evitar bloqueio de benefícios</h2></div>
+                    </a>
+                </div>
+
+                <div class="more-news">
+                    <div class="slider-container">
+                        <button class="arrow arrow-up" onclick="moveUp()" aria-label="Notícias anteriores">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 14l5-5 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+
+                        <div class="slider">
+                            <!-- PRIMEIRO SLIDE LATERAL--> 
+                            <div class="slider-item">
+                                <a href="noticias/2025/recebe_visita_do_superintendente.html">
+                                    <div class="more-news-item">
+                                        <img src="noticias/2025/images/recebe_visita_do_superintendente/capa.jpg" alt="Notícia 1" loading="lazy">
+                                        <p>Acreprevidência recebe visita do Superintendente do INSS de Brasília</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="slider-item">
+                                <a href="noticias/2025/visita_de_cortesia.html">
+                                    <div class="more-news-item">
+                                        <img src="noticias/2025/images/visita_de_cortesia/capa.jpg" alt="Notícia 1" loading="lazy">
+                                        <p>Visita de cortesia da Defensoria Pública Adjunta Dra. Simone</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                             <div class="slider-item">
+                                <a href="noticias/2025/servidoras_do_acreprevidencia_participam_do_3_congresso_brasileiro.html">
+                                    <div class="more-news-item">
+                                        <img src="noticias/2025/images/servidoras_do_acreprevidencia_participam_do_3_congresso_brasileiro/capa.jpg" alt="Notícia 1" loading="lazy">
+                                        <p>Servidoras do Acreprevidência participam do 3º Congresso Brasileiro de MULHERES DE RPPS, em Brasília</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                             <div class="slider-item">
+                                <a href="noticias/2025/curso-regras-de-aposentadoria.html">
+                                    <div class="more-news-item">
+                                        <img src="noticias/2025/images/curso-regras-de-aposentadoria/img-01.jpeg" alt="Notícia 1" loading="lazy">
+                                        <p>Acreprevidência promove curso de capacitação sobre regras de aposentadoria em parceria com a Escola de Contas</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="slider-item">
+                                <a href="noticias/2025/acreprevidencia-capacita-servidores-sobre-regras-da-aposentadoria.html">
+                                    <div class="more-news-item">
+                                        <img src="noticias/2025/images/acreprevidencia-capacita-servidores-sobre-regras-da-aposentadoria/img-04.jpg" alt="Notícia 1" loading="lazy">
+                                        <p>Acreprevidência capacita servidores sobre regras da aposentadoria</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                             <div class="slider-item">
+                                <a href="noticias/2025/acreprevidencia_promove_mais_uma_acao_do_programa_de_educacao_previdenciaria.html">
+                                    <div class="more-news-item">
+                                        <img src="noticias/2025/images/acreprevidencia_promove_mais_uma_acao_do_programa_de_educacao_previdenciaria/img-04.jpeg" alt="Notícia 1" loading="lazy">
+                                        <p>Acreprevidência promove mais uma ação do programa de Educação Previdenciária “Meu Futuro” com jovens pensionistas</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="slider-item">
+                                <a href="noticias/2025/acreprevidencia_realiza_acao_do_programa_vida_nova_em_homenagem_aos_aposentados.html">
+                                    <div class="more-news-item">
+                                        <img src="noticias/2025/images/acreprevidencia_realiza_acao_do_programa_vida_nova_em_homenagem_aos_aposentados/capa.jpg" alt="Notícia 1" loading="lazy">
+                                        <p>Acreprevidência realiza ação de Educação Previdenciária do Programa Vida Nova em homenagem aos aposentados</p>
+                                    </div>
+                                </a>
+                            </div>
+            
+                            <div class="slider-item">
+                                <a href="noticias/2025/edicao_do_RH_itinerante.html">
+                                    <div class="more-news-item">
+                                        <img src="noticias/2025/images/edicao_do_RH_itinerante/capa.jpg" alt="Notícia 2" loading="lazy">
+                                        <p>Servidores do Acreprevidência participam de edição do RH Itinerante na Regional do Alto Acre</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="slider-item">
+                                <a href="noticias/2025/servidores_do_acreprevidencia_participam_de_nova_apresentação_do_codigo_de_etica.html">
+                                    <div class="more-news-item">
+                                        <img src="noticias/2025/images/servidores_do_acreprevidencia_participam_de_nova_apresentação_do_codigo_de_etica/capa.jpg" alt="Notícia 3" loading="lazy">
+                                        <p>Novos servidores do Acreprevidência participam de nova apresentação do código de ética</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="slider-item">
+                                <a href="noticias/2025/treinamento_certificacao_pro_gestao.html.html">
+                                    <div class="more-news-item">
+                                        <img src="noticias/2025/images/treinamento_certificacao_pro_gestao/capa.jpg" alt="Notícia 4" loading="lazy">
+                                        <p>Acreprevidência realiza semana de treinamento com especialista em compliance previdenciário</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="slider-item">
+                                <a href="noticias/2025/acreprevidencia_realiza_workshop_sobre_educacao_previdenciaria.html">
+                                    <div class="more-news-item">
+                                        <img src="noticias/2025/images/acreprevidencia_realiza_workshop_sobre_educacao_previdenciaria/img-01.jpeg" alt="Notícia 5" loading="lazy">
+                                        <p>Acreprevidência realiza workshop sobre educação previdenciária</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="slider-item">
+                                <a href="noticias/2025/governo_realiza_workshop.html">
+                                    <div class="more-news-item">
+                                        <img src="noticias/2025/images/governo_realiza_workshop/capa.jpg" alt="Notícia 6" loading="lazy">
+                                        <p>Governo do Acre Realiza Workshop Sobre Educação Previdenciária</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="slider-item">
+                                <a href="noticias/2025/reuniao_alinhamento.html">
+                                    <div class="more-news-item">
+                                        <img src="noticias/2025/images/reuniao_alinhamento/capa.jpg" alt="Notícia 7" loading="lazy">
+                                        <p>Reunião de Alinhamento Entre o Acreprevidência e o MTPrev</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="slider-item">
+                                <a href="noticias/2025/reuniao_conselho_fiscal.html">
+                                    <div class="more-news-item">
+                                        <img src="noticias/2025/images/reuniao_conselho_fiscal/capa.jpg" alt="Notícia 8" loading="lazy">
+                                        <p>Reunião do Conselho Fiscal do Acreprevidência</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="slider-item">
+                                <a href="noticias/2025/reuniao_do_conselho_estadual.html">
+                                    <div class="more-news-item">
+                                        <img src="noticias/2025/images/reuniao_do_conselho_estadual/capa.jpg" alt="Notícia 9" loading="lazy">
+                                        <p>Reunião do Conselho Estadual de Previdência Social (CEPS)</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="slider-item">
+                                <a href="noticias/2025/secretaria_educacao_realiza_atividade.html">
+                                    <div class="more-news-item">
+                                        <img src="noticias/2025/images/educação_realiza_atividades_laborais/capa.jpeg" alt="Notícia 10" loading="lazy">
+                                        <p>Secretaria de Educação realiza atividades laborais no Acreprevidência</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="slider-item">
+                                <a href="noticias/2025/busca_de_parcerias_programa_voltado_ao_idosos.html">
+                                    <div class="more-news-item">
+                                        <img src="noticias/2025/images/busca_parcerias/capa.jpg" alt="Notícia 11" loading="lazy">
+                                        <p>Acreprevidência busca parcerias para fortalecer o Programa de Educação Previdenciária voltado ao público idoso</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="slider-item">
+                                <a href="noticias/2025/certifica_rpps.html">
+                                    <div class="more-news-item">
+                                        <img src="noticias/2025/images/certifica_rpps/capa.jpeg" alt="Notícia 12" loading="lazy">
+                                        <p>Servidores e conselheiros do Acreprevidência participam do curso Certifica RPPS em Manaus</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="slider-item">
+                                <a href="noticias/2025/homenagem_dia_das_maes.html">
+                                    <div class="more-news-item">
+                                        <img src="noticias/2025/images/homenagem_dia_das_maes/capasite.jpg" alt="Notícia 13" loading="lazy">
+                                        <p>Acreprevidência homenageia servidoras pelo dia das mães</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <button class="arrow arrow-down" onclick="moveDown()" aria-label="Próximas notícias">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim noticias -->
+
+    <!-- Fale conosco -->
+    <div class="faleconosco">
+        <div class="duvidas-titulo">
+            <h1>DÚVIDAS? FALE CONOSCO!</h1>
+        </div>
+        <div class="meios-contato">
+            <a href="mailto:atendimento.acreprev@gmail.com" target="_blank">
+                <div class="meios">
+                    <img src="images/icones/email.png" alt="" loading="lazy">
+                    <div class="infos">
+                        <h3>Envie um e-mail</h3>
+                        <p>atendimento.acreprev@gmail.com</p>
+                    </div>
+                </div>
+            </a>
+            <a href="https://goo.gl/maps/AWRt6yJeqQiQE3k76" target="_blank">
+                <div class="meios">
+                    <img src="images/icones/sede.webp" alt="" loading="lazy">
+                    <div class="infos">
+                        <h3>Visite a nossa sede</h3>
+                        <p>Rua Benjamin Constant, 321, Cerâmica,<br> 69905-072, Rio Branco - AC</p>
+                    </div>
+                </div>
+            </a>
+            <a href="tel:+556832154309">
+                <div class="meios">
+                    <img src="images/icones/telefone.webp" alt="" loading="lazy">
+                    <div class="infos">
+                        <h3>Ou ligue</h3>
+                        <p>(68) 3215-4309</p>
+                    </div>
+                </div>
+            </a>
+             
+            <a href="https://api.whatsapp.com/send?phone=556832154309" target="_blank">
+                <div class="meios">
+                    <img src="images/icones/whatsapp.webp" alt="" loading="lazy">
+                    <div class="infos">
+                        <h3>WhatsApp</h3>
+                        <p>Atendimento</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+        
+    </div>
+    <!-- Fim fale conosco -->
+
+    <!-- Aviso de Cookies -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Ao continuar usando nosso site, você concorda e aceita as nossas políticas de privacidade.
+            <br><a href="/politica-de-privacidade.html">Saiba Mais</a>.
+        </p>
+        <button id="accept-cookies">Concordar</button>
+    </div>
+    <!-- Fim Aviso de Cookies -->
+
+    <!-- O Modal -->
+    <!-- <div id="modalNoticia" class="modal" style="display: block;"> 
+        <div class="modal-content">
+            <span class="close" style="cursor: pointer;">X</span>
+            <div class="bar-color-green"></div>
+            <form>
+                <img src="/images/modal/ALERTADEGOLPES.webp" width="100%" alt="Alerta de Golpes" />
+            </form>
+        </div>
+    </div> 
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var modal = document.getElementById("modalNoticia");
+            var span = document.getElementsByClassName("close")[0];
+        
+            // Fecha o modal ao clicar no "X"
+            span.onclick = function() {
+                modal.style.display = "none";
+            };
+        
+            // Fecha o modal clicando fora dele
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            };
+        });
+    </script>----->
+
+    <script>
+        let currentIndex = 0;
+        const slider = document.querySelector('.slider');
+        const sliderContainer = document.querySelector('.slider-container');
+        const items = document.querySelectorAll('.slider-item');
+
+        // Altura do item (já considerando imagens carregadas)
+        function getItemHeight() {
+            if (!items.length) return 0;
+            return items[0].offsetHeight;
+        }
+
+        // Atualiza o deslocamento
+        function updateTransform() {
+            const itemHeight = getItemHeight();
+            slider.style.transform = `translateY(-${currentIndex * itemHeight}px)`;
+        }
+
+        // Seta para cima
+        function moveUp() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateTransform();
+            }
+        }
+
+        // Seta para baixo
+        function moveDown() {
+            const itemHeight = getItemHeight();
+            const visibleCount = Math.floor(sliderContainer.clientHeight / itemHeight);
+            const maxIndex = items.length - visibleCount;
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+                updateTransform();
+            }
+        }
+
+        // Suporte a swipe no mobile
+        let startY = null;
+        sliderContainer.addEventListener('touchstart', e => {
+            startY = e.touches[0].clientY;
+        }, { passive: true });
+
+        sliderContainer.addEventListener('touchend', e => {
+            if (startY === null) return;
+            const endY = e.changedTouches[0].clientY;
+            if (startY - endY > 30) moveDown();  // swipe up
+            if (endY - startY > 30) moveUp();    // swipe down
+            startY = null;
+        }, { passive: true });
+
+        // Atualiza ao redimensionar
+        window.addEventListener('resize', updateTransform);
+
+        // Inicializa quando a página e imagens carregarem
+        window.addEventListener('load', updateTransform);
+
+        // Torna funções acessíveis globalmente
+        window.moveUp = moveUp;
+        window.moveDown = moveDown;
+    </script>
+
+    <!-- Importando rodapé -->
+    <div id="rodape"></div>
+    <!-- Fim importação rodapé -->   
+
+    <script src="/js/cookies.js" defer></script>
+    <script src="/js/jquery-3.6.4.min.js" defer></script>
+    <script src="/js/bootstrap.bundle.min.js" defer></script>
+    <script src="/js/servicos.js" defer></script>
+    <script src="/js/servicosmobile.js" defer></script>
+    <script src="/js/animacao.js" defer></script>
+    <script src="/js/script.js" defer></script>    
+    <script src="/js/access.js"></script>
+    <div vw class="enabled ">
+        <div vw-access-button class="active vlibras-toggle"></div>
+        <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+    <script src="/js/noticias-module.js"></script>
+</body>
+
+</html>
