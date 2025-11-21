@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/icones/logo.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Preload para garantir carregamento rápido -->
+    <link rel="preload" href="/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="/css/style.css" as="style">
+
+    <!-- Folhas de estilo carregadas no início -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/access.css">
+    <title>Cursos</title>
+  <style>
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+
+  .header-imagem {
+    width: 100%;
+    height: 340px;
+    overflow: hidden;
+  }
+
+  .header-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* mantém o foco central e evita esticar */
+    display: block;
+  }
+
+  .form-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  @media (max-width: 768px) {
+    .form-container {
+      width: 90%;
+      margin: 20px auto;
+      padding: 15px;
+    }
+
+
+  }
+ /* Mobile - altura menor e sem cortar a imagem */
+@media (max-width: 576px) {
+  .header-imagem {
+    height: auto;
+  }
+
+  .header-imagem img {
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+</style>
+</head>
+
+<body>
+    <!-- Importando cabeçalho -->
+    <!-- Cabeçalho com imagem -->
+<div class="header-imagem">
+  <img src="curso.jpg" alt="Imagem de cabeçalho" />
+</div>
+    <!-- Fim importação cabeçalho -->
+
+
+ 
+    <div class="form-container" style="border-top: #26A175 solid 3px !important;">
+      <br />
+      <h5 class="mb-4">Formulário de Inscrição</h5>
+      <form id="formInscricao">
+        <div class="mb-3">
+          <label for="curso" class="form-label">Curso</label>
+          <select class="form-select" id="curso" required>
+            <option value="">Carregando cursos...</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome Completo</label>
+          <input type="text" class="form-control" id="nome" required>
+        </div>
+        <div class="mb-3">
+          <label for="nascimento" class="form-label">Data de Nascimento</label>
+          <input type="tel" class="form-control" id="nascimento" required>
+        </div>
+        <div class="mb-3">
+          <label for="cpf" class="form-label">CPF</label>
+          <input type="tel" class="form-control" id="cpf" placeholder="000.000.000-00" required>
+        </div>
+        <div class="mb-3">
+          <label for="contato" class="form-label">Contato</label>
+          <input type="tel" class="form-control" id="contato" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="orgao" class="form-label">Órgão</label>
+          <select id="orgao" class="form-select" required>
+            <option value="">Selecione um órgão ou poder</option>
+            <option value="ANAC - AGENCIA DE NEGOCIOS DO ESTADO DO ACRE">ANAC - AGENCIA DE NEGOCIOS DO ESTADO DO ACRE</option>
+            <option value="AGEAC - AGENCIA REGULADORA DOS SERVICOS PUBLICOS DO ACRE">AGEAC - AGENCIA REGULADORA DOS SERVICOS PUBLICOS DO ACRE</option>
+            <option value="ASSEMBLEIA LEGISLATIVA DO ESTADO DO ACRE">ASSEMBLEIA LEGISLATIVA DO ESTADO DO ACRE</option>
+            <option value="CAGEACRE - COMPANHIA DE ARMAZENS GERAIS E ENTREPOSTOS">CAGEACRE - COMPANHIA DE ARMAZENS GERAIS E ENTREPOSTOS</option>
+            <option value="CASACIVIL - SECRETARIA DE ESTADO DA CASA CIVIL">CASACIVIL - SECRETARIA DE ESTADO DA CASA CIVIL</option>
+            <option value="CASAMIL - GABINETE MILITAR DO GOVERNADOR">CASAMIL - GABINETE MILITAR DO GOVERNADOR</option>
+            <option value="CBM - CORPO DE BOMBEIROS MILITAR DO ACRE">CBM - CORPO DE BOMBEIROS MILITAR DO ACRE</option>
+            <option value="CDSA - COMPANHIA DE DESENVOLVIMENTO E SERVICOS AMBIENTAIS">CDSA - COMPANHIA DE DESENVOLVIMENTO E SERVICOS AMBIENTAIS</option>
+            <option value="CGE - CONTROLADORIA GERAL DO ESTADO">CGE - CONTROLADORIA GERAL DO ESTADO</option>
+            <option value="CILA - COMPANHIA INDUSTRIAL DE LATICINIOS DO ACRE">CILA - COMPANHIA INDUSTRIAL DE LATICINIOS DO ACRE</option>
+            <option value="CODISACRE - COMPANHIA DE DESENVOLVIMENTO INDUSTRIAL DO ACRE">CODISACRE - COMPANHIA DE DESENVOLVIMENTO INDUSTRIAL DO ACRE</option>
+            <option value="COHAB - COMPANHIA DE HABITACAO DO ACRE">COHAB - COMPANHIA DE HABITACAO DO ACRE</option>
+            <option value="COLONACRE - COMPANHIA DE DESENVOLVIMENTO AGRARIO E COLONIZACAO">COLONACRE - COMPANHIA DE DESENVOLVIMENTO AGRARIO E COLONIZACAO</option>
+            <option value="DERACRE - DEPARTAMENTO DE ESTRADAS DE RODAGEM ACRE">DERACRE - DEPARTAMENTO DE ESTRADAS DE RODAGEM ACRE</option>
+            <option value="DETRAN - DEPARTAMENTO ESTADUAL DE TRANSITO">DETRAN - DEPARTAMENTO ESTADUAL DE TRANSITO</option>
+            <option value="DPE - DEFENSORIA PUBLICA GERAL DO ESTADO DO ACRE">DPE - DEFENSORIA PUBLICA GERAL DO ESTADO DO ACRE</option>
+            <option value="EMATER - EMPRESA DE ASSISTENCIA TECNICA E EXTENSAO RURAL">EMATER - EMPRESA DE ASSISTENCIA TECNICA E EXTENSAO RURAL</option>
+            <option value="ESPAC - ESCOLA DO SERVIDOR PUBLICO DO ACRE">ESPAC - ESCOLA DO SERVIDOR PUBLICO DO ACRE</option>
+            <option value="FADES - FUNDACAO DE APOIO AO DESENVOL. ECONOMICO E SOCIAL">FADES - FUNDACAO DE APOIO AO DESENVOL. ECONOMICO E SOCIAL</option>
+            <option value="FAPAC - FUNDACAO DE AMPARO A PESQUISA DO ESTADO DO ACRE">FAPAC - FUNDACAO DE AMPARO A PESQUISA DO ESTADO DO ACRE</option>
+            <option value="FDRHCD - FUNDACAO DE DESENV DE RECUR HUM. CULTURA DESPORTO">FDRHCD - FUNDACAO DE DESENV DE RECUR HUM. CULTURA DESPORTO</option>
+            <option value="FEM - FUNDACAO DE CULTURA E COMUNICACAO ELIAS MANSOUR">FEM - FUNDACAO DE CULTURA E COMUNICACAO ELIAS MANSOUR</option>
+            <option value="FUNBESA - FUNDACAO DO BEM ESTAR SOCIAL DO ACRE">FUNBESA - FUNDACAO DO BEM ESTAR SOCIAL DO ACRE</option>
+            <option value="FUNDAC - FUNDACAO ALDEIA DE COMUNICACAO DO ACRE">FUNDAC - FUNDACAO ALDEIA DE COMUNICACAO DO ACRE</option>
+            <option value="FUNTAC - FUNDACAO DE TECNOLOGIA DO ESTADO DO ACRE">FUNTAC - FUNDACAO DE TECNOLOGIA DO ESTADO DO ACRE</option>
+            <option value="GABVICE - GABINETE DA VICE GOVERNADORA">GABVICE - GABINETE DA VICE GOVERNADORA</option>
+            <option value="HCA - HOSPITAL DAS CLINICAS DO ACRE">HCA - HOSPITAL DAS CLINICAS DO ACRE</option>
+            <option value="IAPEN - INSTITUTO DE ADMINISTRACAO PENITENCIARIA">IAPEN - INSTITUTO DE ADMINISTRACAO PENITENCIARIA</option>
+            <option value="IDAF - INSTITUTO DE DEFESA AGROPECUARIA E FLORESTAL">IDAF - INSTITUTO DE DEFESA AGROPECUARIA E FLORESTAL</option>
+            <option value="IEPTEC - INSTITUTO DE EDUCAÇÃO PROFISSIONAL E TECNOLOGICA">IEPTEC - INSTITUTO DE EDUCAÇÃO PROFISSIONAL E TECNOLOGICA</option>
+            <option value="IMAC - INSTITUTO DE MEIO AMBIENTE DO ACRE">IMAC - INSTITUTO DE MEIO AMBIENTE DO ACRE</option>
+            <option value="IMC - INSTITUTO DE MUDANÇAS CLIMATICAS">IMC - INSTITUTO DE MUDANÇAS CLIMATICAS</option>
+            <option value="INSTITUTO DE PREVIDÊNCIA DO ESTADO DO ACRE (ACREPREVIDÊNCIA)">INSTITUTO DE PREVIDÊNCIA DO ESTADO DO ACRE (ACREPREVIDÊNCIA)</option>
+            <option value="IPEM - INSTITUTO DE PESOS E MEDIDAS DO ESTADO DO ACRE">IPEM - INSTITUTO DE PESOS E MEDIDAS DO ESTADO DO ACRE</option>
+            <option value="ISE - INSTITUTO SOCIO-EDUCATIVO DO ACRE">ISE - INSTITUTO SOCIO-EDUCATIVO DO ACRE</option>
+            <option value="ITERACRE - INSTITUTO DE TERRAS DO ACRE">ITERACRE - INSTITUTO DE TERRAS DO ACRE</option>
+            <option value="JUCEAC - JUNTA COMERCIAL DO ESTADO DO ACRE">JUCEAC - JUNTA COMERCIAL DO ESTADO DO ACRE</option>
+            <OPTION VALUE="MINISTÉRIO PÚBLICO DO ESTADO DO ACRE (MPAC)">MINISTÉRIO PÚBLICO DO ESTADO DO ACRE (MPAC)</OPTION>
+            <option value="PCAC - POLICIA CIVIL DO ESTADO DO ACRE">PCAC - POLICIA CIVIL DO ESTADO DO ACRE</option>
+            <option value="PGE - PROCURADORIA GERAL DO ESTADO">PGE - PROCURADORIA GERAL DO ESTADO</option>
+            <option value="PM - POLICIA MILITAR DO ACRE">PM - POLICIA MILITAR DO ACRE</option>
+            <option value="PROCON - INSTITUTO DE PROTEÇÃO E DEFESA DO CONSUMIDOR">PROCON - INSTITUTO DE PROTEÇÃO E DEFESA DO CONSUMIDOR</option>
+            <option value="SANACRE - COMPANHIA DE SANEAMENTO DO ESTADO DO ACRE">SANACRE - COMPANHIA DE SANEAMENTO DO ESTADO DO ACRE</option>
+            <option value="SANEACRE - SERVICO DE AGUA E ESGOTO DO ESTADO DO ACRE">SANEACRE - SERVICO DE AGUA E ESGOTO DO ESTADO DO ACRE</option>
+            <option value="SEAD - SECRETARIA DE ESTADO DE ADMINISTRAÇÃO">SEAD - SECRETARIA DE ESTADO DE ADMINISTRAÇÃO</option>
+            <option value="SEAGRI - SECRETARIADE ESTADO DE AGRICULTURA">SEAGRI - SECRETARIADE ESTADO DE AGRICULTURA</option>
+            <option value="SEAP - SECRETARIA DE AGROPECUARIA">SEAP - SECRETARIA DE AGROPECUARIA</option>
+            <option value="SEASDH - SECRETARIA DE ESTADO DE ASSISTÊNCIA SOCIAL E DIREI">SEASDH - SECRETARIA DE ESTADO DE ASSISTÊNCIA SOCIAL E DIREI</option>
+            <option value="SEASDHM - SECRETARIA DE ASSISTENCIA SOCIAL, DIRETOS HUMANOS">SEASDHM - SECRETARIA DE ASSISTENCIA SOCIAL, DIRETOS HUMANOS</option>
+            <option value="SECOM - SECRETARIA DE COMUNICACAO">SECOM - SECRETARIA DE COMUNICACAO</option>
+            <option value="SEDENS - SECRETARIA DE DESENVOLVIMENTO FLORESTAL IND.E COM.">SEDENS - SECRETARIA DE DESENVOLVIMENTO FLORESTAL IND.E COM.</option>
+            <option value="SEE - SECRETARIA DE ESTADO DA EDUCAÇÃO CULTURA E ESPORTE">SEE - SECRETARIA DE ESTADO DA EDUCAÇÃO CULTURA E ESPORTE</option>
+            <option value="SEFAZ - SECRETARIA DA FAZENDA">SEFAZ - SECRETARIA DA FAZENDA</option>
+            <option value="SEGOV - SECRETARIA DE ESTADO DE GOVERNO">SEGOV - SECRETARIA DE ESTADO DE GOVERNO</option>
+            <option value="SEHAB - SECRETARIA DE HABITACAO DE INTERESSE SOCIAL">SEHAB - SECRETARIA DE HABITACAO DE INTERESSE SOCIAL</option>
+            <option value="SEHURB - SECRETARIA DE ESTADO DE HABITAÇÃO E URBANISMO">SEHURB - SECRETARIA DE ESTADO DE HABITAÇÃO E URBANISMO</option>
+            <option value="SEICT - SECRETARIA DE ESTADO DE CIENCIA, DA INDUSTRIA, DO">SEICT - SECRETARIA DE ESTADO DE CIENCIA, DA INDUSTRIA, DO</option>
+            <option value="SEJUDH - SECRETARIA DE JUSTICA E DIREITOS HUMANOS">SEJUDH - SECRETARIA DE JUSTICA E DIREITOS HUMANOS</option>
+            <option value="SEJUSP - SECRETARIA DE ESTADO DE JUSTIÇA E SEGURANÇA PUBLIC">SEJUSP - SECRETARIA DE ESTADO DE JUSTIÇA E SEGURANÇA PUBLIC</option>
+            <option value="SEMA - SECRETARIA DE MEIO AMBIENTE">SEMA - SECRETARIA DE MEIO AMBIENTE</option>
+            <option value="SEMULHER - SECRETARIA DE ESTADO DA MULHER - SEMULHER">SEMULHER - SECRETARIA DE ESTADO DA MULHER - SEMULHER</option>
+            <option value="SEOP - SECRETARIA DE ESTADO DE OBRAS PÚBLICAS">SEOP - SECRETARIA DE ESTADO DE OBRAS PÚBLICAS</option>
+            <option value="SEPI - SECRETARIA EXTRAORDINARIA DOS POVOS INDIGENAS">SEPI - SECRETARIA EXTRAORDINARIA DOS POVOS INDIGENAS</option>
+            <option value="SEPLAN - SECRETARIA DE ESTADO DE PLANEJAMENTO">SEPLAN - SECRETARIA DE ESTADO DE PLANEJAMENTO</option>
+            <option value="SEPMULHER - SECRETARIA DE ESTADO DE POLITICAS PARA MULHERES">SEPMULHER - SECRETARIA DE ESTADO DE POLITICAS PARA MULHERES</option>
+            <option value="SERF - SECRETARIA DE ESTADO DE RELAÇÕES FEDERATIVAS">SERF - SECRETARIA DE ESTADO DE RELAÇÕES FEDERATIVAS</option>
+            <option value="SESACRE - SECRETARIA DE ESTADO DE SAUDE">SESACRE - SECRETARIA DE ESTADO DE SAUDE</option>
+            <option value="SETE - SECRETARIA DE ESTADO DE TURISMO E EMPREENDEDORISMO">SETE - SECRETARIA DE ESTADO DE TURISMO E EMPREENDEDORISMO</option>
+            <option value="SETUL - SECRETARIA DE ESTADO TURISMO E LAZER">SETUL - SECRETARIA DE ESTADO TURISMO E LAZER</option>
+            <option value="SRPI - SECRETARIA DE ESTADO DE ARTICULACAO INSTITUCIONAL">SRPI - SECRETARIA DE ESTADO DE ARTICULACAO INSTITUCIONAL</option>    
+            <OPTION VALUE="TRIBUNAL DE CONTAS DO ESTADO DO ACRE">TRIBUNAL DE CONTAS DO ESTADO DO ACRE</OPTION>
+            <OPTION VALUE="TRIBUNAL DE JUSTIÇA DO ESTADO DO ACRE">TRIBUNAL DE JUSTIÇA DO ESTADO DO ACRE</OPTION>
+            <OPTION VALUE="TRIBUNAL REGIONAL DO TRABALHO DA 14ª REGIÃO">TRIBUNAL REGIONAL DO TRABALHO DA 14ª REGIÃO</OPTION>
+            <option value="TRIBUNAL REGIONAL ELEITORAL – ACRE">TRIBUNAL REGIONAL ELEITORAL – ACRE</option>
+            <OPTION VALUE="TRIBUNAL SUPERIOR ELEITORAL">TRIBUNAL SUPERIOR ELEITORAL</OPTION>    
+            <OPTION VALUE="OUTRO">OUTRO</OPTION>
+          </select>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Enviar Inscrição</button>
+      </form>
+
+      <div id="mensagemResposta" class="mt-4"></div>
+  
+  </div>
+</div>
+  <script>
+    function carregarCursosDisponiveis() {
+      fetch("https://www.acreprevidencia.ac.gov.br/microservices/api/curso-disponivel")
+        .then(response => response.json())
+        .then(cursos => {
+          const select = document.getElementById('curso');
+          select.innerHTML = '<option value="">Selecione um curso</option>';
+
+          cursos.forEach(curso => {
+            let id = typeof curso === 'object' ? curso.id : curso;
+            let nome = typeof curso === 'object' ? curso.curso : curso;
+
+            const option = document.createElement('option');
+            option.value = id;
+            option.textContent = nome;
+            select.appendChild(option);
+          });
+        })
+        .catch(error => {
+          document.getElementById('curso').innerHTML = '<option value="">Erro ao carregar cursos</option>';
+          console.error("Erro ao buscar cursos:", error);
+        });
+    }
+
+
+    // Envia o formulário
+    document.getElementById('formInscricao').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const inputNascimento = document.getElementById("nascimento");
+      const nascimentoTexto = inputNascimento.value;       
+      const [dia, mes, ano] = nascimentoTexto.split("/");
+      // Converte para ISO (yyyy-MM-dd)
+      const nascimentoISO = `${ano}-${mes}-${dia}`;
+
+      const dados = {
+        nome: document.getElementById('nome').value,
+        nascimento: nascimentoISO,
+        cpf: document.getElementById('cpf').value,
+        contato: document.getElementById('contato').value,
+        email: document.getElementById('email').value,
+        orgao: document.getElementById('orgao').value,
+        curso: { id: document.getElementById('curso').value }
+      };
+
+      fetch("https://www.acreprevidencia.ac.gov.br/microservices/api/cadastro-curso", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dados)
+      })
+      .then(async response => {
+        const texto = await response.text();
+        const div = document.getElementById("mensagemResposta");
+        if (response.ok) {
+          div.innerHTML = `<div class="alert alert-success">${texto}</div>`;
+          document.getElementById("formInscricao").reset();
+        } else {
+          div.innerHTML = `<div class="alert alert-danger">${texto}</div>`;
+        }
+      })
+      .catch(error => {
+        document.getElementById("mensagemResposta").innerHTML =
+          `<div class="alert alert-danger">Erro ao enviar inscrição: ${error.message}</div>`;
+      });
+    });
+
+    carregarCursosDisponiveis();
+  </script>
+
+  <!-- Script opcional para máscara -->
+<script>
+  // Máscara para CPF
+  document.getElementById('cpf').addEventListener('input', function (e) {
+    let value = e.target.value.replace(/\D/g, '');
+    if (value.length > 11) value = value.slice(0, 11);
+    value = value.replace(/(\d{3})(\d)/, '$1.$2');
+    value = value.replace(/(\d{3})(\d)/, '$1.$2');
+    value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+    e.target.value = value;
+  });
+
+  // Máscara para telefone
+  document.getElementById('contato').addEventListener('input', function (e) {
+    let value = e.target.value.replace(/\D/g, '');
+    if (value.length > 11) value = value.slice(0, 11);
+    if (value.length <= 10) {
+      value = value.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+    } else {
+      value = value.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
+    }
+    e.target.value = value;
+  });
+
+  // Máscara para data (dd/mm/yyyy)
+  document.getElementById('nascimento').addEventListener('input', function (e) {
+    let value = e.target.value.replace(/\D/g, '').slice(0, 8);
+    if (value.length >= 5) {
+      value = value.replace(/(\d{2})(\d{2})(\d{0,4})/, '$1/$2/$3');
+    } else if (value.length >= 3) {
+      value = value.replace(/(\d{2})(\d{0,2})/, '$1/$2');
+    }
+    e.target.value = value;
+  });
+</script>
+
+
+
+    <script src="/js/jquery-3.6.4.min.js"></script>
+    <script src="/js/cookies.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/access.js"></script>
+
+    <div vw class="enabled ">
+        <div vw-access-button class="active vlibras-toggle"></div>
+        <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+    
+</body>
+
+</html>

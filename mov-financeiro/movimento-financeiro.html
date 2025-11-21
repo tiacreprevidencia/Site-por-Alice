@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/icones/logo.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <!-- Preload para garantir carregamento rápido -->
+    <link rel="preload" href="/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="/css/style.css" as="style">
+
+    <!-- Folhas de estilo carregadas no início -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/access.css">
+    <title>Movimento Financeiro</title>
+
+    <style>
+        @media (max-width: 768px) {
+            .margin-card {
+                width: 100% !important; 
+            }
+        }
+        table, tr {
+            border-color: #e5e5e5 !important; 
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Importando cabeçalho -->
+    <header id="cabecario"></header>
+    <!-- Fim importação cabeçalho -->
+
+    <!-- Conteúdo -->
+    <div class="conteudo-financeiro">
+        <h3 class="conselhos-secao">Movimento Financeiro</h3>
+
+        <div class="containerFinanceiro">
+            <div>
+                <!-- Nav pills -->
+                <ul class="nav nav-pills" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="pill" href="#historico-anual">Histórico Anual</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#ano-2025">2025</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#ano-2024">2024</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#ano-2023">2023</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#ano-2022">2022</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#ano-2021">2021</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#ano-2020">2020</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#ano-2019">2019</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#ano-2018">2018</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#ano-2017">2017</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#ano-2016">2016</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#consolidados">Consolidados</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div id="historico-anual" class="tab-pane active"><br>
+                        <div class="panel">
+                            <div class="margin-card">
+                                <h6>Histórico Anual – 2016 até 2023</h6>
+                                <div class="legenda-graficos">
+                                    <h3>
+                                        <div class="icon despesas"></div>Despesas
+                                    </h3>
+                                    <h3>
+                                        <div class="icon receitas"></div>Receitas
+                                    </h3>
+                                </div>
+                                <!-- Grafico -->
+                                <canvas id="meuGrafico" width="1050" height="350"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="ano-2025" class="tab-pane fade"><br>
+                        <div class="panel">
+                            <div class="margin-card">
+                                <!-- Grafico -->
+                                <h6>Movimento Financeiro – Ano 2025</h6>
+                                <div class="legenda-graficos">
+                                    <h3>
+                                        <div class="icon saldo"></div>Saldo
+                                    </h3>
+                                    <h3>
+                                        <div class="icon receitas"></div>Receitas
+                                    </h3>
+                                    <h3>
+                                        <div class="icon despesas"></div>Despesas
+                                    </h3>
+                                </div>
+                                <canvas id="meuGrafico2025" width="1050" height="350"></canvas>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Mês</th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col">Ação</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableBody2025">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="ano-2024" class="tab-pane fade"><br>
+                        <div class="panel">
+                            <div class="margin-card">
+                                <!-- Grafico -->
+                                <h6>Movimento Financeiro – Ano 2024</h6>
+                                <div class="legenda-graficos">
+                                    <h3>
+                                        <div class="icon saldo"></div>Saldo
+                                    </h3>
+                                    <h3>
+                                        <div class="icon receitas"></div>Receitas
+                                    </h3>
+                                    <h3>
+                                        <div class="icon despesas"></div>Despesas
+                                    </h3>
+                                </div>
+                                <canvas id="meuGrafico2024" width="1050" height="350"></canvas>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Mês</th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col">Ação</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableBody2024">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="ano-2023" class="tab-pane fade"><br>
+                        <div class="panel">
+                            <div class="margin-card">
+                                <!-- Grafico -->
+                                <h6>Movimento Financeiro – Ano 2023</h6>
+                                <div class="legenda-graficos">
+                                    <h3>
+                                        <div class="icon saldo"></div>Saldo
+                                    </h3>
+                                    <h3>
+                                        <div class="icon receitas"></div>Receitas
+                                    </h3>
+                                    <h3>
+                                        <div class="icon despesas"></div>Despesas
+                                    </h3>
+                                </div>
+                                <canvas id="meuGrafico2023" width="1050" height="350"></canvas>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Mês</th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col">Ação</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableBody2023">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="ano-2022" class="tab-pane fade"><br>
+                        <div class="panel">
+                            <div class="margin-card">
+                                <!-- Grafico -->
+                                <h6>Movimento Financeiro – Ano 2022</h6>
+                                <div class="legenda-graficos">
+                                    <h3>
+                                        <div class="icon saldo"></div>Saldo
+                                    </h3>
+                                    <h3>
+                                        <div class="icon receitas"></div>Receitas
+                                    </h3>
+                                    <h3>
+                                        <div class="icon despesas"></div>Despesas
+                                    </h3>
+                                </div>
+                                <canvas id="meuGrafico2022" width="1050" height="400"></canvas>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Mês</th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col">Ação</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableBody2022">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="ano-2021" class="tab-pane fade"><br>
+                        <div class="panel">
+                            <div class="margin-card">
+                                <!-- Grafico -->
+                                <h6>Movimento Financeiro – Ano 2021</h6>
+                                <div class="legenda-graficos">
+                                    <h3>
+                                        <div class="icon saldo"></div>Saldo
+                                    </h3>
+                                    <h3>
+                                        <div class="icon receitas"></div>Receitas
+                                    </h3>
+                                    <h3>
+                                        <div class="icon despesas"></div>Despesas
+                                    </h3>
+                                </div>
+                                <canvas id="meuGrafico2021" width="1050" height="400"></canvas>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Mês</th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col">Ação</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableBody2021">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="ano-2020" class="tab-pane fade"><br>
+                        <div class="panel">
+                            <div class="margin-card">
+                                <!-- Grafico -->
+                                <h6>Movimento Financeiro – Ano 2020</h6>
+                                <div class="legenda-graficos">
+                                    <h3>
+                                        <div class="icon saldo"></div>Saldo
+                                    </h3>
+                                    <h3>
+                                        <div class="icon receitas"></div>Receitas
+                                    </h3>
+                                    <h3>
+                                        <div class="icon despesas"></div>Despesas
+                                    </h3>
+                                </div>
+                                <canvas id="meuGrafico2020" width="1050" height="400"></canvas>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Mês</th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col">Ação</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableBody2020">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="ano-2019" class="tab-pane fade"><br>
+                        <div class="panel">
+                            <div class="margin-card">
+                                <!-- Grafico -->
+                                <h6>Movimento Financeiro – Ano 2019</h6>
+                                <div class="legenda-graficos">
+                                    <h3>
+                                        <div class="icon saldo"></div>Saldo
+                                    </h3>
+                                    <h3>
+                                        <div class="icon receitas"></div>Receitas
+                                    </h3>
+                                    <h3>
+                                        <div class="icon despesas"></div>Despesas
+                                    </h3>
+                                </div>
+                                <canvas id="meuGrafico2019" width="1050" height="400"></canvas>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Mês</th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col">Ação</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableBody2019">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="ano-2018" class="tab-pane fade"><br>
+                        <div class="panel">
+                            <div class="margin-card">
+                                <!-- Grafico -->
+                                <h6>Movimento Financeiro – Ano 2018</h6>
+                                <div class="legenda-graficos">
+                                    <h3>
+                                        <div class="icon saldo"></div>Saldo
+                                    </h3>
+                                    <h3>
+                                        <div class="icon receitas"></div>Receitas
+                                    </h3>
+                                    <h3>
+                                        <div class="icon despesas"></div>Despesas
+                                    </h3>
+                                </div>
+                                <canvas id="meuGrafico2018" width="1050" height="400"></canvas>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Mês</th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col">Ação</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableBody2018">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="ano-2017" class="tab-pane fade"><br>
+                        <div class="panel">
+                            <div class="margin-card">
+                                <!-- Grafico -->
+                                <h6>Movimento Financeiro – Ano 2017</h6>
+                                <div class="legenda-graficos">
+                                    <h3>
+                                        <div class="icon saldo"></div>Saldo
+                                    </h3>
+                                    <h3>
+                                        <div class="icon receitas"></div>Receitas
+                                    </h3>
+                                    <h3>
+                                        <div class="icon despesas"></div>Despesas
+                                    </h3>
+                                </div>
+                                <canvas id="meuGrafico2017" width="1050" height="400"></canvas>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Mês</th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col">Ação</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableBody2017">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="ano-2016" class="tab-pane fade"><br>
+                        <div class="panel">
+                            <div class="margin-card">
+                                <!-- Grafico -->
+                                <h6>Movimento Financeiro – Ano 2016</h6>
+                                <div class="legenda-graficos">
+                                    <h3>
+                                        <div class="icon saldo"></div>Saldo
+                                    </h3>
+                                    <h3>
+                                        <div class="icon receitas"></div>Receitas
+                                    </h3>
+                                    <h3>
+                                        <div class="icon despesas"></div>Despesas
+                                    </h3>
+                                </div>
+                                <canvas id="meuGrafico2016" width="1050" height="400"></canvas>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Mês</th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col">Ação</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableBody2016">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="consolidados" class="container tab-pane fade"><br>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="columnYearConsolidados">Anos Consolidados</th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <th scope="col">Ação</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBodyConsolidado">
+                                <!-- Os dados serão preenchidos dinamicamente aqui -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim conteúdo -->
+
+
+    <!-- Aviso de Cookies -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Ao continuar usando nosso site, você concorda e aceita as nossas políticas de privacidade.
+            <br><a href="/politica-de-privacidade.html">Saiba Mais</a>.
+        </p>
+        <button id="accept-cookies">Ok! Quero Continuar</button>
+    </div>
+    <!-- Fim Aviso de Cookies -->
+
+
+    <!-- Importando rodapé -->
+    <div id="rodape"></div>
+    <!-- Fim importação rodapé -->
+
+    <script src="/js/cookies.js"></script>
+    <script src="/js/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="/js/apiGraficoAnosAll.js"></script>
+    <script src="/js/apiGraficoMesesAll.js"></script>
+    <script src="/js/apiGraficoAnosConsolidadosAll.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/access.js"></script>
+
+    <div vw class="enabled ">
+        <div vw-access-button class="active vlibras-toggle"></div>
+        <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/icones/logo.ico">
+    <!-- Preload para garantir carregamento rápido -->
+    <link rel="preload" href="/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="/css/style.css" as="style">
+
+    <!-- Folhas de estilo carregadas no início -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/access.css">
+    <title>Prova de Vida</title>
+
+    <style>
+        @media (max-width: 768px) {
+            .margem-loja{
+                margin-right: 30px !important;
+                margin-left: 30px !important;
+            }
+            .baixe {
+                width: 86% !important;
+            }
+        }
+        
+    </style>
+
+    <style>
+        /* Margens no mobile */
+        @media (max-width: 768px) {
+            .margem-loja {
+                margin-right: 30px !important;
+                margin-left: 30px !important;
+            }
+
+            .baixe {
+                width: 86% !important;
+            }
+
+            .video-passo-a-passo-prova-de-vida video {
+                height: 360px !important;
+            }
+            .video-na-tela {
+                left: 26.9%;
+            }
+            
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 360px; /* Tamanho base da imagem */
+            margin: auto;
+        }
+
+        .celular {
+            width: 100%;
+            display: block;
+        }
+
+        .video-na-tela {
+            position: absolute;
+            top: 8.5%;
+            left: 26.5%;
+            width: 44%;
+            height: 84%;
+            border-radius: 1.5rem;
+            overflow: hidden;
+        }
+
+        .video-na-tela video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1.5rem;
+        }
+
+        /* Removido .video-passo-a-passo-prova-de-vida video fixo que dava conflito */
+    </style>
+
+</head>
+
+<body>
+    <!-- Importando cabeçalho -->
+    <header id="cabecario"></header>
+    <!-- Fim importação cabeçalho -->
+
+    <div class="servicos-container">
+        <h3 class="conselhos-secao">SERVIÇOS</h3>
+        <h1 class="titulo-secao">Prova de Vida</h1>
+
+        <p>A Prova de Vida é um comprometimento fundamental para os aposentados e pensionistas associados ao
+            Acreprevidência. Este procedimento vai além de uma mera formalidade, sendo um requisito legal e pessoal que
+            garante a continuidade e a regularidade dos benefícios previdenciários. Esta obrigação é claramente
+            estipulada pela Lei nº 2.438, de 22 de julho de 2011, que estabelece as diretrizes para a manutenção e
+            atualização dos benefícios concedidos por essa entidade. Dessa forma, é de extrema importância que os
+            beneficiários estejam atentos a este dever, assegurando assim seus direitos e a solidez do sistema
+            previdenciário.</p><br>
+
+        <h6>Consequências da não realização da Prova de Vida:</h6>
+        <p>- O beneficiário estará inadimplente a partir do 1º dia do mês seguinte ao previsto para a respectiva
+            atualização.</p>
+        <p>- A inadimplência resultará no bloqueio imediato do benefício, conforme estabelece a Lei nº 2.438/2011. É
+            essencial cumprir este requisito para evitar interrupções indesejadas nos pagamentos.</p><br>
+
+        <h6>ATENÇÃO!</h6>
+        <p>Os que se aposentaram ou se tornaram pensionistas no ano corrente, estão dispensados da Prova de Vida.</p>
+    </div>
+
+
+    <div class="servicos-container">
+        <div class="info-download-aplicativo">
+            <div class="image-app-smartphone">
+                <img src="/images/image-app-smartphone.webp" alt="">
+            </div>
+            <div class="where-download-our-app">
+                <div class="info-where-download-our-app">
+                    <h1 class="margem-loja">Disponível nas lojas de aplicativo</h1>
+                    <p class="margem-loja baixe">Baixe nosso aplicativo e realize sua prova de vida online de forma simples e segura. Não
+                        precisa sair de casa, faça tudo pelo celular!</p>
+                    <div class="links-app-loja-de-apps">
+                        <a href="https://play.google.com/store/apps/details?id=ac.gov.br.ACREPREV" target="_blank">
+                            <img src="/images/image-google-pay.webp" alt="">
+                        </a>
+                        <a href="https://apps.apple.com/br/app/acreprev/id1610749146" target="_blank">
+                            <img src="/images/image-app-store.webp" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="servicos-container">
+        <h3 class="title-step-prova-de-vida">Como realizar a prova de vida pelo aplicativo?</h3>
+        <div class="passo-a-passo-prova-de-vida">
+            <div class="video-passo-a-passo-prova-de-vida">
+                <div class="container">
+                    <!-- Imagem do celular -->
+                    <img src="/images/image-app-smartphone.webp" alt="Celular" class="celular">
+
+                    <!-- Vídeo sobre a tela do celular -->
+                    <div class="video-na-tela">
+                        <video src="/images/passo-a-passo-prova-de-vida.mp4" autoplay muted loop playsinline></video>
+                    </div>
+                </div>
+            </div>
+
+            <div class='wrapper'>
+                <div class='steps' id='steps'>
+                    <!-- PREENCHIDO VIA JS -->
+                </div>
+            </div>
+        </div>
+
+        <div class="acamados-prova-de-vida">
+            <i class="fa-solid fa-circle-exclamation fa-xl" style="color: #0a656a;"></i>
+            <div class="conteudo-acamados">
+                <h3 class="title2-step-prova-de-vida">Beneficiários Acamados</h3>
+                <p>Solicitar, pelo telefone <b>(68) 3215-4309</b>, que um servidor do Acreprevidência vá até
+                    sua residência <b>ou</b> enviar para o e-mail <b>acreprev.provadevida@gmail.com</b> os seguintes documentos:
+                </p>
+                <div class="divisao-interna">
+                    <p>– Declaração de internação emitida pela clínica/hospital;</p>
+                    <p>– Cópia do RG ou CNH (Frente e Verso);</p>
+                    <p>– Comprovante de endereço.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-perguntas-frequentes">
+            <h2>Perguntas Frequentes</h2><br>
+            <div class="perguntas-frequentes">
+                <h6>O que é a Prova de Vida?</h6>
+                <div class="resposta-perguntas-frequentes">
+                    <p>A Prova de Vida é um procedimento <strong>obrigatório</strong> para confirmar que o beneficiário
+                        está
+                        vivo e garantir
+                        a continuidade dos benefícios previdenciários.</p>
+                </div>
+            </div>
+            <div class="perguntas-frequentes">
+                <h6>Quando devo realizar a Prova de Vida?</h6>
+                <div class="resposta-perguntas-frequentes">
+                    <p>A Prova de Vida deve ser realizada no <strong>mês do seu aniversário</strong> para garantir a
+                        continuidade e a
+                        regularidade dos seus benefícios com o Acreprevidência.</p>
+                </div>
+            </div>
+            <div class="perguntas-frequentes">
+                <h6>O que acontece se eu não realizar a Prova de Vida no prazo correto?</h6>
+                <div class="resposta-perguntas-frequentes">
+                    <p>A falta de realização da Prova de Vida resultará em inadimplência a partir do 1º dia do mês
+                        seguinte
+                        e pode levar ao bloqueio do benefício.</p>
+                </div>
+            </div>
+            <div class="perguntas-frequentes">
+                <h6>Como devo fazer a Prova de Vida?</h6>
+                <div class="resposta-perguntas-frequentes">
+                    <p>O procedimento para a Prova de Vida pode ser feito de maneira <strong>presencial</strong> na
+                        instituição do
+                        Acreprevidência ou pelo <strong>aplicativo Acreprev</strong>, sendo necessário apenas um
+                        documento
+                        de identificação com foto.
+                    </p>
+                </div>
+            </div>
+            <div class="perguntas-frequentes">
+                <h6>Preciso de algum documento específico para realizar a Prova de Vida?</h6>
+                <div class="resposta-perguntas-frequentes">
+                    <p>É necessário apresentar um documento oficial com foto, como RG ou CNH, além do CPF.</p>
+                </div>
+            </div>
+            <div class="perguntas-frequentes">
+                <h6>Posso realizar a Prova de Vida em outra cidade ou estado?</h6>
+                <div class="resposta-perguntas-frequentes">
+                    <p>Sim, é possível realizar a Prova de Vida em qualquer estado, através do <strong>aplicativo
+                            Acreprev</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Aviso de Cookies -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Ao continuar usando nosso site, você concorda e aceita as nossas políticas de privacidade.
+            <br><a href="/politica-de-privacidade.html">Saiba Mais</a>.
+        </p>
+        <button id="accept-cookies">Ok! Quero Continuar</button>
+    </div>
+    <!-- Fim Aviso de Cookies -->
+
+    <!-- Importando rodapé -->
+    <div id="rodape"></div>
+    <!-- Fim importação rodapé -->
+
+    <script src="/js/jquery-3.6.4.min.js"></script>
+    <script src="/js/cookies.js"></script>
+    <script src="/js/step-by-step-prova-de-vida.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/access.js"></script>
+
+    <div vw class="enabled ">
+        <div vw-access-button class="active vlibras-toggle"></div>
+        <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+
+</body>
+
+</html>
