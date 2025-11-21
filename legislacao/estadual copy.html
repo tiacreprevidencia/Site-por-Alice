@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/images/icones/logo.ico">
+    <title>Legislação Estadual</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <!-- Preload para garantir carregamento rápido -->
+    <link rel="preload" href="/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="/css/style.css" as="style">
+
+    <!-- Folhas de estilo carregadas no início -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/access.css">
+</head>
+
+<body>
+    <!-- Importando cabeçalho -->
+    <header id="cabecario"></header>
+    <!-- Fim importação cabeçalho -->
+
+    <div class="container-site">
+        <h3 class="conselhos-secao">LEGISLAÇÃO</h3>
+        <h1 class="titulo-secao">Estadual</h1>
+
+
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('todos')">Todos</button>
+            <button class="btn" onclick="filterSelection('constituicao')">Constituição</button>
+            <button class="btn" onclick="filterSelection('decretos')">Decretos Estaduais</button>
+            <button class="btn" onclick="filterSelection('leis')">Leis Estaduais</button>
+            <button class="btn" onclick="filterSelection('portarias')">Portarias</button>
+        </div>
+
+        <div class="container">
+            <div class="cards-legis-estadual">
+
+                <!-- LEI ESTADUAL | LCE Nº 4 -->
+                <div class="cards-externo filterDiv leis">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Lei Estadual</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>16 de dezembro de 1981</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>LCE n°4</h5>
+                        <p>Dispõe sobre as Pensões Policiais-Militares da Polícia Militar do Acre.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="http://www.legis.ac.gov.br/detalhar/7" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- CONSTITUIÇÃO | CONSTITUIÇÃO ESTADUAL -->
+                <div class="cards-externo filterDiv constituicao">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Constituição</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>03 de outubro de 1989</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Constituição</h5>
+                        <p>Constituição do Estado do Acre</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="http://www.legis.ac.gov.br/detalhar_constituicao" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- LEI ESTADUAL | LEI Nº 1.236 -->
+                <div class="cards-externo filterDiv leis">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Lei Estadual</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>12 de agosto de 1997</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Lei n° 1.236</h5>
+                        <p>Dispõe sobre a Remuneração do Pessoal da Polícia Militar do Estado do Acre e dá outras
+                            providências.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="http://www.legis.ac.gov.br/detalhar/3338" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- PORTARIA | PORTARIA Nº 40 / 2025 -->
+                <div class="cards-externo filterDiv portarias">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Portaria</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>13 de janeiro de 2025</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Portaria Acreprevidência nº 40</h5>
+                        <p>Reajusta benefícios da Previdênciarios.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/portaria/PORTARIA-ACREPREVIDENCIA-N40.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- PORTARIA | PORTARIA Nº 882 -->
+                <div class="cards-externo filterDiv portarias">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Portaria</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>11 de maio de 2005</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Portaria nº 882</h5>
+                        <p>Reajusta benefícios da Previdência Social.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/portaria/portaria-882.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- LEI ESTADUAL | LCE Nº 154 -->
+                <div class="cards-externo filterDiv leis">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Lei Estadual</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>08 de dezembro de 2005</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>LCE n° 154</h5>
+                        <p>Institui o Regime Próprio de Previdência Social dos Servidores Públicos do Estado do Acre,
+                            cria o Fundo de Previdência Estadual e dá outras providências.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="http://www.legis.ac.gov.br/detalhar/128" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- LEI ESTADUAL | LEI Nº 1.688 -->
+                <div class="cards-externo filterDiv leis">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Lei Estadual</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>08 de dezembro de 2005</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Lei n° 1.688</h5>
+                        <p>Cria o Instituto de Previdência do Estado do Acre - ACREPREVIDÊNCIA, com natureza jurídica de
+                            autarquia e dispõe sobre sua estrutura, competências e quadro de pessoal.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="http://www.legis.ac.gov.br/detalhar/1726" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- PORTARIA | PORTARIA Nº 001 -->
+                <div class="cards-externo filterDiv portarias">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Portaria</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>02 de maio de 2006</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Portaria nº 001</h5>
+                        <p>Determinar o reajuste dos benefícios concedidos.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/portaria/portaria-001-2006.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- LEI ESTADUAL | LCE Nº 164 -->
+                <div class="cards-externo filterDiv leis">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Lei Estadual</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>03 de julho de 2006</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>LCE n° 164</h5>
+                        <p>Dispõe sobre o Estatuto dos Militares do Estado do Acre e dá outras providências.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="http://www.legis.ac.gov.br/detalhar/3855" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- PORTARIA | PORTARIA Nº 205 -->
+                <div class="cards-externo filterDiv portarias">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Portaria</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>30 de abril de 2007</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Portaria nº 205</h5>
+                        <p>Torna público o reajuste dos benefícios previdenciários, calculados com base na média
+                            aritmética
+                            simples das remunerações de contribuição, e demais valores reajustáveis concomitantemente
+                            com os
+                            do Instituto Nacional do Seguro Social - INSS.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/portaria/portaria-205.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- DECRETO ESTADUAL | DECRETO Nº 2.217 -->
+                <div class="cards-externo filterDiv decretos">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Decreto Estadual</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>19 de dezembro de 2007</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Decreto n° 2.217</h5>
+                        <p>"Define a Estrutura Organizacional Básica do Instituto de Previdência do Estado do Acre
+                            ACREPREVIDÊNCIA."</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/decreto-estadual/decreto-2217.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- DECRETO ESTADUAL | DECRETO Nº 2.218 -->
+                <div class="cards-externo filterDiv decretos">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Decreto Estadual</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>19 de dezembro de 2007</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Decreto n° 2.218</h5>
+                        <p>"Regulamenta dispositivo da Lei Complementar n° 154, de 8 de dezembro de 2007."</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/decreto-estadual/decreto-2218.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- PORTARIA | PORTARIA Nº 178 -->
+                <div class="cards-externo filterDiv portarias">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Portaria</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>19 de março de 2008</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Portaria nº 178</h5>
+                        <p>Torna público o reajuste dos benefícios previdenciários, calculados com base na média
+                            aritmética
+                            simples das remunerações de contribuição, e demais valores reajustáveis concomitantemente
+                            com os
+                            do Instituto Nacional do Seguro Social - INSS.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/portaria/portaria-178.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- DECRETO ESTADUAL | DECRETO Nº 3.355 -->
+                <div class="cards-externo filterDiv decretos">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Decreto Estadual</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>19 de agosto de 2008</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Decreto n° 3.355</h5>
+                        <p>Decreto que atribui ao Instituto de Previdência do Estado do Acre a responsabilidade de
+                            efetuar a
+                            análise dos requisitos para fins de reforma.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/decreto-estadual/decreto-3355.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- PORTARIA | PORTARIA Nº 001 -->
+                <div class="cards-externo filterDiv portarias">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Portaria</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>27 de fevereiro de 2009</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Portaria nº 001</h5>
+                        <p>Torna público o reajuste dos benefícios previdenciários, calculados com base na média
+                            aritmética
+                            simples das remunerações de contribuição, e demais valores reajustáveis concomitantemente
+                            com os
+                            do Instituto Nacional do Seguro Social - INSS.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/portaria/portaria-001-2009.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- PORTARIA | PORTARIA Nº 292 -->
+                <div class="cards-externo filterDiv portarias">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Portaria</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>06 de julho de 2010</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Portaria nº 292</h5>
+                        <p>Torna público o reajuste dos benefícios previdenciários, calculados com base na média
+                            aritmética
+                            simples das remunerações de contribuição, e demais valores reajustáveis concomitantemente
+                            com os
+                            do Instituto Nacional do Seguro Social - INSS.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/portaria/portaria-292.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- LEI ESTADUAL | LEI Nº 2.438 -->
+                <div class="cards-externo filterDiv leis">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Lei Estadual</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>22 de julho de 2011</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Lei n° 2.438</h5>
+                        <p>Atualiza dados cadastrais de aposentados civis, militares da reserva e reformados, e
+                            pensionistas beneficiados pelo Fundo de Previdência Social do Estado do Acre (FPS) ou pelo
+                            Tesouro Estadual.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="http://www.legis.ac.gov.br/detalhar/2331" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- PORTARIA | PORTARIA Nº 478 -->
+                <div class="cards-externo filterDiv portarias">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Portaria</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>27 de julho de 2011</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Portaria nº 478</h5>
+                        <p>Torna público o reajuste dos benefícios previdenciários, calculados com base na média
+                            aritmética
+                            simples das remunerações de contribuição, e demais valores reajustáveis concomitantemente
+                            com os
+                            do Instituto Nacional do Seguro Social - INSS.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/portaria/portaria-478.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- PORTARIA | PORTARIA Nº 21 -->
+                <div class="cards-externo filterDiv portarias">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Portaria</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>09 de janeiro de 2012</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Portaria nº 21</h5>
+                        <p>Torna público o reajuste dos benefícios previdenciários, calculados com base na média
+                            aritmética
+                            simples das remunerações de contribuição, e demais valores reajustáveis concomitantemente
+                            com os
+                            do Instituto Nacional do Seguro Social - INSS.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/portaria/portaria-21.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- DECRETO ESTADUAL | DECRETO Nº 3.954 -->
+                <div class="cards-externo filterDiv decretos">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Decreto Estadual</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>16 de maio de 2012</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Decreto nº 3.954</h5>
+                        <p>Institui o programa de melhoria da qualidade dos dados dos servidores Públicos do Estado,
+                            segurdos do Regime Próprio de Previdência Social do Estado do Acre - RPPS.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/decreto-estadual/decreto-3954.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- PORTARIA | PORTARIA Nº 45 -->
+                <div class="cards-externo filterDiv portarias">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Portaria</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>15 de janeiro de 2013</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Portaria nº 45</h5>
+                        <p>Torna público o reajuste dos benefícios previdenciários, calculados com base na média
+                            aritmética
+                            simples das remunerações de contribuição, e demais valores reajustáveis concomitantemente
+                            com os
+                            do Instituto Nacional do Seguro Social - INSS.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/portaria/portaria-45.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- PORTARIA | PORTARIA Nº 33 -->
+                <div class="cards-externo filterDiv portarias">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Portaria</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>16 de janeiro de 2014</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Portaria nº 33</h5>
+                        <p>Torna público o reajuste dos benefícios previdenciários, calculados com base na média
+                            aritmética
+                            simples das remunerações de contribuição, e demais valores reajustáveis concomitantemente
+                            com os
+                            do Instituto Nacional do Seguro Social - INSS.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/portaria/portaria-33.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- LEI ESTADUAL | LEI Nº 2.851 -->
+                <div class="cards-externo filterDiv leis">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Lei Estadual</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>03 de fevereiro de 2014</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Lei n° 2.851</h5>
+                        <p>Dispõe sobre o Plano de Cargos, Carreira e Remuneração dos Servidores do Instituto de
+                            Previdência
+                            do Estado do Acre - ACREPREVIDÊNCIA.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="http://www.legis.ac.gov.br/detalhar/3219" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- PORTARIA | PORTARIA Nº 23 -->
+                <div class="cards-externo filterDiv portarias">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Portaria</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>13 de janeiro de 2015</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Portaria nº 23</h5>
+                        <p>Torna público o reajuste dos benefícios previdenciários, calculados com base na média
+                            aritmética
+                            simples das remunerações de contribuição, e demais valores reajustáveis concomitantemente
+                            com os
+                            do Instituto Nacional do Seguro Social - INSS.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/portaria/portaria-23.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- LEI ESTADUAL | LEI Nº 3.087 -->
+                <div class="cards-externo filterDiv leis">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Lei Estadual</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>23 de dezembro de 2015</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Lei n° 3.087</h5>
+                        <p>Institui o Programa Habitacional do Servidor Público do Estado do Acre - PHSPAC e altera o
+                            art.
+                            11, incisos VI e VIII, da Lei n. 1.805, de 26 de dezembro de 2006.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="http://www.legis.ac.gov.br/detalhar/1959" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- PORTARIA | PORTARIA Nº 39 -->
+                <div class="cards-externo filterDiv portarias">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Portaria</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>12 de janeiro de 2016</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Portaria nº 39</h5>
+                        <p>Torna público o reajuste dos benefícios previdenciários, calculados com base na média
+                            aritmética
+                            simples das remunerações de contribuição, e demais valores reajustáveis concomitantemente
+                            com os
+                            do Instituto Nacional do Seguro Social - INSS.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/portaria/portaria-39.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- PORTARIA | PORTARIA Nº 72 -->
+                <div class="cards-externo filterDiv portarias">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Portaria</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>16 de janeiro de 2017</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Portaria nº 72</h5>
+                        <p>Torna público o reajuste dos benefícios previdenciários, calculados com base na média
+                            aritmética
+                            simples das remunerações de contribuição, e demais valores reajustáveis concomitantemente
+                            com os
+                            do Instituto Nacional do Seguro Social - INSS.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/portaria/portaria-72.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- PORTARIA | PORTARIA Nº 24 -->
+                <div class="cards-externo filterDiv portarias">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Portaria</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>18 de janeiro de 2018</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Portaria nº 24</h5>
+                        <p>Torna público o reajuste dos benefícios previdenciários, calculados com base na média
+                            aritmética
+                            simples das remunerações de contribuição, e demais valores reajustáveis concomitantemente
+                            com os
+                            do Instituto Nacional do Seguro Social - INSS.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/portaria/portaria-24.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- PORTARIA | PORTARIA Nº 004 -->
+                <div class="cards-externo filterDiv portarias">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Portaria</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>16 de janeiro de 2019</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Portaria nº 004</h5>
+                        <p>Divulga o reajuste dos benefícios previdenciários, incluindo pensões sem paridade, calculados
+                            pela média aritmética simples das remunerações de contribuição, alinhados aos benefícios do
+                            regime geral de previdência social.
+                        </p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/portaria/portaria-004.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- LEI ESTADUAL | EC Nº 52 -->
+                <div class="cards-externo filterDiv leis">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Lei Estadual</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>02 de dezembro de 2019</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Emenda Constitucional n° 52</h5>
+                        <p>Modifica o sistema de Previdência Social e dá outras providências.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="http://www.legis.ac.gov.br/detalhar_emendas/52" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- LEI ESTADUAL | LEI Nº 3.549 -->
+                <div class="cards-externo filterDiv leis">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Lei Estadual</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>02 de dezembro de 2019</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Lei n° 3.549</h5>
+                        <p>Cria o Regime de Previdência Complementar do Estado para servidores efetivos, incluindo
+                            membros
+                            de órgãos e Poderes, e estabelece o limite máximo para a concessão de aposentadorias e
+                            pensões
+                            nesse regime.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="http://www.legis.ac.gov.br/detalhar/2495" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- PORTARIA | PORTARIA Nº 22 -->
+                <div class="cards-externo filterDiv portarias">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Portaria</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>14 de janeiro de 2020</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Portaria nº 22</h5>
+                        <p>Regula o reajuste a partir de 1º de janeiro de 2020 dos benefícios previdenciários, pensões
+                            sem
+                            paridade e outros valores, utilizando a média aritmética das remunerações de contribuição.
+                        </p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/portaria/portaria-22.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- PORTARIA | PORTARIA Nº 25 -->
+                <div class="cards-externo filterDiv portarias">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Portaria</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>13 de janeiro de 2021</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Portaria nº 25</h5>
+                        <p>Regula o reajuste a partir de 1º de janeiro de 2021 dos benefícios previdenciários, pensões
+                            sem
+                            paridade e outros valores, utilizando a média aritmética das remunerações de contribuição.
+                        </p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/portaria/portaria-25.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- PORTARIA | PORTARIA Nº 47 -->
+                <div class="cards-externo filterDiv portarias">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Portaria</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>20 de janeiro de 2022</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Portaria nº 47</h5>
+                        <p>Regula o reajuste a partir de 1º de janeiro de 2022 dos benefícios previdenciários, pensões
+                            sem
+                            paridade e outros valores, utilizando a média aritmética das remunerações de contribuição.
+                        </p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/portaria/portaria-47.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- PORTARIA | PORTARIA Nº 16 -->
+                <div class="cards-externo filterDiv portarias">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Portaria</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>11 de janeiro de 2023</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Portaria nº 16</h5>
+                        <p>Regula o reajuste a partir de 1º de janeiro de 2023 dos benefícios previdenciários, pensões
+                            sem
+                            paridade e outros valores, utilizando a média aritmética das remunerações de contribuição.
+                        </p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/portaria/portaria-16.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- DECRETO ESTADUAL | DECRETO Nº 2.483 -->
+                <div class="cards-externo filterDiv decretos">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Decreto Estadual</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>27 de julho de 2023</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Decreto nº 4.533-P</h5>
+                        <p>Nomeia os membros do Conselho Estadual de Previdência Social - CEPS.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/decreto-estadual/decreto-4.533-p.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+
+                <!-- PORTARIA | PORTARIA Nº 20 -->
+                <div class="cards-externo filterDiv portarias">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Portaria</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>12 de janeiro de 2024</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Portaria nº 20</h5>
+                        <p>Regula o reajuste a partir de 1º de janeiro de 2024 dos benefícios previdenciários, pensões
+                            sem
+                            paridade e outros valores, utilizando a média aritmética das remunerações de contribuição.
+                        </p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/portaria/portaria-20.pdf" target="_blank">Saiba Mais</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Aviso de Cookies -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Ao continuar usando nosso site, você concorda e aceita as nossas políticas de privacidade.
+            <br><a href="/politica-de-privacidade.html">Saiba Mais</a>.
+        </p>
+        <button id="accept-cookies">Ok! Quero Continuar</button>
+    </div>
+    <!-- Fim Aviso de Cookies -->
+
+
+    <!-- Importando rodapé -->
+    <div id="rodape"></div>
+    <!-- Fim importação rodapé -->
+
+
+    <script>
+        filterSelection("todos")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "todos") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="/js/cookies.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>  
+    <script src="/js/access.js"></script>
+    
+    <div vw class="enabled ">
+        <div vw-access-button class="active vlibras-toggle"></div>
+        <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+
+</body>
+
+</html>

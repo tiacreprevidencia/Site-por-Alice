@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/images/icones/logo.ico">
+    <!-- Preload para garantir carregamento rápido -->
+    <link rel="preload" href="/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="/css/style.css" as="style">
+
+    <!-- Folhas de estilo carregadas no início -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/acordeao-hierarquico.css">
+    <link rel="stylesheet" href="/css/access.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <title>Aposentadoria</title>
+</head>
+<body>
+    <header id="cabecario"></header>
+    <h3 class="conselhos-secao">BENEFÍCIOS</h3>
+    <h1 class="titulo-secao">Aposentadoria</h1>
+    <main>
+    <section class="accordion-box">
+
+      <!-- Item 1 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-left">
+            <i class="bi bi-graph-up accordion-icon"></i>
+            <span class="accordion-title">Aposentadoria</span>
+          </div>
+          <i class="bi bi-chevron-down accordion-arrow"></i>
+        </div>
+        <div class="accordion-content">
+          <div class="subitem">
+          <ul>
+            <li>Aposentadoria por Incapacidade<br><a href="http://legis.ac.gov.br/detalhar/128" target="_blank">Art. 32 a 43 da LCE 154/2005.</a></li>
+            <li>Aposentadoria Compulsória<br><a href="http://legis.ac.gov.br/detalhar/128" target="_blank">Art. 32 a 43 da LCE 154/2005.</a></li>
+            <li>Aposentadoria Voluntária por Tempo de Contribuição<br><a href="http://legis.ac.gov.br/detalhar/128" target="_blank">Art. 45 e 46 da LCE 154/2005.</a></li>
+            <li>Aposentadoria por Idade<br><a href="http://legis.ac.gov.br/detalhar/128" target="_blank">Art. 47 da LCE 154/2005.</a></li>
+            <li>Aposentadoria Especial dos Professores<br><a href="https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11301.htm" target="_blank">Lei Federal nº 11.301, de 10 de maio de 2006.</a></li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    </main>
+
+    <script>
+    document.querySelectorAll(".accordion-header").forEach(header => {
+      header.addEventListener("click", () => {
+        const item = header.parentElement;
+        item.classList.toggle("active");
+      });
+    });
+  </script>
+
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Ao continuar usando nosso site, você concorda e aceita as nossas políticas de privacidade.
+            <br><a href="/politica-de-privacidade.html">Saiba Mais</a>.
+        </p>
+        <button id="accept-cookies">Ok! Quero Continuar</button>
+    </div>
+    <div id="rodape"></div>
+    <script src="/js/jquery-3.6.4.min.js"></script>
+    <script src="/js/cookies.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/access.js"></script>
+    <div vw class="enabled ">
+        <div vw-access-button class="active vlibras-toggle"></div>
+        <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+</body>
+</html>

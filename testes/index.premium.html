@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acreprevidência - Homepage</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+  /* --- Variáveis de cores --- */
+  :root {
+    --verde-luxo: #0B3D2E;
+    --dourado-brilhante: #FFDF00;
+    --dourado: #FDD017;
+    --dourado-metalico: #D4AF37;
+    --branco: #FFFFFF;
+    --cinza-texto: #555555;
+    --cinza-claro: #F8F8F8;
+  }
+
+  /* --- Reset e base --- */
+  * { margin:0; padding:0; box-sizing:border-box; font-family:'Open Sans', sans-serif; }
+  body { background-color: var(--branco); color: var(--cinza-texto); line-height:1.6; }
+  a { color: var(--verde-luxo); text-decoration: none; }
+  a:hover { color: var(--dourado-metalico); }
+  
+  /* --- Cabeçalho --- */
+  header {
+    background-color: var(--verde-luxo);
+    color: var(--branco);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  header h1 { font-family:'Playfair Display', serif; font-size:2rem; }
+  nav ul { list-style:none; display:flex; gap:1.5rem; }
+  nav li a { font-weight:600; position:relative; padding:0.5rem; }
+  nav li a::after {
+    content:''; position:absolute; width:0%; height:2px;
+    background-color: var(--dourado-metalico); bottom:0; left:0; transition:0.3s;
+  }
+  nav li a:hover::after { width:100%; }
+
+  /* --- Botão Hamburger --- */
+  .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; }
+  .hamburger div { width:25px; height:3px; background-color: var(--branco); transition: all 0.3s; }
+
+  /* --- Hero Section --- */
+  .hero { background-color: var(--branco); text-align:center; padding:5rem 2rem; border-bottom:2px solid var(--dourado-metalico); }
+  .hero h2 { font-family:'Playfair Display', serif; font-size:3rem; color: var(--verde-luxo); margin-bottom:1rem; }
+  .hero p { font-size:1.2rem; color: var(--cinza-texto); }
+  .btn-primary {
+    background-color: var(--verde-luxo); color: var(--branco); padding:0.8rem 1.5rem; border-radius:6px;
+    font-weight:600; transition: all 0.3s; display:inline-block; margin-top:1rem;
+  }
+  .btn-primary:hover {
+    background-color: var(--branco); color: var(--verde-luxo); border:2px solid var(--dourado-metalico);
+    box-shadow:0 4px 12px rgba(212,175,55,0.5);
+  }
+  
+  /* --- Seções de Conteúdo --- */
+  .section { padding:4rem 2rem; max-width:1200px; margin:0 auto; }
+  .cards { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap:2rem; }
+  .card {
+    background-color: var(--cinza-claro);
+    border-left:4px solid var(--dourado-metalico);
+    padding:2rem;
+    border-radius:8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .card:hover { transform: translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,0.1); }
+  .card h3 { color: var(--verde-luxo); margin-bottom:0.8rem; font-family:'Playfair Display', serif; }
+  .card p { color: var(--cinza-texto); }
+  .card-icon { font-size:2rem; color: var(--dourado-metalico); margin-bottom:1rem; display:inline-block; }
+
+  /* --- Seções de Conteúdo --- */
+        .section-box { text-align: center; padding: 2rem 1rem; max-width:1200px; margin:0 auto; }
+        .cards-box {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+            gap: 2rem; /* espaçamento entre os cards */
+            max-width: 1200px; /* controla largura máxima do grid */
+            margin: 0 auto; /* centraliza */
+        }
+        .card-box {
+            background: #fff;
+            border-radius: 10px;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+        .card-box-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+            color: var(--verde-luxo);
+        }
+        .card-box h3 {
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+            color: #333;
+        }
+
+        .card-box p {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 900px) {
+        .cards-box {
+            grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+        }
+        }
+
+        @media (max-width: 600px) {
+        .cards-box {
+            grid-template-columns: 1fr; /* 1 coluna */
+        }
+        }
+
+  /* --- Formulário de Contato --- */
+  form { background-color: var(--cinza-claro); padding:2rem; border-radius:8px; display:flex; flex-direction:column; gap:1rem; max-width:600px; margin:auto; }
+  form label { font-weight:600; margin-bottom:0.3rem; }
+  form input, form textarea { padding:0.8rem; border:1px solid #ccc; border-radius:4px; width:100%; }
+  form input:focus, form textarea:focus { border-color: var(--verde-luxo); outline:none; box-shadow:0 0 5px rgba(11,61,46,0.5); }
+  form button { width:max-content; align-self:flex-start; }
+
+  /* --- Footer --- */
+  footer { background-color: var(--verde-luxo); color: var(--branco); text-align:center; padding:3rem 2rem; margin-top:2rem; }
+  footer a { color: var(--dourado-metalico); margin:0 0.5rem; }
+
+  /* --- Responsividade --- */
+  @media(max-width:768px){
+    nav ul { position:absolute; top:100%; left:0; right:0; background-color: var(--verde-luxo); flex-direction:column; gap:0; display:none; }
+    nav ul.active { display:flex; }
+    nav li a { padding:1rem 2rem; border-bottom:1px solid var(--dourado-metalico); }
+    .hamburger { display:flex; }
+  }
+
+  /* --- Acessibilidade --- */
+  .skip-link { position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden; z-index:100; }
+  .skip-link:focus { left:0; top:0; background: var(--dourado-metalico); color: var(--verde-luxo); padding:1rem; text-decoration:none; font-weight:bold; z-index:1000; }
+</style>
+</head>
+<body>
+
+<!-- --- Skip link acessibilidade --- -->
+<a href="#main-content" class="skip-link" accesskey="1">Ir para conteúdo principal [Alt+1]</a>
+
+<header>
+  <h1>Acreprevidência</h1>
+  <nav>
+    <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" role="button" tabindex="0">
+      <div></div><div></div><div></div>
+    </div>
+    <ul id="nav-list">
+      <li><a href="#main-content" accesskey="2">Início</a></li>
+      <li><a href="#services" accesskey="3">Serviços</a></li>
+      <li><a href="#news" accesskey="4">Notícias</a></li>
+      <li><a href="#contact" accesskey="5">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main-content">
+
+<!-- Hero Section -->
+<section class="hero">
+  <h2>Segurança e Tradição para Todos</h2>
+  <p>Protegendo o futuro dos servidores e cidadãos do Acre com confiança e transparência.</p>
+  <a href="#services" class="btn-primary">Ver Serviços</a>
+</section>
+
+<!-- Serviços -->
+    <section class="section-box" id="services">
+    <h2 style="font-family:'Playfair Display', serif; color: var(--verde-luxo); margin-bottom:2rem;">Serviços</h2>
+    <div class="cards-box">
+        <div class="card-box"><span class="card-box-icon">📄</span><h3>Serviço 1</h3><p>Descrição do serviço ou funcionalidade do site, elegante e clara.</p></div>
+        <div class="card-box"><span class="card-box-icon">💼</span><h3>Serviço 2</h3><p>Descrição do serviço ou funcionalidade do site, elegante e clara.</p></div>
+        <div class="card-box"><span class="card-box-icon">⚖️</span><h3>Serviço 3</h3><p>Descrição do serviço ou funcionalidade do site, elegante e clara.</p></div>
+        <div class="card-box"><span class="card-box-icon">📄</span><h3>Serviço 1</h3><p>Descrição do serviço ou funcionalidade do site, elegante e clara.</p></div>
+        <div class="card-box"><span class="card-box-icon">💼</span><h3>Serviço 2</h3><p>Descrição do serviço ou funcionalidade do site, elegante e clara.</p></div>
+        <div class="card-box"><span class="card-box-icon">⚖️</span><h3>Serviço 3</h3><p>Descrição do serviço ou funcionalidade do site, elegante e clara.</p></div>
+    </div>
+    </section>
+
+<!-- Serviços -->
+<section class="section" id="services">
+  <h2 style="font-family:'Playfair Display', serif; color: var(--verde-luxo); margin-bottom:2rem;">Serviços</h2>
+  <div class="cards">
+    <div class="card"><span class="card-icon">📄</span><h3>Serviço 1</h3><p>Descrição do serviço ou funcionalidade do site, elegante e clara.</p></div>
+    <div class="card"><span class="card-icon">💼</span><h3>Serviço 2</h3><p>Descrição do serviço ou funcionalidade do site, elegante e clara.</p></div>
+    <div class="card"><span class="card-icon">⚖️</span><h3>Serviço 3</h3><p>Descrição do serviço ou funcionalidade do site, elegante e clara.</p></div>
+  </div>
+</section>
+
+<!-- Notícias -->
+<section class="section" id="news">
+  <h2 style="font-family:'Playfair Display', serif; color: var(--verde-luxo); margin-bottom:2rem;">Últimas Notícias</h2>
+  <div class="cards">
+    <div class="card"><span class="card-icon">📰</span><h3>Notícia 1</h3><p>Resumo da notícia destacando transparência e informações importantes.</p></div>
+    <div class="card"><span class="card-icon">📰</span><h3>Notícia 2</h3><p>Resumo da notícia destacando transparência e informações importantes.</p></div>
+  </div>
+</section>
+
+<!-- Formulário de Contato -->
+<section class="section" id="contact">
+  <h2 style="font-family:'Playfair Display', serif; color: var(--verde-luxo); margin-bottom:2rem;">Fale Conosco</h2>
+  <form>
+    <label for="nome">Nome *</label>
+    <input type="text" id="nome" name="nome" required>
+    <label for="email">E-mail *</label>
+    <input type="email" id="email" name="email" required>
+    <label for="mensagem">Mensagem *</label>
+    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+    <button type="submit" class="btn-primary">Enviar</button>
+  </form>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 Acreprevidência - Todos os direitos reservados</p>
+  <p>
+    <a href="#">Política de Privacidade</a> |
+    <a href="#">Acessibilidade</a> |
+    <a href="#">Transparência</a>
+  </p>
+</footer>
+
+<script>
+  // Menu hambúrguer responsivo
+  const hamburger = document.getElementById('hamburger');
+  const navList = document.getElementById('nav-list');
+
+  hamburger.addEventListener('click', () => {
+    navList.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', navList.classList.contains('active'));
+  });
+
+  hamburger.addEventListener('keypress', (e) => {
+    if(e.key === 'Enter' || e.key === ' ') {
+      navList.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', navList.classList.contains('active'));
+    }
+  });
+</script>
+
+</body>
+</html>

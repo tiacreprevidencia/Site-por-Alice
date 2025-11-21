@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acordeão Neumorphism Moderno Completo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    /* =========================================================
+       RESET GLOBAL
+    ========================================================= */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* =========================================================
+       VARIÁVEIS DO PROJETO
+    ========================================================= */
+    :root {
+      --verde-escuro: #1b7053;
+      --verde-azul: #30c896;
+      --verde-agua: #26a175;
+      --verde-luxo: #0B3D2E;
+      --titulos: #094142;
+      --preto: #000;
+      --branco: #fff;
+      --branco-sujo: #fafafa;
+      --branco-quase-branco: #fcfcfc;
+      --cinza-borda: #e6e6e6;
+      --cinza-claro: #f2f2f2;
+      --cinza-texto: #555;
+      --gray-icons: #D9D9D9;
+      --sombra-suave: rgba(0,0,0,0.08);
+      --sombra-forte: rgba(0,0,0,0.12);
+      --realce: rgba(255,255,255,0.6);
+    }
+
+    html, body {
+      font-family: "Segoe UI", sans-serif;
+      background: var(--branco);
+      color: var(--preto);
+    }
+
+    /* =========================================================
+       CONTAINER PRINCIPAL
+    ========================================================= */
+    main {
+      display: block;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      max-width: 1200px;
+    }
+
+    .accordion-box {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* =========================================================
+       ITEM NEUMORPHISM DO ACORDEÃO
+    ========================================================= */
+    .accordion-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      background: var(--branco-quase-branco);
+      border: 1px solid var(--cinza-borda);
+      box-shadow:
+        8px 8px 16px var(--sombra-suave),
+        -6px -6px 12px var(--realce);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    /* Gradiente lateral */
+    .accordion-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--verde-escuro), var(--verde-azul));
+      border-radius: 16px 0 0 16px;
+      pointer-events: none;
+    }
+
+    /* Efeito hover — levanta o bloco */
+    .accordion-item:hover {
+      transform: translateY(-5px);
+      background: var(--branco-sujo);
+      box-shadow:
+        10px 10px 20px var(--sombra-forte),
+        -6px -6px 16px var(--realce);
+    }
+
+    /* =========================================================
+       CABEÇALHO DO ACORDEÃO
+    ========================================================= */
+    .accordion-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding: 2rem 2.2rem;
+      background: transparent;
+      transition: background 0.25s ease;
+    }
+
+    .accordion-header:hover {
+      background: var(--branco-sujo);
+    }
+
+    .accordion-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--verde-luxo);
+      transition: color 0.3s ease;
+    }
+
+    .accordion-item.active .accordion-title {
+      color: var(--verde-azul);
+    }
+
+    .accordion-icon {
+      font-size: 1.4rem;
+      color: var(--gray-icons);
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .accordion-item.active .accordion-icon {
+      transform: rotate(90deg);
+      color: var(--verde-agua);
+    }
+
+    /* =========================================================
+       CONTEÚDO INTERNO
+    ========================================================= */
+    .accordion-content {
+      display: none;
+      padding: 0 2.2rem 2rem;
+      border-top: 1px solid var(--cinza-borda);
+      background: var(--branco-sujo);
+      border-radius: 0 0 16px 16px;
+      box-shadow:
+        inset 4px 4px 8px var(--sombra-suave),
+        inset -4px -4px 8px var(--realce);
+    }
+
+    .accordion-item.active .accordion-content {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .accordion-content p {
+      font-size: 1rem;
+      color: var(--cinza-texto);
+      line-height: 1.6;
+      margin: 0.6rem 0 1rem;
+    }
+
+    .accordion-content ul {
+      margin: 0.5rem 0 1rem 1.5rem;
+      list-style-type: disc;
+      color: var(--verde-luxo);
+    }
+
+    .accordion-content li {
+      margin-bottom: 0.4rem;
+    }
+
+    .accordion-content a {
+      color: var(--verde-agua);
+      text-decoration: underline;
+      transition: color 0.2s ease;
+    }
+
+    .accordion-content a:hover {
+      color: var(--verde-azul);
+    }
+
+    /* =========================================================
+       RESPONSIVIDADE
+    ========================================================= */
+    @media (max-width: 767px) {
+      main { padding: 2rem 1rem; }
+      .accordion-header { padding: 1.5rem; }
+      .accordion-content { padding: 0 1.5rem 1.5rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="accordion-box">
+
+      <!-- Item 1 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <span class="accordion-title">Aposentadoria</span>
+          <i class="bi bi-chevron-right accordion-icon"></i>
+        </div>
+        <div class="accordion-content">
+          <p>Concedida ao servidor que completar os requisitos de idade e tempo de contribuição previstos em lei.</p>
+          <ul>
+            <li>Tempo mínimo de 10 anos de serviço público;</li>
+            <li>5 anos no cargo em que se dará a aposentadoria;</li>
+            <li>Regras de transição conforme legislação vigente.</li>
+          </ul>
+          <p>Mais detalhes em: <a href="#">Art. 45 e 46 da LCE 154/2005</a></p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <span class="accordion-title">Benefícios Previdenciários</span>
+          <i class="bi bi-chevron-right accordion-icon"></i>
+        </div>
+        <div class="accordion-content">
+          <p>Concedido ao servidor que ficar temporariamente incapacitado para o trabalho.</p>
+          <ul>
+            <li>Auxílio Doença — art. 55 da LCE 154/2005;</li>
+            <li>Pensão por Morte — art. 60 da LCE 154/2005.</li>
+          </ul>
+          <p>Mais informações: <a href="#">Regulamentação Completa</a></p>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <script>
+    document.querySelectorAll(".accordion-item").forEach(item => {
+      item.querySelector(".accordion-header").addEventListener("click", () => {
+        item.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+</html>

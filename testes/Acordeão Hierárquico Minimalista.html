@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acordeão Hierárquico Minimalista</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f8f9fa;
+      --white: #ffffff;
+      --text-dark: #2f2f2f;
+      --text-muted: #555;
+      --border: #e3e3e3;
+      --shadow: rgba(0, 0, 0, 0.04);
+      --hover: #f3f3f3;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, sans-serif;
+      background: var(--bg);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 3rem 1rem;
+      color: var(--text-dark);
+    }
+
+    .rounds-box {
+      width: 100%;
+      max-width: 850px;
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    /* Card */
+    .round-box {
+      background: var(--white);
+      border-radius: 10px;
+      box-shadow: 0 2px 6px var(--shadow);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      position: relative;
+      transition: border-color 0.2s ease;
+    }
+    
+    .round-box:hover {
+      border-color: #cfcfcf;
+    }
+
+    /* Header */
+    .round-box-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.3rem 1.6rem;
+      cursor: pointer;
+      background: var(--white);
+      transition: background 0.2s ease;
+    }
+
+    .round-box-header:hover {
+      background: var(--hover);
+    }
+
+    .round-box-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      transition: color 0.2s ease;
+    }
+
+    .toggle-icon {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      transition: transform 0.25s ease, color 0.25s ease;
+    }
+
+    .round-box.active .toggle-icon {
+      transform: rotate(90deg);
+      color: var(--text-dark);
+    }
+
+    /* Conteúdo */
+    .round-box-content {
+      display: none;
+      padding: 1.5rem 2rem;
+      border-top: 1px solid var(--border);
+      background: #fcfcfc;
+    }
+
+    .round-box.active .round-box-content {
+      display: block;
+    }
+
+    /* Subtítulos */
+    .subitem-header {
+      font-weight: 600;
+      font-size: 1rem;
+      margin: 1rem 0 0.3rem;
+    }
+
+    /* Parágrafos */
+    .round-box-content p {
+      margin: 0.3rem 0 1rem 0;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* Listas */
+    .round-box-content ul {
+      margin: 0.5rem 0 1.2rem 2.4rem;
+      padding: 0;
+      list-style-type: disc;
+    }
+
+    .round-box-content li {
+      margin-bottom: 0.4rem;
+      color: var(--text-dark);
+      font-size: 0.95rem;
+    }
+
+    /* Links */
+    .round-box-content a {
+      color: var(--text-dark);
+      text-decoration: underline;
+      transition: color 0.2s ease;
+    }
+
+    .round-box-content a:hover {
+      color: #000;
+    }
+
+  </style>
+</head>
+<body>
+
+  <section class="rounds-box">
+
+    <!-- Aposentadoria -->
+    <div class="round-box">
+      <div class="round-box-header">
+        <span class="round-box-title">Aposentadoria</span>
+        <i class="bi bi-chevron-right toggle-icon"></i>
+      </div>
+
+      <div class="round-box-content">
+        <div class="subitem">
+          <div class="subitem-header">Aposentadoria Voluntária</div>
+          <p>Concedida ao servidor que completar os requisitos de idade e tempo de contribuição previstos em lei.</p>
+          <ul>
+            <li>Tempo mínimo de 10 anos de efetivo exercício no serviço público;</li>
+            <li>5 anos no cargo em que se dará a aposentadoria;</li>
+            <li>Regras de transição podem ser aplicadas conforme legislação vigente.</li>
+          </ul>
+          <p>Mais detalhes em: <a href="#">Art. 45 e 46 da LCE 154/2005</a></p>
+        </div>
+
+        <div class="subitem">
+          <div class="subitem-header">Aposentadoria Especial dos Professores</div>
+          <p>Aplica-se exclusivamente aos servidores que comprovarem tempo de efetivo exercício nas funções de magistério.</p>
+          <ul>
+            <li>Redução de 5 anos nos requisitos de idade e tempo de contribuição;</li>
+            <li>Somente atividades de docência e direção escolar são consideradas;</li>
+          </ul>
+          <p>Base legal: <a href="#">Lei Federal nº 11.301, de 10 de maio de 2006</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Benefícios -->
+    <div class="round-box">
+      <div class="round-box-header">
+        <span class="round-box-title">Benefícios Previdenciários</span>
+        <i class="bi bi-chevron-right toggle-icon"></i>
+      </div>
+
+      <div class="round-box-content">
+        <div class="subitem">
+          <div class="subitem-header">Auxílio Doença</div>
+          <p>Concedido ao servidor que ficar temporariamente incapacitado para o trabalho.</p>
+          <p>Mais informações: <a href="#">Art. 55 da LCE 154/2005</a></p>
+        </div>
+
+        <div class="subitem">
+          <div class="subitem-header">Pensão por Morte</div>
+          <ul>
+            <li>Devida aos dependentes do servidor falecido;</li>
+            <li>Valor definido conforme tempo de contribuição e regras constitucionais;</li>
+            <li>Regulamentação: <a href="#">Art. 60 da LCE 154/2005</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const accordions = document.querySelectorAll(".round-box");
+
+      accordions.forEach(box => {
+        const header = box.querySelector(".round-box-header");
+        header.addEventListener("click", () => {
+          box.classList.toggle("active");
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

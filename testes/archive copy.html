@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arquivos - Acreprevidência</title>
+<style>
+  body {
+    font-family: "Segoe UI", sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background: #004b8d;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header input[type="search"] {
+    width: 250px;
+    padding: 0.4rem;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+  }
+
+  main {
+    display: flex;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  /* Painel principal (pastas e arquivos) */
+  .explorer {
+    flex: 2;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 1rem;
+  }
+
+  .folder {
+    margin-bottom: 1rem;
+  }
+
+  .folder-header {
+    background: #e9f1fb;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .folder-header:hover {
+    background: #d6e7fc;
+  }
+
+  .files {
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+    display: none;
+  }
+
+  .file {
+    padding: 0.4rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+  }
+
+  .file:hover {
+    background: #f8f9fa;
+  }
+
+  .file span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .file small {
+    color: #777;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Visualizador lateral */
+  .preview {
+    flex: 3;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 1rem;
+  }
+
+  iframe {
+    width: 100%;
+    height: 80vh;
+    border: none;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h2>📁 Arquivos Acreprevidência</h2>
+  <input type="search" id="search" placeholder="Buscar arquivo...">
+</header>
+
+<main>
+  <div class="explorer" id="explorer">
+    <div class="folder">
+      <div class="folder-header" onclick="toggleFolder(this)">
+        <span>📂 Relatórios de Gestão</span>
+        <span>+</span>
+      </div>
+      <div class="files">
+        <div class="file" onclick="previewFile('https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf')">
+          <span>📄 Relatório 2024</span>
+          <small>PDF • 12/03/2025</small>
+        </div>
+        <div class="file" onclick="previewFile('https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf')">
+          <span>📄 Relatório 2023</span>
+          <small>PDF • 10/03/2024</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="folder">
+      <div class="folder-header" onclick="toggleFolder(this)">
+        <span>📂 Atas e Resoluções</span>
+        <span>+</span>
+      </div>
+      <div class="files">
+        <div class="file" onclick="previewFile('https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf')">
+          <span>📄 Ata nº 05/2025</span>
+          <small>PDF • 02/05/2025</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="preview" id="preview">
+    <p style="color:#666;">Selecione um arquivo para visualizar.</p>
+  </div>
+</main>
+
+<script>
+  function toggleFolder(header) {
+    const files = header.nextElementSibling;
+    const sign = header.querySelector("span:last-child");
+    const open = files.style.display === "block";
+    files.style.display = open ? "none" : "block";
+    sign.textContent = open ? "+" : "−";
+  }
+
+  function previewFile(url) {
+    const preview = document.getElementById("preview");
+    preview.innerHTML = `<iframe src="${url}"></iframe>`;
+  }
+
+  // Filtro de busca
+  document.getElementById("search").addEventListener("input", function() {
+    const term = this.value.toLowerCase();
+    document.querySelectorAll(".file").forEach(file => {
+      const text = file.textContent.toLowerCase();
+      file.style.display = text.includes(term) ? "flex" : "none";
+    });
+  });
+</script>
+
+</body>
+</html>

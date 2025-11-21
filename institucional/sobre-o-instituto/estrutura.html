@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="/images/icones/logo.ico">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- Preload para garantir carregamento rápido -->
+    <link rel="preload" href="/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="/css/style.css" as="style">
+
+    <!-- Folhas de estilo carregadas no início -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/access.css">
+    <link rel="stylesheet" href="/css/estrutura.css">
+    <title>Estrutura Organizacional</title>
+</head>
+<style>
+    /* --- NOVO: versão com subdrops --- */
+.round-box.subdrop {
+  padding-bottom: 1rem; /* espaço para subníveis */
+}
+
+.round-box-sub {
+  background: var(--branco);
+  margin-top: 0.8rem;
+  margin-left: 1rem;
+  border-radius: 8px;
+  padding: 0.9rem 1.2rem;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05),
+              0 2px 6px rgba(0,0,0,0.04);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  border-left: 3px solid var(--verde-claro);
+}
+
+.round-box-sub:hover {
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.06),
+              0 4px 10px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+  background: var(--branco-sujo);
+}
+</style>
+
+<body>
+
+    <header id="cabecario"></header>
+
+        <h3 class="conselhos-secao">SOBRE O INSTITUTO</h3>
+        <h1 class="titulo-secao">Estrutura Organizacional</h1>
+        
+    <main>
+      <section class="rounds-box">
+        <div class="round-box subdrop">
+  <h3>Órgãos Colegiados</h3>
+  <div class="round-box-sub">
+    <p><strong>CEPS</strong> - Conselho Estadual de Previdência Social</p>
+  </div>
+  <div class="round-box-sub">
+    <p><strong>CONFIS</strong> - Conselho Fiscal</p>
+  </div>
+  <div class="round-box-sub">
+    <p><strong>COMINV</strong> - Comitê de Investimentos</p>
+  </div>
+</div>
+
+      </section>
+  </main>
+
+    <div id="rodape"></div>
+
+    <script src="/js/jquery-3.6.4.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/cookies.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/access.js"></script>
+    <div vw class="enabled ">
+        <div vw-access-button class="active vlibras-toggle"></div>
+        <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acordeão Neumorphism Estável</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    /* ============================
+       RESET + VARIÁVEIS GERAIS
+    ============================ */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --branco: #fff;
+      --branco-sujo: #fafafa;
+      --cinza-claro: #f2f2f2;
+      --cinza-texto: #444;
+      --verde-luxo: #0B3D2E;
+      --sombra-suave: rgba(0,0,0,0.08);
+      --realce: rgba(255,255,255,0.6);
+    }
+
+    html, body {
+      background: var(--branco);
+      font-family: "Segoe UI", sans-serif;
+      color: var(--cinza-texto);
+    }
+
+    /* ============================
+       CONTAINER
+    ============================ */
+    main {
+      display: block;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      max-width: 1200px;
+    }
+
+    .accordion-box {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* ============================
+       ITEM DO ACORDEÃO
+    ============================ */
+    .accordion-item {
+      background: var(--branco);
+      border-radius: 12px;
+      box-shadow:
+        6px 6px 12px var(--sombra-suave),
+        -4px -4px 10px var(--realce);
+      overflow: hidden;
+      transition: background 0.25s ease;
+    }
+
+    .accordion-header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px; 
+      height: 100%;
+      background: linear-gradient(180deg, var(--verde-escuro), var(--verde-azul));
+      border-radius: 10px 0 0 10px;
+      pointer-events: none; 
+    }
+
+    .accordion-item:hover {
+      background: var(--branco-sujo);
+    }
+
+    /* ============================
+       CABEÇALHO (ÍCONE + TÍTULO + SETA)
+    ============================ */
+    .accordion-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      padding: 1.5rem 2rem;
+      user-select: none;
+    }
+
+    .accordion-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .accordion-icon {
+      font-size: 1.5rem;
+      color: #aaa;
+    }
+
+    .accordion-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--verde-luxo);
+    }
+
+    .accordion-arrow {
+      font-size: 1.2rem;
+      color: #888;
+      transition: transform 0.25s ease;
+    }
+
+    .accordion-item.active .accordion-arrow {
+      transform: rotate(180deg);
+    }
+
+    /* ============================
+       CONTEÚDO
+    ============================ */
+    .accordion-content {
+      display: none;
+      padding: 0 2rem 1.8rem 3.5rem;
+      background: var(--branco);
+    }
+
+    .accordion-item.active .accordion-content {
+      display: block;
+    }
+
+    .accordion-content p {
+      margin: 0.5rem 0 1rem;
+      line-height: 1.6;
+      font-size: 0.96rem;
+    }
+
+    .accordion-content ul {
+      margin: 0.5rem 0 1rem 1.3rem;
+      padding: 0;
+      list-style-type: disc;
+    }
+
+    .accordion-content li {
+      margin-bottom: 0.4rem;
+    }
+
+    .accordion-content a {
+      color: var(--verde-luxo);
+      text-decoration: underline;
+    }
+
+    /* ============================
+       RESPONSIVIDADE
+    ============================ */
+    @media (max-width: 767px) {
+      .accordion-header {
+        padding: 1.2rem 1.4rem;
+      }
+      .accordion-content {
+        padding: 0 1.4rem 1.4rem 2.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="accordion-box">
+
+      <!-- Item 1 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-left">
+            <i class="bi bi-graph-up accordion-icon"></i>
+            <span class="accordion-title">Avaliação Atuarial</span>
+          </div>
+          <i class="bi bi-chevron-up accordion-arrow"></i>
+        </div>
+        <div class="accordion-content">
+          <p>Relatórios completos sobre o equilíbrio financeiro e atuarial do regime próprio de previdência.</p>
+          <ul>
+            <li>Relatório Atuarial de 2024;</li>
+            <li>Nota Técnica de Avaliação;</li>
+            <li>Estudo de Sustentabilidade.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-left">
+            <i class="bi bi-calendar3 accordion-icon"></i>
+            <span class="accordion-title">Calendário de Pagamento</span>
+          </div>
+          <i class="bi bi-chevron-up accordion-arrow"></i>
+        </div>
+        <div class="accordion-content">
+          <p>Datas oficiais de pagamento dos benefícios e remunerações vinculadas ao sistema previdenciário.</p>
+          <p><a href="#">Consultar o calendário completo</a></p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-left">
+            <i class="bi bi-award accordion-icon"></i>
+            <span class="accordion-title">Certidões e Certificados</span>
+          </div>
+          <i class="bi bi-chevron-up accordion-arrow"></i>
+        </div>
+        <div class="accordion-content">
+          <p>Emissão e verificação de certidões previdenciárias e certificações de regularidade.</p>
+          <ul>
+            <li>CRP — Certidão de Regularidade Previdenciária;</li>
+            <li>Certificação Pró-Gestão RPPS;</li>
+            <li>Declarações de Regularidade.</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <script>
+    document.querySelectorAll(".accordion-header").forEach(header => {
+      header.addEventListener("click", () => {
+        const item = header.parentElement;
+        item.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+</html>

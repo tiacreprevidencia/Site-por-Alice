@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/icones/logo.ico">
+    <title>Legislação Federal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <!-- Preload para garantir carregamento rápido -->
+    <link rel="preload" href="/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="/css/style.css" as="style">
+
+    <!-- Folhas de estilo carregadas no início -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/access.css">
+</head>
+
+<body>
+    <!-- Importando cabeçalho -->
+    <header id="cabecario"></header>
+    <!-- Fim importação cabeçalho -->
+
+    <div class="container-site">
+        <h3 class="conselhos-secao">LEGISLAÇÃO</h3>
+        <h1 class="titulo-secao">Federal</h1>
+
+
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('todos')">Todos</button>
+            <button class="btn" onclick="filterSelection('constituicao')">Constituição</button>
+            <button class="btn" onclick="filterSelection('emendas')">Emendas Constitucionais</button>
+            <button class="btn" onclick="filterSelection('leis')">Leis Federais</button>
+            <button class="btn" onclick="filterSelection('orientacoes')">Orientações Normativas</button>
+            <button class="btn" onclick="filterSelection('resolucoes')">Resoluções</button>
+            <button class="btn" onclick="filterSelection('portarias')">Portarias</button>
+        </div>
+
+        <div class="container">
+            <div class="cards-legis-estadual">
+
+                <!-- LEI FEDERAL | LEI Nº 3.765 -->
+                <div class="cards-externo filterDiv leis">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Lei Federal</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>04 de maio de 1960</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Lei n° 3.765</h5>
+                        <p>Dispõe sobre as Pensões Militares.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="http://www.planalto.gov.br/ccivil_03/leis/l3765.htm" target="_blank">Visualizar</a></p>
+                    </div>
+                </div>
+
+                <!-- LEI FEDERAL | DL Nº 667 -->
+                <div class="cards-externo filterDiv leis">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Lei Federal</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>02 de julho de 1969</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Decreto-Lei n° 667</h5>
+                        <p>Reorganiza as Polícias Militares e os Corpos de Bombeiros Militares dos Estados, dos
+                            Território e do Distrito Federal, e dá outras providências.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del0667.htm" target="_blank">Visualizar</a></p>
+                    </div>
+                </div>
+
+                <!-- CONSTITUIÇÃO | CONSTITUIÇÃO FEDERAL -->
+                <div class="cards-externo filterDiv constituicao">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Constituição</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>05 de outubro de 1988</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Constituição Federal</h5>
+                        <p>Constituição da República Federativa do Brasil de 1988.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank">Visualizar</a></p>
+                    </div>
+                </div>
+
+                <!-- LEI FEDERAL | LEI Nº 9.717 -->
+                <div class="cards-externo filterDiv leis">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Lei Federal</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>27 de novembro de 1998</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Lei n° 9.717 - (Revogado)</h5>
+                        <p>Regula a aplicação da Emenda Constitucional nº 41/2003, alterando dispositivos das Leis nºs
+                            9.717/1998, 8.213/1991, 9.532/1997, e providencia outras medidas.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="http://www.planalto.gov.br/Ccivil_03/leis/L9717.htm" target="_blank">Visualizar</a></p>
+                    </div>
+                </div>
+
+                <!-- EMENDAS | EC Nº 20 -->
+                <div class="cards-externo filterDiv emendas">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Emendas</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>15 de dezembro de 1998</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>EC n° 20</h5>
+                        <p>Modifica o sistema de previdência social, estabelece normas de transição e dá outras
+                            providências.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc20.htm" target="_blank">Visualizar</a></p>
+                    </div>
+                </div>
+
+                <!-- EMENDAS | EC Nº 41 -->
+                <div class="cards-externo filterDiv emendas">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Emendas</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>19 de dezembro de 2003</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>EC n° 41</h5>
+                        <p>Modifica os arts. 37, 40, 42, 48, 96, 149 e 201 da Constituição Federal, revoga o inciso IX
+                            do § 3 do art. 142 da Constituição Federal e dispositivos da Emenda Constitucional nº 20, de
+                            15 de dezembro de 1998, e dá outras providências.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc41.htm" target="_blank">Visualizar</a></p>
+                    </div>
+                </div>
+
+                <!-- LEI FEDERAL | LEI Nº 10.887 -->
+                <div class="cards-externo filterDiv leis">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Lei Federal</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>18 de junho de 2004</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Lei n° 10.887</h5>
+                        <p>
+                            Regula a aplicação da Emenda Constitucional nº 41/2003, alterando dispositivos das Leis nºs
+                            9.717/1998, 8.213/1991, 9.532/1997, e promove outras providências.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2004/Lei/L10.887.htm" target="_blank">Visualizar</a></p>
+                    </div>
+                </div>
+
+                <!-- EMENDAS | EC Nº 47 -->
+                <div class="cards-externo filterDiv emendas">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Emendas</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>06 de julho de 2005</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>EC n° 47</h5>
+                        <p>Altera os arts. 37, 40, 195 e 201 da Constituição Federal, para dispor sobre a previdência
+                            social, e dá outras providências.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc47.htm" target="_blank">Visualizar</a></p>
+                    </div>
+                </div>
+
+                <!-- ORIENTAÇÕES NORMATIVAS | ON Nº 01 -->
+                <div class="cards-externo filterDiv orientacoes">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Orientações</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>23 de janeiro de 2007</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>ON n° 01</h5>
+                        <p>Orientação Normativa MPS</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/orientacoes-normativas/orientacao-normativa-01.pdf" target="_blank">Visualizar</a></p>
+                    </div>
+                </div>
+
+                <!-- RESOLUÇÕES | RESOLUÇÃO BACEN Nº 3.506 -->
+                <div class="cards-externo filterDiv resolucoes">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Orientações</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>26 de outubro de 2007</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Resolução BACEN n° 3.506</h5>
+                        <p>Dispõe sobre as aplicações dos recursos dos regimes próprios de previdência social
+                            instituídos pela União, Estados, Distrito Federal e Municípios.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/resolucoes/resolucao-bacen-3506.pdf" target="_blank">Visualizar</a></p>
+                    </div>
+                </div>
+
+                <!-- PORTARIA | PORTARIA Nº 154 -->
+                <div class="cards-externo filterDiv portarias">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Portaria</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>15 de maio de 2008</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Portaria n° 154</h5>
+                        <p> Disciplina procedimentos sobre a emissão de certidão de tempo de contribuição pelos regimes
+                            próprios de previdência social.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/portaria/portaria-154.pdf" target="_blank">Visualizar</a></p>
+                    </div>
+                </div>
+
+                <!-- RESOLUÇÕES | RESOLUÇÃO BACEN Nº 3.922 -->
+                <div class="cards-externo filterDiv resolucoes">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Orientações</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>25 de novembro de 2010</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>Resolução BACEN n° 3.922</h5>
+                        <p>Dispõe sobre as aplicações dos recursos dos regimes próprios de previdência social
+                            instituídos pela União, Estados, Distrito Federal e Municípios.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="/docs/resolucoes/resolucao-bacen-3922.pdf" target="_blank">Visualizar</a></p>
+                    </div>
+                </div>
+
+                <!-- EMENDAS | EC Nº 70 -->
+                <div class="cards-externo filterDiv emendas">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Emendas</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>29 de março de 2012</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>EC n° 70</h5>
+                        <p>Adiciona o art. 6º-A à Emenda Constitucional nº 41/2003, definindo critérios para o cálculo e
+                            correção dos proventos da aposentadoria por invalidez de servidores públicos que ingressaram
+                            até a data de publicação da emenda.
+                        </p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc70.htm" target="_blank">Visualizar</a></p>
+                    </div>
+                </div>
+
+                <!-- EMENDAS | EC Nº 103 -->
+                <div class="cards-externo filterDiv emendas">
+                    <div class="dados-card">
+                        <div class="tipo-card">
+                            <h5 class="tipo-legislacao">Emendas</h5>
+                        </div>
+                        <div class="data-card">
+                            <h5>12 de novembro de 2019</h5>
+                        </div>
+                    </div>
+                    <div class="conteudo-card-externo">
+                        <h5>EC n° 103</h5>
+                        <p>Altera o sistema de previdência social e estabelece regras de transição e disposições
+                            transitórias.</p>
+                    </div>
+                    <div class="saiba-mais-card">
+                        <p><a href="https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc103.htm" target="_blank">Visualizar</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Aviso de Cookies -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Ao continuar usando nosso site, você concorda e aceita as nossas políticas de privacidade.
+            <br><a href="/politica-de-privacidade.html">Saiba Mais</a>.
+        </p>
+        <button id="accept-cookies">Ok! Quero Continuar</button>
+    </div>
+    <!-- Fim Aviso de Cookies -->
+
+
+    <!-- Importando rodapé -->
+    <div id="rodape"></div>
+    <!-- Fim importação rodapé -->
+
+    <script>
+        filterSelection("todos")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "todos") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+    <script>
+        (function () {
+            var btnContainer = document.getElementById('myBtnContainer');
+            var btns = btnContainer ? Array.from(btnContainer.querySelectorAll('button')) : [];
+            var valid = btns.map(function (b) {
+                var on = b.getAttribute('onclick') || '';
+                var m = on.match(/filterSelection\(\s*['"]([^'"]+)['"]\s*\)/);
+                return m ? m[1] : null;
+            }).filter(Boolean);
+
+            function setActive(cat) {
+                btns.forEach(function (b) { b.classList.remove('active'); });
+                var target = btns.find(function (b) {
+                    var on = b.getAttribute('onclick') || '';
+                    return on.indexOf("filterSelection('" + cat + "')") > -1 || on.indexOf('filterSelection("' + cat + '")') > -1;
+                });
+                if (target) target.classList.add('active');
+            }
+
+            function openFromHash() {
+                var hash = location.hash ? location.hash.slice(1) : '';
+                if (!hash) return;                    // sem hash: mantém "Todos"
+                if (valid.indexOf(hash) === -1) return; // ignora hashes inválidos
+
+                filterSelection(hash);
+
+                setTimeout(function () {
+                    setActive(hash);
+                    var first = document.querySelector('.filterDiv.show');
+                    if (first) first.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 80);
+            }
+
+            window.addEventListener('load', openFromHash);
+            window.addEventListener('hashchange', openFromHash);
+        })();
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="/js/cookies.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/access.js"></script>
+    
+    <div vw class="enabled ">
+        <div vw-access-button class="active vlibras-toggle"></div>
+        <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+    
+</body>
+
+</html>

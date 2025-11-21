@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beneficiários</title>
+  <link rel="shortcut icon" href="/images/icones/logo.ico">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/access.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <style>
+    /* ===== RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--branco);
+      font-family: "Segoe UI", sans-serif;
+      margin: 0; padding: 0;
+    }
+
+    /* ===== PALETA ===== */
+    :root {
+      --preto: #000;
+      --branco: #fff;
+      --branco-sujo: #fafafa;
+      --verde-escuro: #1b7053;
+      --verde-azul: #30c896;
+      --verde-limao: #3aaa35;
+      --sombra-suave: rgba(0, 0, 0, 0.07);
+      --realce: rgba(255, 255, 255, 0.6);
+      --texto: #2f2f2f;
+      --link: #0a85d1;
+      --underline: #0599f5;
+      --gray-icons: #D9D9D9;
+    }
+
+    /* ===== CONTAINER ===== */
+    main {
+      display: block;
+      padding: 2rem 2rem 4rem;
+      margin: 0 auto;
+    }
+
+    .accordion-box {
+      display: grid;
+      gap: 1.2rem;
+      padding: 0 4rem;
+      width: 100%;  
+      max-width: 1200px; 
+      margin: 0 auto;
+    }
+
+    /* ===== ITEM ===== */
+    .accordion-item {
+      position: relative;
+      background: var(--branco);
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    /* 🔹 Borda fina lateral com gradiente */
+    .accordion-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--verde-escuro), var(--verde-azul));
+      border-radius: 12px 0 0 12px;
+      pointer-events: none;
+    }
+
+    /* ===== CABEÇALHO ===== */
+    .accordion-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.4rem 1.8rem;
+      cursor: pointer;
+      user-select: none;
+      background: var(--branco);
+    }
+
+    .accordion-header:hover {
+      box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+      background: var(--branco-sujo);
+    }
+
+    .accordion-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .accordion-icon {
+      font-size: 1.6rem;
+      margin-right: 25px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      color: var(--gray-icons);
+    }
+
+    .accordion-title {
+      font-size: 1.3rem;
+      color: var(--preto);
+    }
+
+    .accordion-arrow {
+      font-size: 1.1rem;
+      color: #777;
+      transition: transform 0.25s ease;
+    }
+
+    .accordion-item.active .accordion-arrow {
+      transform: rotate(180deg);
+    }
+
+    /* ===== CONTEÚDO ===== */
+    .accordion-content {
+      display: none;
+      padding: 0 1.5rem 2rem;
+      color: #444;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .accordion-item.active .accordion-content {
+      display: block;
+    }
+
+    /* Subtítulos */
+    .subitem-header {
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin: 1rem 0 0.3rem;
+    }
+
+    /* Parágrafos */
+    .accordion-content p {
+      margin: 0.3rem 0 1rem 0;
+      color: var(--text-muted);
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    /* Listas */
+    .accordion-content ul {
+      margin: 0.5rem 0 1.2rem 2.4rem;
+      padding: 0;
+      list-style-type: disc;
+    }
+
+    .accordion-content li {
+      margin-bottom: 0.4rem;
+      color: var(--text-dark);
+      font-size: 1.2rem;
+    }
+
+    /* Links */
+    .accordion-content a {
+      color: var(--link);
+      text-decoration: underline;
+    }
+
+    .accordion-content a:hover {
+      color: var(--underline);
+    }
+  </style>
+</head>
+<body>
+  <div id="cabecario"></div>
+
+  <h3 class="conselhos-secao">Beneficiários</h3>
+  <h1 class="titulo-secao">Beneficiários</h1>
+
+  <main>
+    <section class="accordion-box">
+
+      <!-- Item 1 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-left">
+            <i class="bi bi-graph-up accordion-icon"></i>
+            <span class="accordion-title">Avaliação Atuarial</span>
+          </div>
+          <i class="bi bi-chevron-down accordion-arrow"></i>
+        </div>
+        <div class="accordion-content">
+          <p>Documentos e relatórios relacionados à avaliação atuarial dos servidores.</p>
+          <p>Mais informações: <a href="#">ver detalhes</a>.</p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-left">
+            <i class="bi bi-calendar3 accordion-icon"></i>
+            <span class="accordion-title">Calendário de Pagamento</span>
+          </div>
+          <i class="bi bi-chevron-down accordion-arrow"></i>
+        </div>
+        <div class="accordion-content">
+          <p>Veja as datas de pagamento atualizadas para o exercício vigente.</p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <div class="accordion-left">
+            <i class="bi bi-award accordion-icon"></i>
+            <span class="accordion-title">Certidões e Certificados</span>
+          </div>
+          <i class="bi bi-chevron-down accordion-arrow"></i>
+        </div>
+        <div class="accordion-content">
+          <p>Emissão de certidões de tempo de contribuição e certificados de regularidade.</p>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <script>
+    document.querySelectorAll(".accordion-header").forEach(header => {
+      header.addEventListener("click", () => {
+        const item = header.parentElement;
+        item.classList.toggle("active");
+      });
+    });
+  </script>
+
+  <div id="rodape"></div>
+
+  <div id="cookie-banner" class="cookie-banner">
+    <p>Ao continuar usando nosso site, você concorda e aceita as nossas políticas de privacidade.
+      <br><a href="/politica-de-privacidade.html">Saiba Mais</a>.
+    </p>
+    <button id="accept-cookies">Ok! Quero Continuar</button>
+  </div>
+  <script src="/js/jquery-3.6.4.min.js"></script>
+  <script src="/js/cookies.js"></script>
+  <script src="/js/script.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/access.js"></script>
+  <div vw class="enabled ">
+    <div vw-access-button class="active vlibras-toggle"></div>
+    <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget("https://vlibras.gov.br/app");
+  </script>
+  <script src="/js/transparencia.js"></script>
+</body>
+</html>

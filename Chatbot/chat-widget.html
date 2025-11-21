@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chatbot Widget</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+  <link rel="stylesheet" href="/Chatbot/chatstyle.css" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    /* Garantindo que o chat ocupe 100% do iframe */
+    #chat-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: none;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      border: transparent;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="chat-container">
+
+    <!-- Cabeçalho -->
+    <div id="chat-header">
+      <img src="logo.png" alt="Acreprevidência Logo" class="chat-logo" />
+      <span>Assistente Virtual</span>
+      <button id="chat-close" title="Fechar"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- FAQ -->
+    <div id="chat-faq-buttons">
+      <div class="chat-topic">
+        <button class="chat-faq-topic">Perguntas Frequentes<i class="fi fi-rr-caret-down chat-faq-arrow"></i></button>
+        <div class="chat-sub-buttons">
+          <button class="chat-faq-btn"><i class="fi fi-rr-angle-right chat-faq-btn-arrow"></i>Como faço a prova de vida?</button>
+          <button class="chat-faq-btn"><i class="fi fi-rr-angle-right chat-faq-btn-arrow"></i>Qual o prazo para a prova de vida?</button>
+          <button class="chat-faq-btn"><i class="fi fi-rr-angle-right chat-faq-btn-arrow"></i>O que fazer se perdi meus documentos?</button>
+          <button class="chat-faq-btn"><i class="fi fi-rr-angle-right chat-faq-btn-arrow"></i>Como recuperar minha senha?</button>
+          <button class="chat-faq-btn"><i class="fi fi-rr-angle-right chat-faq-btn-arrow"></i>Onde consulto meu contracheque?</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Área do chat -->
+    <div id="chat-log"></div>
+
+    <!-- Formulário de envio -->
+    <form id="chat-form">
+      <input type="text" id="chat-input" placeholder="Digite sua dúvida e pressione Enter..." />
+      <button type="submit" id="chat-send">➤</button>
+    </form>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/string-similarity/umd/string-similarity.min.js"></script>
+  <script src="chatbot.js"></script>
+
+</body>
+</html>

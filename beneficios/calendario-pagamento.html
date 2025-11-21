@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/images/icones/logo.ico">
+    <!-- Preload para garantir carregamento rápido -->
+    <link rel="preload" href="/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="/css/style.css" as="style">
+
+    <!-- Folhas de estilo carregadas no início -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/access.css">
+    <title>Beneficiários</title>
+
+    <style>
+        .calendar-container {
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+        .calendar-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #0C5A5C;
+        }
+        .payment-card {
+            background-color: #fff;
+            color: #0C5A5C;
+            font-weight: bold;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            margin: 10px;
+            border: solid 1px #000;
+            border-color: #cdcdcd;
+        }
+        .payment-card span {
+            display: block;
+            font-size: 14px;
+        }
+        .payment-card .day {
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Importando cabeçalho -->
+    <header id="cabecario"></header>
+    <!-- Fim importação cabeçalho -->
+
+    <div class="container-beneficios">
+        <h3 class="conselhos-secao">CALENDÁRIO DE PAGAMENTO</h3>
+
+        <div class="container calendar-container">
+            <div class="calendar-title">CALENDÁRIO DE PAGAMENTO 2025</div>
+            <div class="cards-wrapper">
+                <div class="row justify-content-center">
+                    <div class="col-4 col-sm-2 payment-card">
+                        <div class="day">31</div>
+                        <span>Jan</span>
+                    </div>
+                    <div class="col-4 col-sm-2 payment-card">
+                        <div class="day">28</div>
+                        <span>Fev</span>
+                    </div>
+                    <div class="col-4 col-sm-2 payment-card">
+                        <div class="day">31</div>
+                        <span>Mar</span>
+                    </div>
+                    <div class="col-4 col-sm-2 payment-card">
+                        <div class="day">30</div>
+                        <span>Abr</span>
+                    </div>
+                    <div class="col-4 col-sm-2 payment-card">
+                        <div class="day">30</div>
+                        <span>Mai</span>
+                    </div>
+                    <div class="col-4 col-sm-2 payment-card">
+                        <div class="day">30</div>
+                        <span>Jun</span>
+                    </div>
+                    <div class="col-4 col-sm-2 payment-card">
+                        <div class="day">31</div>
+                        <span>Jul</span>
+                    </div>
+                    <div class="col-4 col-sm-2 payment-card">
+                        <div class="day">29</div>
+                        <span>Ago</span>
+                    </div>
+                    <div class="col-4 col-sm-2 payment-card">
+                        <div class="day">30</div>
+                        <span>Set</span>
+                    </div>
+                    <div class="col-4 col-sm-2 payment-card">
+                        <div class="day">31</div>
+                        <span>Out</span>
+                    </div>
+                    <div class="col-4 col-sm-2 payment-card">
+                        <div class="day">28</div>
+                        <span>Nov</span>
+                    </div>
+                    <div class="col-4 col-sm-2 payment-card">
+                        <div class="day">30</div>
+                        <span>Dez</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Aviso de Cookies -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Ao continuar usando nosso site, você concorda e aceita as nossas políticas de privacidade.
+            <br><a href="/politica-de-privacidade.html">Saiba Mais</a>.
+        </p>
+        <button id="accept-cookies">Ok! Quero Continuar</button>
+    </div>
+    <!-- Fim Aviso de Cookies -->
+
+    <br />
+    <!-- Importando rodapé -->
+    <div id="rodape"></div>
+    <!-- Fim importação rodapé -->
+
+    <script src="/js/jquery-3.6.4.min.js"></script>
+    <script src="/js/cookies.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/access.js"></script>
+
+    <div vw class="enabled ">
+        <div vw-access-button class="active vlibras-toggle"></div>
+        <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+
+</body>
+
+</html>

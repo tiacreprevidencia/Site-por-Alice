@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chatbot Acreprevidência</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+  <link rel="stylesheet" href="chatstyle.css">
+</head>
+<body>
+
+<!-- Botão flutuante -->
+<button id="chatbot-toggle" title="Assistente Virtual">
+  <img src="businessman.png" alt="Assistente Virtual" class="chatbot-icon" />
+  <span class="chatbot-label">Assistente Virtual</span>
+</button>
+
+<!-- Container do chat -->
+<div id="chat-container">
+  <div id="chat-header">
+    <img src="logo.png" alt="Acreprevidência Logo" class="chat-logo" />
+    <span>Assistente Virtual</span>
+    <button id="chat-close" title="Fechar"><i class="fas fa-times"></i></button>
+  </div>
+  <div id="faq-buttons">
+  <div class="topic">
+    <button class="faq-topic">Perguntas Frequentes<i class="fi fi-rr-caret-down faq-arrow"></i></button>
+      <div class="sub-buttons">
+        <button class="faq-btn"><i class="fi fi-rr-angle-right faq-btn-arrow"></i>Como faço a prova de vida? </i></button>
+        <button class="faq-btn"><i class="fi fi-rr-angle-right faq-btn-arrow"></i>Qual o prazo para a prova de vida? </i></button>
+        <button class="faq-btn"><i class="fi fi-rr-angle-right faq-btn-arrow"></i>O que fazer se perdi meus documentos? </i></button>
+        <button class="faq-btn"><i class="fi fi-rr-angle-right faq-btn-arrow"></i>Como recuperar minha senha? </i></button>
+        <button class="faq-btn"><i class="fi fi-rr-angle-right faq-btn-arrow"></i>Onde consulto meu contracheque? </i></button>
+    </div>
+  </div>
+  </div>
+
+  <div id="chat-log"></div>
+
+  <form id="chat-form">
+    <input type="text" id="chat-input" placeholder="Digite sua dúvida e pressione Enter..." />
+    <button type="submit" id="chat-send">➤</button>
+  </form>
+</div>
+
+  <!-- Biblioteca string-similarity -->
+<script src="https://cdn.jsdelivr.net/npm/string-similarity/umd/string-similarity.min.js"></script>
+
+  <!-- Código do chatbot -->
+<script src="chatbot.js"></script> 
+
+</body>
+</html>
+
+
+
+

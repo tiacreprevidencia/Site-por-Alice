@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prévia de Paleta de Cores - Transparência</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <style>
+    /* === PALETA === */
+    :root {
+      --verde-escuro: #1b7053;
+      --verde-hover: #3aaa35;
+      --verde-agua: #26a175;
+      --verde-agua-escuro: #0B5A5D;
+      --verde-pastel: #e6f2ec;
+      --cinza-esverdeado: #abcbba;
+      --texto: #333333;
+    }
+
+    /* === ESTILOS GERAIS === */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--verde-pastel);
+      color: var(--texto);
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    h1 {
+      color: var(--verde-escuro);
+      margin-bottom: 1rem;
+    }
+
+    .paleta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .cor {
+      width: 130px;
+      height: 130px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .card-exemplo {
+      background-color: #fff;
+      border: 2px solid var(--verde-escuro);
+      border-radius: 12px;
+      padding: 1.5rem;
+      max-width: 300px;
+      text-align: center;
+      color: var(--verde-escuro);
+      transition: all 0.3s ease;
+    }
+
+    .card-exemplo:hover {
+      background-color: var(--verde-escuro);
+      color: #fff;
+    }
+
+    .card-exemplo:hover .bi {
+      color: var(--verde-hover);
+    }
+
+    .bi {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: var(--verde-agua);
+      transition: color 0.3s ease;
+    }
+
+    button {
+      padding: 10px 20px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      background-color: var(--cinza-esverdeado);
+      color: var(--verde-agua-escuro);
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--verde-escuro);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Prévia de Paleta de Cores 🌿</h1>
+
+  <!-- BLOCO DE CORES -->
+  <div class="paleta">
+    <div class="cor" style="background-color:#1b7053;">#1b7053</div>
+    <div class="cor" style="background-color:#3aaa35;">#3aaa35</div>
+    <div class="cor" style="background-color:#26a175;">#26a175</div>
+    <div class="cor" style="background-color:#0B5A5D;">#0B5A5D</div>
+    <div class="cor" style="background-color:#abcbba; color:#333; text-shadow:none;">#abcbba</div>
+    <div class="cor" style="background-color:#81c97d;">#81c97d</div>
+  </div>
+
+  <!-- EXEMPLO DE CARD -->
+  <div class="card-exemplo">
+    <i class="bi bi-leaf-fill"></i>
+    <h3>Exemplo de Card</h3>
+    <p>Fundo branco, borda verde escuro, hover em verde institucional.</p>
+  </div>
+
+  <!-- EXEMPLO DE BOTÃO -->
+  <button>Botão de Ação</button>
+
+</body>
+</html>

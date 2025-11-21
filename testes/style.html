@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acreprevidência - Design Clean</title>
+  <style>
+    :root {
+      --verde: #1a7431;
+      --verde-claro: #e8f5ec;
+      --preto: #1e1e1e;
+      --cinza-suave: #f8f9fa;
+      --branco: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--branco);
+      color: var(--preto);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    section {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 6rem 2rem;
+    }
+
+    h1, h2, h3 {
+      color: var(--verde);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 8rem 2rem;
+      background: var(--verde-claro);
+      border-radius: 1rem;
+      margin-top: 4rem;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 1.5rem auto 0 auto;
+    }
+
+    .noticias, .servicos, .sobre {
+      margin-top: 8rem;
+    }
+
+    .noticias article, .servicos div {
+      background: var(--cinza-suave);
+      border-radius: 1rem;
+      padding: 3rem;
+      margin-bottom: 5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .noticias article:hover, .servicos div:hover {
+      transform: translateY(-5px);
+    }
+
+    .noticias h2, .servicos h2, .sobre h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .noticias article h3 {
+      color: var(--verde);
+      margin-bottom: 1rem;
+    }
+
+    .noticias article p {
+      color: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 4rem 2rem;
+      font-size: 0.95rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <h1>Acreprevidência</h1>
+    <p>Comprometida com a transparência, sustentabilidade e valorização do servidor público do Acre.</p>
+  </section>
+
+  <section class="sobre">
+    <h2>Quem Somos</h2>
+    <p>A Acreprevidência é responsável pela gestão do regime próprio de previdência dos servidores públicos do Estado do Acre, assegurando benefícios e estabilidade financeira.</p>
+  </section>
+
+  <section class="noticias">
+    <h2>Últimas Notícias</h2>
+    <article>
+      <h3>Título da Notícia 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac eros eget sapien feugiat mattis.</p>
+    </article>
+
+    <article>
+      <h3>Título da Notícia 2</h3>
+      <p>Praesent a feugiat metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+    </article>
+  </section>
+
+  <section class="servicos">
+    <h2>Serviços ao Servidor</h2>
+    <div>
+      <p>Consulta de benefícios, aposentadorias e pensões, de forma clara e acessível.</p>
+    </div>
+
+    <div>
+      <p>Atendimento digital eficiente para facilitar o acesso às informações previdenciárias.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Acreprevidência. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
